@@ -3,8 +3,8 @@
     background-size: cover;
 }
 .add_logo_size{
-    width: 5rem;
-    height: 5rem;
+    width: 6rem;
+    height: 6rem;
 }
 .add_Font_heading {
     font-size: 48px;
@@ -58,10 +58,11 @@ span.add_color_font{
     margin-top: -25px !important;
 }
 .top_img_dan{
-    width: 35rem;
+    width: 32rem;
 }
 .add_center_banner_img{
     width: 35rem;
+    height: 46rem;
 }
 .add_top_banner_img {
     background: url('./assets/bgtopbanner.png') no-repeat center center;
@@ -89,6 +90,8 @@ span.add_color_font{
     font-size: 1rem;
     max-width: 600px;
     color: #333;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
   }
   .social-icons a {
     color: #000;
@@ -100,11 +103,13 @@ span.add_color_font{
     color: #7f5b36;
   } 
   .add_right_margin {
-    margin-right: -20rem;
+    margin-right: -31rem;
+    margin-top: -1rem;
 }
 .add_left_margin {
-    margin-right: 8rem;
-    margin-top: 2rem;
+    margin-right: 15rem;
+    margin-top: 3rem;
+
 }
 .navbar-scrolled {
   background-color: #fff !important;
@@ -114,6 +119,8 @@ span.add_color_font{
 .add_font_size_nav{
     font-size: 14px!important;
     font-weight: 400!important;
+    font-family: "Roboto", sans-serif;
+
 }
 .navbar-custom {
     background-color: transparent;
@@ -125,7 +132,7 @@ span.add_color_font{
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
   .add_logo_size_icon{
-    width: 1.3rem;
+    width: 1rem;
     height: 1.3rem;
   }
   @media screen and (min-width: 360px) and (max-width: 768px) {
@@ -138,6 +145,7 @@ span.add_color_font{
     }
     .add_center_banner_img {
         width: 15rem;
+        height: 20rem;
     }
     .add_left_margin {
         margin-right: 0rem;
@@ -151,11 +159,18 @@ span.add_color_font{
         line-height: 20px;
     }
     .add_second_heading {
-        font-size: 25px;
+        font-size: 22px;
         line-height: 32px;
     }
     .add_font_para_second {
         font-size: 12px;
         line-height: 18px;
+    }
+    .tequila_font_size {
+        font-size: 50px;
+        line-height: 60px;
+    }
+    .add_height_all {
+        height: 10rem !important;
     }
   }
