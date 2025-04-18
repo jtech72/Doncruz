@@ -112,13 +112,13 @@ function App() {
           <div className="row">
             <div className="col-md-5 col-12 ps-md-5 ps-0 d-flex align-items-end justify-content-end mb-md-5 mb-0 pb-5">
               <div className="row ps-md-5 ps-0">
-                <div className="col-12 mb-3 d-flex align-items-center justify-content-start ps-md-5 ps-0">
+                <div className="col-12 mb-3 d-flex align-items-center justify-content-start ps-md-5 ps-5">
                   <img src={Donlogo} className="add_img_logo_size" alt="" />
                 </div>
-                <div className="col-12 text-start ps-md-5 ps-0">
+                <div className="col-12 text-start ps-md-5 ps-5">
                   <h3 className="add_second_heading">This is Don Cruz Platinum Añejo –<br />  The Pinnacle of Purity.</h3>
                 </div>
-                <div className="col-12 text-start mt-3 ps-md-5 ps-0">
+                <div className="col-12 text-start mt-3 ps-md-5 ps-5">
                   <p className="add_font_para_second">
                     At Tequila don cruz Platinum, every bottle is the perfect fusion of time-
                     honored tradition and cutting-edge innovation. While modern techniques
@@ -126,7 +126,7 @@ function App() {
                     a testament to an exceptional recipe passed down with dedication.
                   </p>
                 </div>
-                <div className="col-12 mt-md-5 mt-0 d-flex align-items-center justify-content-start ps-md-5 ps-0">
+                <div className="col-12 mt-md-5 mt-0 d-flex align-items-center justify-content-start ps-md-5 ps-5">
                   <span className="add_color_font d-flex align-items-center justify-content-start">
                     Plata <hr className="ms-3 add_line_width" />
                   </span>
