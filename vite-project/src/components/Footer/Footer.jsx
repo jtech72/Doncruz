@@ -14,17 +14,17 @@ const Footer = () => {
     <footer className="bg-black text-white py-5 overflow-x-hidden mt-5">
       <div className="container-fluid px-0">
         <div className="row d-flex align-items-center">
-          <div className="col-4 px-0">
+          <div className="col-5 pe-5 px-0">
             <hr style={{
               height: '1px',
               borderColor: '#EBB713',
               opacity: '1'
             }} />
           </div>
-          <div className="col-4 text-center">
+          <div className="col-2 text-center">
             <img src={Logo} alt="" className='add_size_bottom_logo' />
           </div>
-          <div className="col-4 px-0">
+          <div className="col-5 ps-5 px-0">
             <hr style={{
               height: '1px',
               borderColor: '#EBB713',

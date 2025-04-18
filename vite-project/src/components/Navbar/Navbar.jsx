@@ -44,12 +44,12 @@ const Navbar = () => {
       <div className="row w-100 align-items-center ps-md-5">
         {/* Left links */}
         <div className="col-md-4 ps-md-5">
-          <ul className="navbar-nav d-flex flex-md-row flex-column justify-content-start">
-            <li className="nav-item px-md-3">
-              <a className="nav-link add_font_size_nav text-dark active" href="#">Home</a>
+          <ul className="navbar-nav d-flex flex-md-row flex-column justify-content-start ps-5">
+            <li className="nav-item ps-md-5 pe-5">
+              <a className="nav-link add_font_size_nav text-dark active ps-4" href="#">Home</a>
             </li>
-            <li className="nav-item px-md-3">
-              <a className="nav-link add_font_size_nav text-dark active" href="#">ABOUT US</a>
+            <li className="nav-item ps-md-4">
+              <a className="nav-link add_font_size_nav text-dark active" href="#">About Us</a>
             </li>
           </ul>
         </div>
@@ -65,12 +65,12 @@ const Navbar = () => {
 
         {/* Right links */}
         <div className="col-md-4">
-          <ul className="navbar-nav d-flex flex-md-row flex-column justify-content-end">
-            <li className="nav-item px-md-3">
-              <a className="nav-link add_font_size_nav text-dark active" href="#">COLLECTION</a>
+          <ul className="navbar-nav d-flex flex-md-row flex-column justify-content-end  pe-5">
+            <li className="nav-item ps-md-3 pe-5">
+              <a className="nav-link add_font_size_nav text-dark active" href="#">Collections</a>
             </li>
-            <li className="nav-item px-md-3">
-              <a className="nav-link add_font_size_nav text-dark active" href="#">EXPERIENCE</a>
+            <li className="nav-item ps-md-4">
+              <a className="nav-link add_font_size_nav text-dark active pe-5" href="#">Experience</a>
             </li>
           </ul>
         </div>

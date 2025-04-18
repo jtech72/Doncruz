@@ -101,7 +101,7 @@ function App() {
                   </p>
                 </div>
                 <div className="col-12 mt-md-5 mt-0 d-flex align-items-center justify-content-end pe-md-5 pe-0">
-                  <span className="add_color_font d-flex align-items-center justify-content-end">
+                  <span className="add_color_font d-flex align-items-end justify-content-end">
                     <hr className="me-3 add_line_width" /> Plata
                   </span>
                 </div>
@@ -145,7 +145,7 @@ function App() {
             <div className="col-12 d-flex align-items-center justify-content-center">
               <h5 className="tequila_font_size mb-0">Tequila</h5>
             </div>
-            <div className="col-md-9 col-12 mx-auto">
+            <div className="col-md-9 col-12 mx-auto pb-5">
               <div className="row d-flex align-items-center justify-content-center mt-4 mb-5">
                 <div className="col-6 border-end py-1 border border-dark border-top-0 border-start-0 border-bottom-0">
                   <p className="add_font_para_second text-end pe-3 mb-0">
@@ -175,7 +175,7 @@ function App() {
             </div>
           </div>
 
-          <div className="row mx-auto mx-md-0">
+          <div className="row mx-auto mx-md-0 mt-md-5 pt-md-5 pt-0 mt-0">
             <div className="col-md-7 col-12 ps-0">
               <img src={Twoperson} className="w-100 h-100" alt="" />
             </div>
