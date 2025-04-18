@@ -84,7 +84,7 @@ function App() {
               <img src={Menbottle} className="w-100 h-100" alt="" />
             </div>
             <div className="col-md-5 mt-4 mt-md-0 col-12 pe-md-5 pe-0 d-flex align-items-end justify-content-end mb-md-5 mb-0 pb-5">
-              <div className="row pe-md-5 pe-0 mx-auto">
+              <div className="row pe-md-5 pe-2 mx-auto">
                 <div className="col-12 mb-3 d-flex align-items-center justify-content-end pe-md-5 pe-0">
                   <img src={Donlogo} className="add_img_logo_size" alt="" />
                 </div>
@@ -110,15 +110,15 @@ function App() {
           </div>
 
           <div className="row">
-            <div className="col-md-5 col-12 ps-5 d-flex align-items-end justify-content-end mb-5 pb-5">
-              <div className="row ps-5">
-                <div className="col-12 mb-3 d-flex align-items-center justify-content-start ps-5">
+            <div className="col-md-5 col-12 ps-md-5 ps-0 d-flex align-items-end justify-content-end mb-md-5 mb-0 pb-5">
+              <div className="row ps-md-5 ps-0">
+                <div className="col-12 mb-3 d-flex align-items-center justify-content-start ps-md-5 ps-0">
                   <img src={Donlogo} className="add_img_logo_size" alt="" />
                 </div>
-                <div className="col-12 text-start ps-5">
+                <div className="col-12 text-start ps-md-5 ps-0">
                   <h3 className="add_second_heading">This is Don Cruz Platinum Añejo –<br />  The Pinnacle of Purity.</h3>
                 </div>
-                <div className="col-12 text-start mt-3 ps-5">
+                <div className="col-12 text-start mt-3 ps-md-5 ps-0">
                   <p className="add_font_para_second">
                     At Tequila don cruz Platinum, every bottle is the perfect fusion of time-
                     honored tradition and cutting-edge innovation. While modern techniques
@@ -126,7 +126,7 @@ function App() {
                     a testament to an exceptional recipe passed down with dedication.
                   </p>
                 </div>
-                <div className="col-12 mt-5 d-flex align-items-center justify-content-start ps-5">
+                <div className="col-12 mt-md-5 mt-0 d-flex align-items-center justify-content-start ps-md-5 ps-0">
                   <span className="add_color_font d-flex align-items-center justify-content-start">
                     Plata <hr className="ms-3 add_line_width" />
                   </span>
@@ -145,7 +145,7 @@ function App() {
             <div className="col-12 d-flex align-items-center justify-content-center">
               <h5 className="tequila_font_size mb-0">Tequila</h5>
             </div>
-            <div className="col-9 mx-auto">
+            <div className="col-md-9 col-12 mx-auto">
               <div className="row d-flex align-items-center justify-content-center mt-4 mb-5">
                 <div className="col-6 border-end py-1 border border-dark border-top-0 border-start-0 border-bottom-0">
                   <p className="add_font_para_second text-end pe-3 mb-0">
@@ -175,25 +175,25 @@ function App() {
             </div>
           </div>
 
-          <div className="row">
+          <div className="row mx-auto mx-md-0">
             <div className="col-md-7 col-12 ps-0">
               <img src={Twoperson} className="w-100 h-100" alt="" />
             </div>
-            <div className="col-md-5 col-12 pe-5 d-flex align-items-center justify-content-center mb-5 pb-5">
-              <div className="row px-5">
+            <div className="col-md-5 col-12 pe-md-5 pe-0 d-flex align-items-center justify-content-center mb-md-5 mb-0 pb-md-5 pb-0">
+              <div className="row px-md-5 px-0 mt-md-0 mt-3">
                 <div className="col-12 text-start">
                   <h3 className="add_second_heading">
                     From Farm to Bottle – Crafting <br /> Perfection from the Finest Agave
                   </h3>
                 </div>
-                <div className="col-12 text-start mt-3">
+                <div className="col-12 text-start mt-md-3 mt-1">
                   <p className="add_font_para_second">
                     Hand-selected from the heart of the fields, only the best
                     Blue Weber Agave makes its way into Tequiladoncruz Platinum. Every plant is carefully nurtured, harvested at
                     peak maturity, and expertly trimmed to extract the richest flavors.
                   </p>
                 </div>
-                <div className="col-12 text-start mt-3">
+                <div className="col-12 text-start mt-md-3 mt-1">
                   <p className="add_font_para_second">
                     With generations of expertise, our jimadores ensure that
                     only the purest, most flavorful piñas begin the journey to
