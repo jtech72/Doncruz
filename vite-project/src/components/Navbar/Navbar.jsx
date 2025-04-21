@@ -44,21 +44,21 @@ const Navbar = () => {
 
       {/* Collapse div controlled by state */}
       <div className={`collapse navbar-collapse d-md-block ${isOpen ? 'show' : ''}`} id="navbarContent">
-        <div className="row w-100 align-items-center ps-md-5">
+        <div className="row mx-auto w-100 align-items-center ps-md-5 ps-0">
           {/* Left links */}
-          <div className="col-md-4 ps-md-5">
+          <div className="col-md-4 ps-md-5 ps-0">
             <ul className="navbar-nav d-flex flex-md-row flex-column justify-content-start ps-md-5 ps-0">
-              <li className="nav-item ps-md-5 pe-5">
-                <a className="nav-link add_font_size_nav text-dark active ps-4" href="#">Home</a>
+              <li className="nav-item ps-md-5 pe-0">
+                <a className="nav-link add_font_size_nav text-dark active ps-md-4 ps-0" href="#">Home</a>
               </li>
-              <li className="nav-item ps-md-4">
+              <li className="nav-item ps-md-4 ps-0">
                 <a className="nav-link add_font_size_nav text-dark active" href="#">About Us</a>
               </li>
             </ul>
           </div>
 
           {/* Center logo (hidden in mobile and shown above) */}
-          <div className="col-md-4 text-center ps-md-5 d-none d-md-block">
+          <div className="col-md-4 text-center ps-md-5 ps-0 d-none d-md-block">
             <a className="nav-link text-dark active" href="#">
               <div className="navbar-brand mx-auto">
                 <img src={logo} alt="Logo" className="add_logo_size" />
@@ -68,12 +68,12 @@ const Navbar = () => {
 
           {/* Right links */}
           <div className="col-md-4">
-            <ul className="navbar-nav d-flex flex-md-row flex-column justify-content-end pe-5">
-              <li className="nav-item ps-md-3 pe-5">
+            <ul className="navbar-nav d-flex flex-md-row flex-column justify-content-end pe-md-5 pe-0">
+              <li className="nav-item ps-md-3 pe-md-5 pe-0">
                 <a className="nav-link add_font_size_nav text-dark active" href="#">Collections</a>
               </li>
-              <li className="nav-item ps-md-4">
-                <a className="nav-link add_font_size_nav text-dark active pe-5" href="#">Experience</a>
+              <li className="nav-item ps-md-4 ps-0">
+                <a className="nav-link add_font_size_nav text-dark active pe-md-5 pe-0" href="#">Experience</a>
               </li>
             </ul>
           </div>
