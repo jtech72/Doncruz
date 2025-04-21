@@ -18,7 +18,7 @@ const Navbar = () => {
   return (
 <>
 <nav
-  className={`navbar navbar-expand-md navbar-light text-dark py-3 position-fixed w-100 navbar-custom ${scrolled ? 'scrolled' : ''}`}
+  className={`navbar navbar-expand-md navbar-light text-dark py-md-3 py-2 position-fixed w-100 navbar-custom ${scrolled ? 'scrolled' : ''}`}
   style={{ zIndex: 9999 }}
 >
   <div className="container">
