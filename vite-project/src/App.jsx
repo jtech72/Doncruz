@@ -28,9 +28,9 @@ function App() {
           <section className="row add_top_banner_img pt-md-5 pt-0">
             <div className="container pt-5">
               <div className="row pt-5">
-                <div className="col-10 mx-auto pt-5">
+                <div className="col-10 mx-auto pt-md-5 pt-0">
                   <div className="row mx-auto">
-                    <div className="col-md-4 col-12 d-flex align-items-center flex-column justify-content-between">
+                    <div className="col-md-4 col-12 pt-5 pt-md-0 d-flex align-items-center flex-column justify-content-between">
                       <img src={Danimg} className="top_img_dan add_right_margin" alt="" />
                       <p className="description pb-md-5 pb-4 pt-md-0 pt-4 mb-0 text-start">
                         From the careful jima to the meticulous distillation, every step in the creation of tequila is infused with passion and dedication.
@@ -85,23 +85,23 @@ function App() {
             </div>
             <div className="col-md-5 mt-4 mt-md-0 col-12 pe-md-5 pe-0 d-flex align-items-end justify-content-end mb-md-5 mb-0 pb-5">
               <div className="row pe-md-5 pe-2 mx-auto">
-                <div className="col-12 mb-3 d-flex align-items-center justify-content-end pe-md-5 pe-0">
+                <div className="col-12 mb-3 d-flex align-items-center justify-content-md-end justify-content-center pe-md-5 pe-0">
                   <img src={Donlogo} className="add_img_logo_size" alt="" />
                 </div>
-                <div className="col-12 text-end pe-md-5 pe-0">
+                <div className="col-12 text-md-end text-center pe-md-5 pe-0">
                   <h3 className="add_second_heading">
                     This is Don Cruz Platinium Plata-<br /> This is tequila, redefined.
                   </h3>
                 </div>
-                <div className="col-12 text-end mt-3 pe-md-5 pe-0">
-                  <p className="text-end add_font_para_second">
+                <div className="col-12 text-md-end text-center mt-3 pe-md-5">
+                  <p className="text-md-end text-center add_font_para_second">
                     Every drop of Doncruz Platinum tells a story—one of tradition, precision,
                     and passion. From the expert jima of the agave to the meticulous art of
                     distillation, this is more than just a spirit—it’s an experience.
                   </p>
                 </div>
-                <div className="col-12 mt-md-5 mt-0 d-flex align-items-center justify-content-end pe-md-5 pe-0">
-                  <span className="add_color_font d-flex align-items-end justify-content-end">
+                <div className="col-12 mt-md-5 mt-0 d-flex align-items-center justify-content-md-end justify-content-center pe-md-5 pe-0">
+                  <span className="add_color_font d-flex align-items-end justify-content-md-end justify-content-center">
                     <hr className="me-3 add_line_width" /> Plata
                   </span>
                 </div>
@@ -112,13 +112,13 @@ function App() {
           <div className="row">
             <div className="col-md-5 col-12 ps-md-5 ps-0 d-flex align-items-end justify-content-end mb-md-5 mb-0 pb-5">
               <div className="row ps-md-5 ps-0">
-                <div className="col-12 mb-3 d-flex align-items-center justify-content-start ps-md-5 ps-5">
+                <div className="col-12 mb-3 d-flex align-items-center justify-content-md-start justify-content-center ps-md-5 ps-5">
                   <img src={Donlogo} className="add_img_logo_size" alt="" />
                 </div>
-                <div className="col-12 text-start ps-md-5 ps-5">
+                <div className="col-12 text-md-start text-center ps-md-5 ps-5">
                   <h3 className="add_second_heading">This is Don Cruz Platinum Añejo –<br />  The Pinnacle of Purity.</h3>
                 </div>
-                <div className="col-12 text-start mt-3 ps-md-5 ps-5">
+                <div className="col-12 text-md-start text-center mt-3 ps-md-5 ps-5">
                   <p className="add_font_para_second">
                     At Tequila don cruz Platinum, every bottle is the perfect fusion of time-
                     honored tradition and cutting-edge innovation. While modern techniques
@@ -138,7 +138,7 @@ function App() {
             </div>
           </div>
 
-          <div className="row py-5 add_bg_img_design">
+          <div className="row py-md-5 pt-5 pb-0 add_bg_img_design mt-md-0 mt-1">
             <div className="col-12 d-flex align-items-center justify-content-center">
               <p className="mb-0 pb-0 add_para_font pe-4">The new era of</p>
             </div>
@@ -146,29 +146,49 @@ function App() {
               <h5 className="tequila_font_size mb-0">Tequila</h5>
             </div>
             <div className="col-md-9 col-12 mx-auto pb-5">
-              <div className="row d-flex align-items-center justify-content-center mt-4 mb-5">
-                <div className="col-6 border-end py-1 border border-dark border-top-0 border-start-0 border-bottom-0">
+              <div className="row d-md-flex d-none align-items-center  justify-content-center mt-4 mb-5">
+                <div className="col-md-6 col-12 border-md-end  py-1 border border-dark border-top-0 border-start-0 border-bottom-0">
                   <p className="add_font_para_second text-end pe-3 mb-0">
-                    From the careful jima to the meticulous distillation, every step in the creation of tequila is infused with passion and dedication. This is why we believe tequila should be revered as a high-end spirit.
+                    From the careful jima to the meticulous distillation, every step in the<br/>
+                     creation of tequila is infused with passion and dedication. This is why<br/>
+                      we believe tequila should be revered as a high-end spirit.
                   </p>
                 </div>
-                <div className="col-6 py-1">
+                <div className="col-md-6 col-12 py-1">
                   <p className="add_font_para_second text-start ps-3 mb-0">
-                    To create a truly exceptional tequila, it takes time, love, commitment, and an exquisite recipe. And when this is achieved, only a bottle of equal elegance will suffice — something that exudes strength, importance, and is worthy of the precious liquid it holds.
+                    To create a truly exceptional tequila, it takes time, love, commitment, and an exquisite<br/>
+                     recipe. And when this is achieved, only a bottle of equal elegance will suffice — something <br/>
+                     that exudes strength, importance, and is worthy of the precious liquid it holds.
+                  </p>
+                </div>
+              </div>
+              <div className="row mx-auto d-block d-md-none align-items-center justify-content-center mt-4 mb-5">
+                <div className="col-md-6 col-12 py-1">
+                  <p className="add_font_para_second text-end pe-3 mb-0">
+                    From the careful jima to the meticulous distillation, every step in the
+                     creation of tequila is infused with passion and dedication. This is why
+                      we believe tequila should be revered as a high-end spirit.
+                  </p>
+                </div>
+                <div className="col-md-6 col-12 py-1">
+                  <p className="add_font_para_second text-start ps-3 mb-0">
+                    To create a truly exceptional tequila, it takes time, love, commitment, and an exquisite
+                     recipe. And when this is achieved, only a bottle of equal elegance will suffice — something 
+                     that exudes strength, importance, and is worthy of the precious liquid it holds.
                   </p>
                 </div>
               </div>
               <div className="row g-3">
-                <div className="col-6 col-md-3 d-flex align-items-center justify-content-center">
+                <div className="col-6 col-md-3 pe-0 pe-md-2  d-flex align-items-center justify-content-center">
                   <img src={Lightbott} className="img-fluid add_height_all rounded" alt="Image 1" />
                 </div>
-                <div className="col-6 col-md-3 d-flex align-items-center justify-content-center">
+                <div className="col-6 col-md-3 ps-0 ps-md-2 d-flex align-items-center justify-content-center">
                   <img src={Yellowbottle} className="img-fluid add_height_all rounded" alt="Image 2" />
                 </div>
-                <div className="col-6 col-md-3 d-flex align-items-center justify-content-center">
+                <div className="col-6 col-md-3 pe-0 pe-md-2 d-flex align-items-center justify-content-center">
                   <img src={Bluebootle} className="img-fluid add_height_all rounded" alt="Image 3" />
                 </div>
-                <div className="col-6 col-md-3 d-flex align-items-center justify-content-center">
+                <div className="col-6 col-md-3 ps-0 ps-md-2 d-flex align-items-center justify-content-center">
                   <img src={Bootglass} className="img-fluid add_height_all rounded" alt="Image 4" />
                 </div>
               </div>

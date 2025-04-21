@@ -159,8 +159,8 @@ span.add_color_font{
         line-height: 20px;
     }
     .add_second_heading {
-        font-size: 22px;
-        line-height: 32px;
+        font-size: 21px;
+        line-height: 27px;
     }
     .add_font_para_second {
         font-size: 12px;
@@ -173,4 +173,29 @@ span.add_color_font{
     .add_height_all {
         height: 10rem !important;
     }
+    .add_logo_size {
+        width: 4rem;
+        height: 4rem;
+    }
+    .add_line_width {
+        width: 17rem;
+      
+    }
+    .add_bg_img_design{
+        margin-top: -7px !important;
+    }
+    #navbarContent {
+        background-color: white;
+        padding: 1rem;
+        text-align: center;
+      }
+    
+      #navbarContent .nav-link {
+        padding: 0.5rem 0;
+      }
+    
+      #navbarContent .navbar-nav {
+        flex-direction: column !important;
+        align-items: center !important;
+      }
   }

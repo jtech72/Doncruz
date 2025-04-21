@@ -33,14 +33,14 @@ const Footer = () => {
       </div>
   
       {/* Footer Main Content */}
-      <div className="row py-5">
-        <div className="col-12 col-md-4 px-4 mb-4 mb-md-0">
-          <h4 className="text-warning" style={{ fontSize: '24px' }}>About us</h4>
-          <p style={{ fontSize: '16px' }}>
+      <div className="row py-md-5 pb-0 pt-5 px-md-5 px-0">
+        <div className="col-12 col-md-4 px-4 mb-4 mb-md-0 ps-md-5 ps-3">
+          <h4 className="text-warning ps-md-5 ps-0" style={{ fontSize: '24px' }}>About us</h4>
+          <p className="ps-md-5 ps-0"style={{ fontSize: '16px' }}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore...
           </p>
-          <h4 className="text-warning mb-3" style={{ fontSize: '24px' }}>Follow us on</h4>
-          <div className="d-flex">
+          <h4 className="text-warning mb-3 ps-md-5 ps-0" style={{ fontSize: '24px' }}>Follow us on</h4>
+          <div className="d-flex ps-md-5 ps-0">
             <img src={FB} className="pe-3 fav_icon" alt="Facebook" />
             <img src={Inst} className="pe-3 fav_icon" alt="Instagram" />
             <img src={IG} className="fav_icon" alt="IG" />
