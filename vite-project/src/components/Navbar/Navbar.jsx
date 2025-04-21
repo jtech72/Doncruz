@@ -27,20 +27,24 @@ const Navbar = () => {
 >
 <div className="container">
       {/* Navbar brand and toggler for mobile */}
-      <div className="d-flex w-100 justify-content-between align-items-center d-md-none">
-        <a className="navbar-brand" href="#">
-          <img src={logo} alt="Logo" className="add_logo_size" />
-        </a>
-        <button
-          className="navbar-toggler border-0 shadow-none"
-          type="button"
-          onClick={toggleNavbar}
-          aria-expanded={isOpen}
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
-      </div>
+      <div className="d-flex w-100 justify-content-between align-items-center d-md-none position-relative">
+  <a
+    className="navbar-brand pt-4 position-absolute start-50 translate-middle-x"
+    href="#"
+  >
+    <img src={logo} alt="Logo" className="add_logo_size" />
+  </a>
+  <button
+    className="navbar-toggler border-0 shadow-none ms-auto"
+    type="button"
+    onClick={toggleNavbar}
+    aria-expanded={isOpen}
+    aria-label="Toggle navigation"
+  >
+    <span className="navbar-toggler-icon"></span>
+  </button>
+</div>
+
 
       {/* Collapse div controlled by state */}
       <div className={`collapse navbar-collapse d-md-block ${isOpen ? 'show' : ''}`} id="navbarContent">
