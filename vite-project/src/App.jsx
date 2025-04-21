@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './App.css'
 import Footer from './components/Footer/Footer'
 import Navbar from './components/Navbar/Navbar'
@@ -18,29 +18,34 @@ import Lightbott from './assets/lightbott.png'
 import youtube from './assets/toutube.png'
 import instagram from './assets/insta.png'
 import facebook from './assets/facebook.png'
+import { Modal } from 'react-bootstrap'
 
 function App() {
+  const [openModal, setOpenModal] = useState(false)
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setOpenModal(true);
+    }, 3000);
+
+    return () => clearTimeout(timer); // Cleanup
+  }, []);
   return (
     <>
       <Navbar />
       <section>
         <div className="container-fluid">
-          <section className="row add_top_banner_img pt-md-5 pt-0">
+          <section className="row add_top_banner_img pt-md-5 pt-0 position-relative">
             <div className="container pt-5">
               <div className="row pt-5">
-                <div className="col-10 mx-auto pt-md-5 pt-0">
+                <div className="col-md-10 col-12 mx-auto pt-md-5 pt-0 position-absolute bottom-overlay">
                   <div className="row mx-auto">
                     <div className="col-md-4 col-12 pt-5 pt-md-0 d-flex align-items-center flex-column justify-content-between">
-                      <img src={Danimg} className="top_img_dan add_right_margin" alt="" />
-                      <p className="description pb-md-5 pb-4 pt-md-0 pt-4 mb-0 text-start">
+                      <p className="description pb-md-5 pb-4 pt-md-0 pt-4 mb-0 text-md-start text-center">
                         From the careful jima to the meticulous distillation, every step in the creation of tequila is infused with passion and dedication.
                       </p>
                     </div>
-                    <div className="col-md-4 col-12">
-                      <img src={Cenetrbanner} className="add_center_banner_img" alt="" />
-                    </div>
-                    <div className="col-md-4  col-12 d-flex align-items-center flex-column justify-content-between ">
-                      <img src={Cryzimg} className="top_img_dan add_left_margin" alt="" />
+                    <div className="col-md-4 col-12"></div>
+                    <div className="col-md-4 col-12 d-flex align-items-center flex-column justify-content-between ps-md-5 ps-0">
                       <div className="social-icons pb-5">
                         <img src={facebook} className="add_logo_size_icon me-3" alt="facebook" />
                         <img src={instagram} className="add_logo_size_icon me-3" alt="instagram" />
@@ -53,9 +58,10 @@ function App() {
             </div>
           </section>
 
+
           <div className="row add_bg_img">
-            <div className="col-12 pt-5 pb-4">
-              <div className="row">
+            <div className="col-12 px-3 px-md-0 pt-5 pb-4">
+              <div className="row mx-auto mx-md-0">
                 <div className="col-5 my-auto ps-0">
                   <hr className="add_color_line" />
                 </div>
@@ -110,13 +116,19 @@ function App() {
           </div>
 
           <div className="row">
-            <div className="col-md-5 col-12 ps-md-5 ps-0 d-flex align-items-end justify-content-end mb-md-5 mb-0 pb-5">
+            {/* Image Column - show first on mobile, second on desktop */}
+            <div className="col-md-7 col-12 pe-0 order-1 order-md-2">
+              <img src={Anejob} className="w-100 h-100" alt="" />
+            </div>
+
+            {/* Content Column - show second on mobile, first on desktop */}
+            <div className="col-md-5 col-12 ps-md-5 ps-0 d-flex align-items-end justify-content-end mb-md-5 mb-0 pt-4 pt-md-0 pb-5 order-2 order-md-1">
               <div className="row ps-md-5 ps-0">
                 <div className="col-12 mb-3 d-flex align-items-center justify-content-md-start justify-content-center ps-md-5 ps-5">
                   <img src={Donlogo} className="add_img_logo_size" alt="" />
                 </div>
                 <div className="col-12 text-md-start text-center ps-md-5 ps-5">
-                  <h3 className="add_second_heading">This is Don Cruz Platinum Añejo –<br />  The Pinnacle of Purity.</h3>
+                  <h3 className="add_second_heading">This is Don Cruz Platinum Añejo –<br /> The Pinnacle of Purity.</h3>
                 </div>
                 <div className="col-12 text-md-start text-center mt-3 ps-md-5 ps-5">
                   <p className="add_font_para_second">
@@ -126,19 +138,17 @@ function App() {
                     a testament to an exceptional recipe passed down with dedication.
                   </p>
                 </div>
-                <div className="col-12 mt-md-5 mt-0 d-flex align-items-center justify-content-start ps-md-5 ps-5">
+                <div className="col-12 mt-md-5 mt-0 d-flex align-items-center justify-content-md-start justify-content-center ps-md-5 ps-5">
                   <span className="add_color_font d-flex align-items-center justify-content-start">
                     Plata <hr className="ms-3 add_line_width" />
                   </span>
                 </div>
               </div>
             </div>
-            <div className="col-md-7 col-12 pe-0">
-              <img src={Anejob} className="w-100 h-100" alt="" />
-            </div>
           </div>
 
-          <div className="row py-md-5 pt-5 pb-0 add_bg_img_design mt-md-0 mt-1">
+
+          <div className="row py-md-5 pt-5 pb-0 add_bg_img_design">
             <div className="col-12 d-flex align-items-center justify-content-center">
               <p className="mb-0 pb-0 add_para_font pe-4">The new era of</p>
             </div>
@@ -149,71 +159,68 @@ function App() {
               <div className="row d-md-flex d-none align-items-center  justify-content-center mt-4 mb-5">
                 <div className="col-md-6 col-12 border-md-end  py-1 border border-dark border-top-0 border-start-0 border-bottom-0">
                   <p className="add_font_para_second text-end pe-3 mb-0">
-                    From the careful jima to the meticulous distillation, every step in the<br/>
-                     creation of tequila is infused with passion and dedication. This is why<br/>
-                      we believe tequila should be revered as a high-end spirit.
+                    From the careful jima to the meticulous distillation, every step in the<br />
+                    creation of tequila is infused with passion and dedication. This is why<br />
+                    we believe tequila should be revered as a high-end spirit.
                   </p>
                 </div>
                 <div className="col-md-6 col-12 py-1">
                   <p className="add_font_para_second text-start ps-3 mb-0">
-                    To create a truly exceptional tequila, it takes time, love, commitment, and an exquisite<br/>
-                     recipe. And when this is achieved, only a bottle of equal elegance will suffice — something <br/>
-                     that exudes strength, importance, and is worthy of the precious liquid it holds.
+                    To create a truly exceptional tequila, it takes time, love, commitment, and an exquisite<br />
+                    recipe. And when this is achieved, only a bottle of equal elegance will suffice — something <br />
+                    that exudes strength, importance, and is worthy of the precious liquid it holds.
                   </p>
                 </div>
               </div>
               <div className="row mx-auto d-block d-md-none align-items-center justify-content-center mt-4 mb-5">
                 <div className="col-md-6 col-12 py-1">
-                  <p className="add_font_para_second text-end pe-3 mb-0">
+                  <p className="add_font_para_second text-center pe-0 mb-0">
                     From the careful jima to the meticulous distillation, every step in the
-                     creation of tequila is infused with passion and dedication. This is why
-                      we believe tequila should be revered as a high-end spirit.
+                    creation of tequila is infused with passion and dedication. This is why
+                    we believe tequila should be revered as a high-end spirit.
                   </p>
                 </div>
                 <div className="col-md-6 col-12 py-1">
-                  <p className="add_font_para_second text-start ps-3 mb-0">
+                  <p className="add_font_para_second text-center ps-0 mb-0">
                     To create a truly exceptional tequila, it takes time, love, commitment, and an exquisite
-                     recipe. And when this is achieved, only a bottle of equal elegance will suffice — something 
-                     that exudes strength, importance, and is worthy of the precious liquid it holds.
+                    recipe. And when this is achieved, only a bottle of equal elegance will suffice — something
+                    that exudes strength, importance, and is worthy of the precious liquid it holds.
                   </p>
                 </div>
               </div>
               <div className="row g-3">
-                <div className="col-6 col-md-3 pe-0 pe-md-2  d-flex align-items-center justify-content-center">
+                <div className="col-12 col-md-3 pe-0 pe-md-2 ps-md-2 ps-0  d-flex align-items-center justify-content-center">
                   <img src={Lightbott} className="img-fluid add_height_all rounded" alt="Image 1" />
                 </div>
-                <div className="col-6 col-md-3 ps-0 ps-md-2 d-flex align-items-center justify-content-center">
+                <div className="col-12 col-md-3 ps-0 ps-md-2 pe-md-2 pe-0 d-flex align-items-center justify-content-center">
                   <img src={Yellowbottle} className="img-fluid add_height_all rounded" alt="Image 2" />
                 </div>
-                <div className="col-6 col-md-3 pe-0 pe-md-2 d-flex align-items-center justify-content-center">
+                <div className="col-12 col-md-3 pe-0 pe-md-2 ps-md-2 ps-0 d-flex align-items-center justify-content-center">
                   <img src={Bluebootle} className="img-fluid add_height_all rounded" alt="Image 3" />
                 </div>
-                <div className="col-6 col-md-3 ps-0 ps-md-2 d-flex align-items-center justify-content-center">
+                <div className="col-12 col-md-3 ps-0 ps-md-2 pe-md-2 pe-0 d-flex align-items-center justify-content-center">
                   <img src={Bootglass} className="img-fluid add_height_all rounded" alt="Image 4" />
                 </div>
               </div>
             </div>
           </div>
-
           <div className="row mx-auto mx-md-0 mt-md-5 pt-md-5 pt-0 mt-0">
-            <div className="col-md-7 col-12 ps-0">
-              <img src={Twoperson} className="w-100 h-100" alt="" />
-            </div>
-            <div className="col-md-5 col-12 pe-md-5 pe-0 d-flex align-items-center justify-content-center mb-md-5 mb-0 pb-md-5 pb-0">
-              <div className="row px-md-5 px-0 mt-md-0 mt-3">
-                <div className="col-12 text-start">
+            {/* Content Column - Show First on Mobile, Second on Desktop */}
+            <div className="col-md-5 col-12order-1 order-md-2 pe-md-5 pe-0 d-flex align-items-center justify-content-center mb-md-5 mb-0 pb-md-5 pb-0">
+              <div className="row px-md-5 px-0 mt-md-0 mt-5 mx-auto">
+                <div className="col-12 text-md-start text-center">
                   <h3 className="add_second_heading">
                     From Farm to Bottle – Crafting <br /> Perfection from the Finest Agave
                   </h3>
                 </div>
-                <div className="col-12 text-start mt-md-3 mt-1">
+                <div className="col-12 text-md-start text-center mt-md-3 mt-1">
                   <p className="add_font_para_second">
                     Hand-selected from the heart of the fields, only the best
                     Blue Weber Agave makes its way into Tequiladoncruz Platinum. Every plant is carefully nurtured, harvested at
                     peak maturity, and expertly trimmed to extract the richest flavors.
                   </p>
                 </div>
-                <div className="col-12 text-start mt-md-3 mt-1">
+                <div className="col-12 text-md-start text-center mt-md-3 mt-1">
                   <p className="add_font_para_second">
                     With generations of expertise, our jimadores ensure that
                     only the purest, most flavorful piñas begin the journey to
@@ -222,8 +229,40 @@ function App() {
                 </div>
               </div>
             </div>
+
+            {/* Image Column - Show Second on Mobile, First on Desktop */}
+            <div className="col-md-7 col-12 order-2 order-md-1 ps-0 mb-md-5 mb-0">
+              <img src={Twoperson} className="w-100 h-100" alt="" />
+            </div>
           </div>
+
         </div>
+        <Modal
+          show={openModal}
+          onHide={() => setOpenModal(false)}
+          centered
+          className="custom-modal" // 👈 custom class here
+        >
+          <div className="contact-section">
+            <div className="form-container">
+              <h2>Savor the Moment</h2>
+              <p>Let's raise a glass to great tequila! Contact us to learn more or make an inquiry today.</p>
+              <form>
+                <div className="input-row">
+                  <input type="text" placeholder="First Name" />
+                  <input type="text" placeholder="Last Name" />
+                </div>
+                <div className="input-row">
+                  <input type="email" placeholder="Email" />
+                  <input type="tel" placeholder="Phone Number" />
+                </div>
+                <textarea placeholder="Write your message..." rows="3"></textarea>
+                <button type="submit" className='mt-4'>Let’s Experience The Taste</button>
+              </form>
+            </div>
+          </div>
+        </Modal>
+
       </section>
       <Footer />
     </>

@@ -11,30 +11,30 @@ import './Footer.css'
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-white py-5 pb-3 overflow-x-hidden mt-5">
+    <footer className="bg-black text-white py-md-5 pt-3 pb-3 overflow-x-hidden mt-5">
     <div className="container-fluid px-3 px-md-0">
       {/* Divider and Logo Section */}
-      <div className="row align-items-center text-center text-md-start">
-        <div className="col-12 col-md-5 px-0 pe-md-5">
+      <div className="row  mx-auto mx-md-0 align-items-center text-center text-md-start">
+        <div className="col-4 col-md-5 px-0 pe-md-5">
           <hr
-            className="d-none d-md-block"
+            className="d-block d-md-block"
             style={{ height: '1px', borderColor: '#EBB713', opacity: '1' }}
           />
         </div>
-        <div className="col-12 col-md-2 text-center my-3 my-md-0">
+        <div className="col-4 col-md-2 text-center my-3 my-md-0">
           <img src={Logo} alt="Logo" className="img-fluid add_size_bottom_logo" />
         </div>
-        <div className="col-12 col-md-5 px-0 ps-md-5">
+        <div className="col-4 col-md-5 px-0 ps-md-5">
           <hr
-            className="d-none d-md-block"
+            className="d-block d-md-block"
             style={{ height: '1px', borderColor: '#EBB713', opacity: '1' }}
           />
         </div>
       </div>
   
       {/* Footer Main Content */}
-      <div className="row py-md-5 pb-0 pt-5 px-md-5 px-0">
-        <div className="col-12 col-md-4 px-4 mb-4 mb-md-0 ps-md-5 ps-3">
+      <div className="row py-md-5 pb-0 pt-3 px-md-5 px-0">
+        <div className="col-12 col-md-4 px-4 mb-5 mb-md-0 ps-md-5 ps-3">
           <h4 className="text-warning ps-md-5 ps-0" style={{ fontSize: '24px' }}>About us</h4>
           <p className="ps-md-5 ps-0"style={{ fontSize: '16px' }}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore...
@@ -47,7 +47,7 @@ const Footer = () => {
           </div>
         </div>
   
-        <div className="col-6 col-md-2 mb-4 mb-md-0 ps-md-5">
+        <div className="col-12 col-md-2 mb-4 mb-md-0 ps-md-5">
           <h4 className="text-warning pb-2" style={{ fontSize: '24px' }}>Quick Links</h4>
           <ul className="list-unstyled">
             <li className="pb-2">Home</li>
@@ -57,7 +57,7 @@ const Footer = () => {
           </ul>
         </div>
   
-        <div className="col-6 col-md-2 mb-4 mb-md-0 ps-md-5">
+        <div className="col-12 col-md-2 mb-4 mb-md-0 ps-md-5">
           <h4 className="text-warning pb-2" style={{ fontSize: '24px' }}>Our Collections</h4>
           <ul className="list-unstyled">
             <li className="pb-2">Plata</li>
