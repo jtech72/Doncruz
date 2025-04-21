@@ -45,7 +45,7 @@ function App() {
                       </p>
                     </div>
                     <div className="col-md-4 col-12"></div>
-                    <div className="col-md-4 col-12 d-flex align-items-center flex-column justify-content-between">
+                    <div className="col-md-4 col-12 d-flex align-items-center flex-column justify-content-between ps-md-5 ps-0">
                       <div className="social-icons pb-5">
                         <img src={facebook} className="add_logo_size_icon me-3" alt="facebook" />
                         <img src={instagram} className="add_logo_size_icon me-3" alt="instagram" />
