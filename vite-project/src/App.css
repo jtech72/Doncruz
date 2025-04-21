@@ -184,4 +184,18 @@ span.add_color_font{
     .add_bg_img_design{
         margin-top: -7px !important;
     }
+    #navbarContent {
+        background-color: white;
+        padding: 1rem;
+        text-align: center;
+      }
+    
+      #navbarContent .nav-link {
+        padding: 0.5rem 0;
+      }
+    
+      #navbarContent .navbar-nav {
+        flex-direction: column !important;
+        align-items: center !important;
+      }
   }

@@ -146,15 +146,35 @@ function App() {
               <h5 className="tequila_font_size mb-0">Tequila</h5>
             </div>
             <div className="col-md-9 col-12 mx-auto pb-5">
-              <div className="row d-flex align-items-center justify-content-center mt-4 mb-5">
-                <div className="col-md-6 col-12 border-md-end border-0 py-1 border border-dark border-top-0 border-start-0 border-bottom-0">
+              <div className="row d-md-flex d-none align-items-center  justify-content-center mt-4 mb-5">
+                <div className="col-md-6 col-12 border-md-end  py-1 border border-dark border-top-0 border-start-0 border-bottom-0">
                   <p className="add_font_para_second text-end pe-3 mb-0">
-                    From the careful jima to the meticulous distillation, every step in the creation of tequila is infused with passion and dedication. This is why we believe tequila should be revered as a high-end spirit.
+                    From the careful jima to the meticulous distillation, every step in the<br/>
+                     creation of tequila is infused with passion and dedication. This is why<br/>
+                      we believe tequila should be revered as a high-end spirit.
                   </p>
                 </div>
                 <div className="col-md-6 col-12 py-1">
                   <p className="add_font_para_second text-start ps-3 mb-0">
-                    To create a truly exceptional tequila, it takes time, love, commitment, and an exquisite recipe. And when this is achieved, only a bottle of equal elegance will suffice — something that exudes strength, importance, and is worthy of the precious liquid it holds.
+                    To create a truly exceptional tequila, it takes time, love, commitment, and an exquisite<br/>
+                     recipe. And when this is achieved, only a bottle of equal elegance will suffice — something <br/>
+                     that exudes strength, importance, and is worthy of the precious liquid it holds.
+                  </p>
+                </div>
+              </div>
+              <div className="row mx-auto d-block d-md-none align-items-center justify-content-center mt-4 mb-5">
+                <div className="col-md-6 col-12 py-1">
+                  <p className="add_font_para_second text-end pe-3 mb-0">
+                    From the careful jima to the meticulous distillation, every step in the
+                     creation of tequila is infused with passion and dedication. This is why
+                      we believe tequila should be revered as a high-end spirit.
+                  </p>
+                </div>
+                <div className="col-md-6 col-12 py-1">
+                  <p className="add_font_para_second text-start ps-3 mb-0">
+                    To create a truly exceptional tequila, it takes time, love, commitment, and an exquisite
+                     recipe. And when this is achieved, only a bottle of equal elegance will suffice — something 
+                     that exudes strength, importance, and is worthy of the precious liquid it holds.
                   </p>
                 </div>
               </div>
