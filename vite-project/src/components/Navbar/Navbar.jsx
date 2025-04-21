@@ -62,7 +62,7 @@ const Navbar = () => {
           </div>
 
           {/* Center logo (hidden in mobile and shown above) */}
-          <div className="col-md-4 text-center ps-md-5 ps-0 d-none d-md-block">
+          <div className="col-md-4 text-center ps-md-0 ps-0 d-none d-md-block">
             <a className="nav-link text-dark active" href="#">
               <div className="navbar-brand mx-auto">
                 <img src={logo} alt="Logo" className="add_logo_size" />
