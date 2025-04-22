@@ -67,7 +67,7 @@ span.add_color_font{
     height: 46rem;
 }
 .add_top_banner_img {
-    background: url('./assets/bgbanner.png') no-repeat center center;
+    background: url('./assets/bgbanner.svg') no-repeat center center;
     background-size: cover;
     text-align: center;
     position: relative;
@@ -129,6 +129,7 @@ span.add_color_font{
     background-color: transparent;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
     /* z-index: -111; */
+    height: 9rem;
   }
   .fade.custom-modal.modal.show {
     z-index: 999999;
@@ -145,7 +146,7 @@ span.add_color_font{
 
   /* contact us form css */
   .contact-section {
-    background-image: url('../src/assets/contactimg.png'); /* Replace with your tequila bottle image path */
+    background-image: url('../src/assets/contactimg.svg'); /* Replace with your tequila bottle image path */
     background-size: cover;
     /* background-position: center; */
     height: 90vh;
@@ -233,7 +234,7 @@ span.add_color_font{
     background-color: #dcb46c;
   }
   .bottom-overlay {
-    bottom: 5rem;
+    bottom: 3rem;
     left: 0;
     right: 0;
   }
@@ -246,7 +247,7 @@ span.add_color_font{
         /* background-size: cover; */
         text-align: center;
         /* position: relative; */
-        height: 53vh;
+        height: 56vh;
       }
     .top_img_dan {
         width: 18rem;
@@ -261,6 +262,10 @@ span.add_color_font{
     .add_Font_heading {
         font-size: 18px;
         line-height: 22px;
+    }
+    .navbar-custom {
+    
+      height: 5rem;
     }
     .add_para_font {
         font-size: 12px;
@@ -319,3 +324,174 @@ span.add_color_font{
             height: 51px;
         }
   }
+  .entry-title, .page-title {
+    /* margin-bottom: 1.5rem; */
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    font-weight: 800;
+ 
+}
+.add_font_size{
+  font-size: 16px;
+  line-height: 22px;
+}
+.add_font_heading_privacy {
+  font-size: 20px;
+  line-height: 24px;
+}
+.managing_cookies_heading {
+  font-size: 20px;
+  line-height: 24px;
+}
+/* .cubecontainer {
+  height: 165px;
+  width: 200px;
+  position: absolute;
+  perspective:100%; 
+ left: 0;
+ right: 0;
+ margin: auto;
+  overflow: hidden; 
+}
+
+#cube{
+ width: 200px;
+  height: 200px;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d; 
+  -ms-transform-style: preserve-3d; 
+  -o-transform-style: preserve-3d; 
+  transform-style: preserve-3d; 
+  margin-top: 25%; 
+  margin-left: 15%;
+ transform: rotateX( 30deg ) rotateY(45deg);
+}
+#cube figure {
+  margin: 0; 
+  padding: 0px; 
+  width: 101px;
+  height: 50px;
+  display: block;
+  position: absolute; 
+  -webkit-transform:translateZ( 100px ); 
+  -moz-transform:translateZ( 100px ); 
+  -ms-transform:translateZ( 100px ); 
+  -o-transform:translateZ( 100px ); 
+  transform:translateZ( 100px ); 
+  border: 10px solid black;
+ border-radius: 1px;
+}
+#cube:hover >figure{
+ border: 10px solid white;
+ animation: grow 3s infinite;
+
+}
+
+.cubecontainer:hover{
+ background-color: black;
+}
+
+#cube .front { 
+ animation: grow 3s;
+  -webkit-transform: rotateY( 0deg ) translateZ( 55px ); 
+  -moz-transform: rotateY( 0deg ) translateZ( 55px ); 
+  -ms-transform: rotateY( 0deg ) translateZ( 55px ); 
+  -o-transform: rotateY( 0deg ) translateZ( 55px ); 
+  transform: rotateY( 0deg ) translateZ( 60px ); 
+}
+
+#cube .back { 
+ animation: grow 3s;
+  -webkit-transform: rotateX( 180deg ) translateZ( 50px ); 
+  -moz-transform: rotateX( 180deg ) translateZ( 50px ); 
+  -ms-transform: rotateX( 180deg ) translateZ( 50px ); 
+  -o-transform: rotateX( 180deg ) translateZ( 50px ); 
+  transform: rotateX( 180deg ) translateZ( 60px );
+}
+
+#cube .right { 
+ animation: grow 3s;
+  -webkit-transform: rotateY( 90deg ) translateZ( 50px ); 
+  -moz-transform: rotateY( 90deg ) translateZ( 50px ); 
+  -ms-transform: rotateY( 90deg ) translateZ( 50px ); 
+  -o-transform: rotateY( 90deg ) translateZ( 50px ); 
+  transform: rotateY( 90deg ) translateZ( 60px );
+}
+
+
+#cube .left { 
+ animation: grow 3s;
+  -webkit-transform: rotateY( -90deg ) translateZ( 50px ); 
+  -moz-transform: rotateY( -90deg ) translateZ( 50px ); 
+  -ms-transform: rotateY( -90deg ) translateZ( 50px ); 
+  -o-transform: rotateY( -90deg ) translateZ( 50px ); 
+  transform: rotateY( -90deg ) translateZ( 60px );
+}
+
+@keyframes grow {
+ 0%   { width: 0; height: 0; }
+ 100% { width: 102px; height: 50px;}
+} */
+
+
+
+/* .animated-image {
+  position: relative;
+  width: 40px; 
+  height: 32px;
+}
+
+.frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: toggleFrames 1s infinite alternate;
+  opacity: 0;
+}
+
+.frame-1 {
+  animation-delay: 0s;
+}
+
+.frame-2 {
+  animation-delay: 0.5s;
+}
+
+@keyframes toggleFrames {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+} */
+
+
+/* global.css or add to Tailwind via @layer utilities */
+/* .glow {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease-in-out;
+} */
+
+.origin-center {
+  transform-origin: center center;
+}
+/* .zoom-in-zoom-out {
+  margin: 24px;
+  width: 80px;
+  height: 80px;
+  animation: zoom-in-zoom-in 2s ease-out forwards;
+}
+
+@keyframes zoom-in-zoom-in {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.5, 1.5);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+} */
+
