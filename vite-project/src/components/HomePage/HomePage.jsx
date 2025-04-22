@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 import Cenetrlogo from '../../assets/centerlogo.svg'
 import Menbottle from '../../assets/menbottleimg.svg'
@@ -13,9 +13,42 @@ import youtube from '../../assets/toutube.png'
 import instagram from '../../assets/insta.png'
 import facebook from '../../assets/facebook.png'
 import { Modal } from 'react-bootstrap'
+import { gsap } from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
 
+// Register the ScrollTrigger plugin
+gsap.registerPlugin(ScrollTrigger);
 
 const HomePage = ({setOpenModal, openModal}) => {
+
+  useEffect(() => {
+    // Animation for the logo
+    gsap.to('.add_logo_size', {
+      scrollTrigger: {
+        trigger: '.row[data-split]',
+        scrub: 0.6,
+        toggleActions: 'restart none none none',
+      },
+      opacity: 1,
+      scale: 1,
+      duration: 1,
+      ease: 'power1.out',
+    });
+
+    // Animation for the color lines
+    gsap.to('.add_color_line', {
+      scrollTrigger: {
+        trigger: '.row[data-split]',
+        scrub: 0.6,
+        toggleActions: 'restart none none none',
+      },
+      opacity: 1,
+      scaleX: 1,
+      duration: 1,
+      ease: 'power1.out',
+      stagger: 0.2,
+    });
+  }, []);
   return (
     <section>
     <div className="container-fluid">
@@ -46,7 +79,7 @@ const HomePage = ({setOpenModal, openModal}) => {
 
       <div className="row add_bg_img">
         <div className="col-12 px-3 px-md-0 pt-5 pb-4">
-          <div className="row mx-auto mx-md-0">
+          {/* <div className="row mx-auto mx-md-0">
             <div className="col-5 my-auto ps-0">
               <hr className="add_color_line" />
             </div>
@@ -56,7 +89,22 @@ const HomePage = ({setOpenModal, openModal}) => {
             <div className="col-5 my-auto pe-0">
               <hr className="add_color_line" />
             </div>
-          </div>
+          </div> */}
+          <div className="row mx-auto mx-md-0" data-split>
+      <div className="col-5 my-auto ps-0">
+        <hr className="add_color_line" />
+      </div>
+      <div className="col-2 d-flex align-items-center justify-content-center">
+        <img
+          className="add_logo_size"
+          alt="center logo"
+          src="/src/assets/centerlogo.svg?t=1745309685784"
+        />
+      </div>
+      <div className="col-5 my-auto pe-0">
+        <hr className="add_color_line" />
+      </div>
+    </div>
         </div>
         <div className="col-12 text-center">
           <h1 className="text-white add_Font_heading">

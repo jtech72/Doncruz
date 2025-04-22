@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import logo from '../../assets/logo.png'
 import vector1 from '../../assets/Vector1.png'
 import vector2 from '../../assets/Vector2.png'
 import vector3 from '../../assets/Vector3.png'
 import vector4 from '../../assets/Vector4.png'
 import { motion } from "framer-motion";
+import { gsap } from 'gsap';
 
 
 import { Link } from 'react-router-dom';
@@ -12,6 +13,75 @@ import { Link } from 'react-router-dom';
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+
+
+  const overlayRef = useRef(null);
+  const introLogoRef = useRef(null);
+  const navbarLogoRef = useRef(null);
+
+  const [showOverlay, setShowOverlay] = useState(true);
+
+  // const overlayRef = useRef(null);
+  // const introLogoRef = useRef(null);
+  // const navbarLogoRef = useRef(null);
+
+  // const [showOverlay, setShowOverlay] = useState(true);
+
+  useEffect(() => {
+    const runAnimation = () => {
+      if (!introLogoRef.current || !navbarLogoRef.current || !overlayRef.current) return;
+  
+      const targetRect = navbarLogoRef.current.getBoundingClientRect();
+  
+      const tl = gsap.timeline({
+        onComplete: () => {
+          setShowOverlay(false);
+          document.body.classList.add('intro-done');
+        },
+      });
+  
+      tl.fromTo(
+        introLogoRef.current,
+        {
+          scale: 0,
+          opacity: 0,
+          filter: 'blur(10px)',
+          rotation: 0,
+        },
+        {
+          scale: 1.2,
+          opacity: 1,
+          duration: 1.5,
+          ease: 'power4.out',
+          filter: 'blur(0px)',
+          rotation: 360, // 👈 ROTATION ADDED HERE
+        }
+      )
+        .to(introLogoRef.current, {
+          scale: 0.3,
+          x: targetRect.left + targetRect.width / 2 - window.innerWidth / 2,
+          y: targetRect.top + targetRect.height / 2 - window.innerHeight / 2,
+          duration: 1,
+          ease: 'power2.inOut',
+        })
+        .to(
+          overlayRef.current,
+          {
+            opacity: 0,
+            duration: 0.5,
+            onComplete: () => {
+              document.body.style.overflow = 'auto';
+            },
+          },
+          '-=0.4'
+        );
+    };
+  
+    const timeout = setTimeout(runAnimation, 100);
+  
+    return () => clearTimeout(timeout);
+  }, []);
+  
 
   const toggleNavbar = () => {
     setIsOpen(!isOpen);
@@ -69,9 +139,42 @@ const Navbar = () => {
               {/* Center logo (hidden in mobile and shown above) */}
               <div className="col-md-4 text-center ps-md-0 ps-0 d-none d-md-block">
                 <Link className="nav-link text-dark active" to="/">
-                  <div className="navbar-brand mx-auto">
+                  {/* <div className="navbar-brand mx-auto">
                     <img src={logo} alt="Logo" className="add_logo_size " />
-                  </div>
+                  </div> */}
+                  {showOverlay && (
+        <div
+          ref={overlayRef}
+          className="position-fixed top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center bg-white"
+          style={{ zIndex: 9999 }}
+        >
+          <img
+            ref={introLogoRef}
+            src={logo}
+            alt="Intro Logo"
+            className="position-absolute"
+            style={{
+              width: 120,
+              height: 120,
+              zIndex: 10000,
+            }}
+          />
+        </div>
+      )}
+
+      {/* {/ Navbar with logo /} */}
+      <nav className="navbar d-flex align-items-center justify-content-center px-4 py-2">
+        <div className="navbar-brand" ref={navbarLogoRef}>
+          <img src={logo} alt="Navbar Logo" style={{ width: 100 }} />
+        </div>
+      </nav>
+
+      {/* {/ Page Content /} */}
+      {/* <div className="container mt-5">
+        <h1>Welcome to My Website</h1>
+        <p>This is your content.</p>
+      </div> */}
+    {/* </> */}
                   {/* <section class="cubecontainer" >
 
 
