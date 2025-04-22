@@ -90,21 +90,23 @@ const HomePage = ({setOpenModal, openModal}) => {
               <hr className="add_color_line" />
             </div>
           </div> */}
-          <div className="row mx-auto mx-md-0" data-split>
-      <div className="col-5 my-auto ps-0">
-        <hr className="add_color_line" />
-      </div>
-      <div className="col-2 d-flex align-items-center justify-content-center">
-        <img
-          className="add_logo_size"
-          alt="center logo"
-          src="/src/assets/centerlogo.svg?t=1745309685784"
-        />
-      </div>
-      <div className="col-5 my-auto pe-0">
-        <hr className="add_color_line" />
-      </div>
-    </div>
+       <div className="row mx-auto mx-md-0" data-split>
+  <div className="col-5 my-auto ps-0">
+    <hr className="add_color_line" />
+  </div>
+  <div className="col-2 d-flex align-items-center justify-content-center">
+    <img
+      className="add_logo_size"
+      alt="center logo"
+      // src="/src/assets/centerlogo.svg?t=1745309685784"
+      src={Cenetrlogo}
+    />
+  </div>
+  <div className="col-5 my-auto pe-0">
+    <hr className="add_color_line" />
+  </div>
+</div>
+
         </div>
         <div className="col-12 text-center">
           <h1 className="text-white add_Font_heading">
