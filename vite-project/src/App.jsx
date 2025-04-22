@@ -14,7 +14,7 @@ function App() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setOpenModal(true);
-    }, 3000);
+    }, 5000);
 
     return () => clearTimeout(timer); // Cleanup
   }, []);
