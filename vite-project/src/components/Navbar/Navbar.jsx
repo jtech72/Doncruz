@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import logo from '../../assets/logo.png'
 import vector1 from '../../assets/Vector1.png'
 import vector2 from '../../assets/Vector2.png'
 import vector3 from '../../assets/Vector3.png'
 import vector4 from '../../assets/Vector4.png'
 import { motion } from "framer-motion";
-import 'animate.css';
-
+import { gsap } from 'gsap';
+import tequila from '../../assets/tequila.png'
 
 
 import { Link } from 'react-router-dom';
@@ -14,6 +14,75 @@ import { Link } from 'react-router-dom';
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+
+
+  const overlayRef = useRef(null);
+  const introLogoRef = useRef(null);
+  const navbarLogoRef = useRef(null);
+
+  const [showOverlay, setShowOverlay] = useState(true);
+
+  // const overlayRef = useRef(null);
+  // const introLogoRef = useRef(null);
+  // const navbarLogoRef = useRef(null);
+
+  // const [showOverlay, setShowOverlay] = useState(true);
+
+  useEffect(() => {
+    const runAnimation = () => {
+      if (!introLogoRef.current || !navbarLogoRef.current || !overlayRef.current) return;
+
+      const targetRect = navbarLogoRef.current.getBoundingClientRect();
+
+      const tl = gsap.timeline({
+        onComplete: () => {
+          setShowOverlay(false);
+          document.body.classList.add('intro-done');
+        },
+      });
+
+      tl.fromTo(
+        introLogoRef.current,
+        {
+          scale: 0,
+          opacity: 0,
+          filter: 'blur(10px)',
+          rotation: 0,
+        },
+        {
+          scale: 1.2,
+          opacity: 1,
+          duration: 1.5,
+          ease: 'power4.out',
+          filter: 'blur(0px)',
+          rotation: 360, // 👈 ROTATION ADDED HERE
+        }
+      )
+        .to(introLogoRef.current, {
+          scale: 0.3,
+          x: targetRect.left + targetRect.width / 2 - window.innerWidth / 2,
+          y: targetRect.top + targetRect.height / 2 - window.innerHeight / 2,
+          duration: 1,
+          ease: 'power2.inOut',
+        })
+        .to(
+          overlayRef.current,
+          {
+            opacity: 0,
+            duration: 0.5,
+            onComplete: () => {
+              document.body.style.overflow = 'auto';
+            },
+          },
+          '-=0.4'
+        );
+    };
+
+    const timeout = setTimeout(runAnimation, 100);
+
+    return () => clearTimeout(timeout);
+  }, []);
+
 
   const toggleNavbar = () => {
     setIsOpen(!isOpen);
@@ -41,7 +110,7 @@ const Navbar = () => {
             >
               <img src={logo} alt="Logo" className="add_logo_size" />
             </a>
-            <button
+            {/* <button
               className="navbar-toggler border-0 shadow-none ms-auto"
               type="button"
               onClick={toggleNavbar}
@@ -49,7 +118,7 @@ const Navbar = () => {
               aria-label="Toggle navigation"
             >
               <span className="navbar-toggler-icon"></span>
-            </button>
+            </button> */}
           </div>
 
 
@@ -70,64 +139,18 @@ const Navbar = () => {
 
               {/* Center logo (hidden in mobile and shown above) */}
               <div className="col-md-4 text-center ps-md-0 ps-0 d-none d-md-block">
-                <Link className="nav-link text-dark active" to="/">
-                  {/* <div className="navbar-brand mx-auto">
-                    <img src={logo} alt="Logo" className="add_logo_size " />
-                  </div> */}
-                  {/* <section class="cubecontainer" >
+                <Link className="nav-link text-dark active" to="/">{/* <div className="navbar-brand mx-auto">                    <img src={logo} alt="Logo" className="add_logo_size " />                  </div> */}                  {/* <section class="cubecontainer" >                      <div id="cube">                      <figure class="front"></figure>                      <figure class="back"></figure>                      <figure class="right"></figure>                      <figure class="left"></figure>                      <div class="acvtive"></div>                       </div>                  </section>  */}                  {/* <div class="animated-image">                  <img src={vector1} alt="Logo" className="add_logo_size" />                  <img src={vector2} alt="Logo" className="add_logo_size" />                  <img src={vector3} alt="Logo" className="add_logo_size" />                  <img src={vector4} alt="Logo" className="add_logo_size" />                   </div> */}                  {/* <div className="relative w-[160px] h-[160px] mx-auto mt-20">                    <motion.img src={vector1} alt="Top Left"                    {...commonProps} initial={{ x: -100, y: -100, opacity: 0 }}/>                    <motion.img src={vector2} alt="Top Right"                    {...commonProps} initial={{ x: 100, y: -100, opacity: 0 }}/>                   <motion.img src={vector3} alt="Bottom Left"                    {...commonProps} initial={{ x: -100, y: 100, opacity: 0 }}/>                   <motion.img src={vector4} alt="Bottom Right"                    {...commonProps} initial={{ x: 100, y: 100, opacity: 0 }}/>  </div> */}  
+                <div className='position-relative d-flex justify-content-center'>
+                   <div className='position-relative'><div className="animate__animated animate__fadeInDown rotate-360">
+                    <img src={vector1} alt="" /> </div><div className="animate__animated animate__fadeInDown animate__delay-1s rotate-360">
+                       <img src={vector2} alt="" /></div></div> <div className='d-flex justify-content-center position-absolute mt-2'>
+                        <div className="animate__animated animate__fadeInUp animate__delay-2s rotate-360"><img src={vector3} alt="" /></div>
+                        <div className="animate__animated animate__fadeInUp animate__delay-3s rotate-360"><img src={vector4} alt="" /></div></div></div>
 
-
-                    <div id="cube">
-                      <figure class="front"></figure>
-                      <figure class="back"></figure>
-                      <figure class="right"></figure>
-                      <figure class="left"></figure>
-                      <div class="acvtive"></div>
-
-
-
-                    </div>
-                  </section>  */}
-                  {/* <div class="animated-image">
-                  <img src={vector1} alt="Logo" className="add_logo_size" />
-                  <img src={vector2} alt="Logo" className="add_logo_size" />
-                  <img src={vector3} alt="Logo" className="add_logo_size" />
-                  <img src={vector4} alt="Logo" className="add_logo_size" />
-
-                  </div> */}
-                  {/* <div className="relative w-[160px] h-[160px] mx-auto mt-20">
-                    <motion.img src={vector1} alt="Top Left" 
-                    {...commonProps} initial={{ x: -100, y: -100, opacity: 0 }}/>
-                    <motion.img src={vector2} alt="Top Right"
-                    {...commonProps} initial={{ x: 100, y: -100, opacity: 0 }}/>
-                   <motion.img src={vector3} alt="Bottom Left"
-                    {...commonProps} initial={{ x: -100, y: 100, opacity: 0 }}/>
-                   <motion.img src={vector4} alt="Bottom Right"
-                    {...commonProps} initial={{ x: 100, y: 100, opacity: 0 }}/>  </div> */}
-
-
-<div className='position-relative d-flex justify-content-center'>
-  <div className='position-relative'>
-    <div className="animate__animated animate__fadeInDown rotate-360">
-      <img src={vector1} alt="" />
-    </div>
-    <div className="animate__animated animate__fadeInDown animate__delay-1s rotate-360">
-      <img src={vector2} alt="" />
-    </div>
-  </div>
-
-  <div className='d-flex justify-content-center position-absolute mt-2'>
-    <div className="animate__animated animate__fadeInUp animate__delay-2s rotate-360">
-      <img src={vector3} alt="" />
-    </div>
-    <div className="animate__animated animate__fadeInUp animate__delay-3s rotate-360">
-      <img src={vector4} alt="" />
-    </div>
-  </div>
-</div>
-
-
-                </Link>
+                        <div className='mt-2'>
+                          <img src={tequila } alt="" />
+                        </div>
+                      </Link>
               </div>
 
 
