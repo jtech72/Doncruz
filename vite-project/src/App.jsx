@@ -13,7 +13,7 @@ function App() {
   const [openModal, setOpenModal] = useState(false)
   useEffect(() => {
     const timer = setTimeout(() => {
-      setOpenModal(true);
+      setOpenModal(false);
     }, 5000);
 
     return () => clearTimeout(timer); // Cleanup

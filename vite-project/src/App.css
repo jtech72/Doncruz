@@ -2,6 +2,7 @@ body {
   overflow: auto!important;               /* still allows scrolling */
   scrollbar-width: none!important;        /* Firefox */
   -ms-overflow-style: none!important;     /* Internet Explorer 10+ */
+  font-family: 'Quikly-Rar', sans-serif !important;
 }
 
 body::-webkit-scrollbar {
@@ -18,8 +19,8 @@ body::-webkit-scrollbar {
 .add_Font_heading {
     font-size: 48px;
     line-height: 60px;
-    font-family: 'Playfair Display', serif;
-}
+    font-family: 'Quikly-Rar', sans-serif !important;
+  }
 .add_para_font{
     font-size: 20px;
     line-height: 32px;
@@ -32,13 +33,13 @@ hr.add_color_line{
 .add_second_heading{
     font-size: 36px;
     line-height: 48px;
-    font-family: 'Playfair Display', serif;
-}
+    font-family: 'Quikly-Rar', sans-serif !important;
+  }
 .add_font_para_second{
     font-size: 16px;
     line-height: 22px;
-    font-family: 'Inter', sans-serif;
-font-weight: 400;
+    font-family: 'Quikly-Rar', sans-serif !important;
+    font-weight: 400;
 }
 .add_line_width{
     width: 18rem;
@@ -56,9 +57,10 @@ span.add_color_font{
 .tequila_font_size {
     font-size: 80px;
     line-height: 70px;
-    font-family: 'Playfair Display', serif;
-    margin-top: -12px;
+        margin-top: -12px;
     letter-spacing: 5px;
+    font-family: 'Quikly-Rar', sans-serif !important;
+
 }
 .add_height_all{
     height: 25rem!important;
@@ -102,7 +104,7 @@ span.add_color_font{
     font-size: 1rem;
     max-width: 600px;
     color: #333;
-    font-family: "Roboto", sans-serif;
+    font-family: 'Quikly-Rar', sans-serif !important;
     font-weight: 400;
   }
   .social-icons a {
@@ -131,7 +133,7 @@ span.add_color_font{
 .add_font_size_nav{
     font-size: 14px!important;
     font-weight: 400!important;
-    font-family: "Roboto", sans-serif;
+    font-family: 'Quikly-Rar', sans-serif !important;
 
 }
 .navbar-custom {
@@ -178,7 +180,7 @@ span.add_color_font{
   
   .form-container h2 {
     font-size: 48px;
-    font-family: "Roboto", sans-serif;
+    font-family: 'Quikly-Rar', sans-serif !important;
 
   }
   
@@ -285,7 +287,7 @@ to {transform: rotate(360deg);}}
       height: 5rem;
     }
     .add_para_font {
-        font-size: 12px;
+        font-size: 11px;
         line-height: 16px;
     }
     .add_second_heading {
@@ -295,6 +297,7 @@ to {transform: rotate(360deg);}}
     .add_font_para_second {
         font-size: 12px;
         line-height: 18px;
+        text-align: justify;
     }
     .tequila_font_size {
         font-size: 50px;
@@ -311,6 +314,10 @@ to {transform: rotate(360deg);}}
         width: 8rem;
       
     }
+    span.add_color_font {
+      font-size: 15px;
+      color: #EBB713;
+    }  
     .add_bg_img_design{
         margin-top: -7px !important;
     }
@@ -353,7 +360,7 @@ to {transform: rotate(360deg);}}
   line-height: 22px;
 }
 .add_font_heading_privacy {
-  font-size: 20px;
+  font-size: 19px;
   line-height: 24px;
 }
 .managing_cookies_heading {
@@ -395,6 +402,7 @@ to {transform: rotate(360deg);}}
 body {
   overflow: hidden; 
   /* / prevent scroll during intro / */
+  
 }
 
 body.intro-done {
@@ -412,4 +420,18 @@ body.intro-done {
 
 .glow-animate {
   animation: glow 2.5s ease-in-out forwards;
+}
+.slick-prev:before, .slick-next:before{
+  display: none;
+}
+@font-face {
+  font-family: 'Quikly-Rar';
+  src: url('../public/fonts/Quirkily-Bold.otf') format('opentype'),
+       url('../public/fonts/Quirkily-BoldItalic.otf') format('opentype'),
+       url('../public/fonts/Quirkily-Italic.otf') format('opentype'),
+       url('../public/fonts/Quirkily-Light.otf') format('opentype'),
+       url('../public/fonts/Quirkily-LightItalic.otf') format('opentype'),
+       url('../public/fonts/Quirkily-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
 }
