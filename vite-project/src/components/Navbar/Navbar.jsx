@@ -5,6 +5,8 @@ import vector2 from '../../assets/Vector2.png'
 import vector3 from '../../assets/Vector3.png'
 import vector4 from '../../assets/Vector4.png'
 import { motion } from "framer-motion";
+import 'animate.css';
+
 
 
 import { Link } from 'react-router-dom';
@@ -69,9 +71,9 @@ const Navbar = () => {
               {/* Center logo (hidden in mobile and shown above) */}
               <div className="col-md-4 text-center ps-md-0 ps-0 d-none d-md-block">
                 <Link className="nav-link text-dark active" to="/">
-                  <div className="navbar-brand mx-auto">
+                  {/* <div className="navbar-brand mx-auto">
                     <img src={logo} alt="Logo" className="add_logo_size " />
-                  </div>
+                  </div> */}
                   {/* <section class="cubecontainer" >
 
 
@@ -85,7 +87,7 @@ const Navbar = () => {
 
 
                     </div>
-                  </section> */}
+                  </section>  */}
                   {/* <div class="animated-image">
                   <img src={vector1} alt="Logo" className="add_logo_size" />
                   <img src={vector2} alt="Logo" className="add_logo_size" />
@@ -102,10 +104,33 @@ const Navbar = () => {
                     {...commonProps} initial={{ x: -100, y: 100, opacity: 0 }}/>
                    <motion.img src={vector4} alt="Bottom Right"
                     {...commonProps} initial={{ x: 100, y: 100, opacity: 0 }}/>  </div> */}
+
+
+<div className='position-relative d-flex justify-content-center'>
+  <div className='position-relative'>
+    <div className="animate__animated animate__fadeInDown rotate-360">
+      <img src={vector1} alt="" />
+    </div>
+    <div className="animate__animated animate__fadeInDown animate__delay-1s rotate-360">
+      <img src={vector2} alt="" />
+    </div>
+  </div>
+
+  <div className='d-flex justify-content-center position-absolute mt-2'>
+    <div className="animate__animated animate__fadeInUp animate__delay-2s rotate-360">
+      <img src={vector3} alt="" />
+    </div>
+    <div className="animate__animated animate__fadeInUp animate__delay-3s rotate-360">
+      <img src={vector4} alt="" />
+    </div>
+  </div>
+</div>
+
+
                 </Link>
               </div>
 
-              {/* Right links */}
+
               <div className="col-md-4">
                 <ul className="navbar-nav d-flex flex-md-row flex-column justify-content-end pe-md-5 pe-0">
                   <li className="nav-item ps-md-3 pe-md-5 pe-0">
