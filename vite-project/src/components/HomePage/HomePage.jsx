@@ -84,7 +84,7 @@ const HomePage = ({ setOpenModal, openModal }) => {
           <div className="container pt-5">
             <div className="row pt-5">
               <div className="col-md-10 col-12 mx-auto pt-md-5 pt-0 position-absolute bottom-overlay">
-                <div className="row mx-auto">
+                <div className="row mx-auto d-md-flex d-none">
                   <div className="col-md-4 col-12 pt-5 pt-md-0 d-flex align-items-center flex-column justify-content-between">
                     <p className="description pb-md-5 pb-4 pt-md-0 pt-4 mb-0 text-md-start text-center">
                       From the careful jima to the meticulous distillation, every step in the creation of tequila is infused with passion and dedication.
@@ -176,14 +176,14 @@ const HomePage = ({ setOpenModal, openModal }) => {
   </div>
 </AnimateOnScroll>
 
-          <div className="col-12 text-center pb-md-5 pb-0 mb-4 mt-3">
+          <div className="col-12 text-center pb-md-4 pb-0 mb-4 mt-4">
             <p className="text-white add_para_font">
               Don Cruz Platinium — The Legacy of Enric Ramon in Every Sip
             </p>
           </div>
         </div>
 
-        <div className="row">
+        {/* <div className="row">
           <div className="col-md-7 col-12 ps-0">
             <img src={Menbottle} className="w-100 h-100" alt="" />
           </div>
@@ -214,15 +214,15 @@ const HomePage = ({ setOpenModal, openModal }) => {
               </div>
             </div>
           </div>
-        </div>
-{/* <div className="row">
-  <div className="col-md-7 col-12 ps-0" data-aos="fade-right" data-aos-duration="1000">
+        </div> */}
+<div className="row">
+  <div className="col-md-7 col-12 ps-0" data-aos="fade-up" data-aos-duration="1000">
     <img src={Menbottle} className="w-100 h-100" alt="Men Bottle" />
   </div>
 
   <div className="col-md-5 mt-4 mt-md-0 col-12 pe-md-5 pe-0 d-flex align-items-end justify-content-end mb-md-5 mb-0 pb-5">
     <div className="row pe-md-5 pe-2 mx-auto">
-      <div className="col-12 mb-3 d-flex align-items-center justify-content-md-end justify-content-center pe-md-5 pe-0 ps-0">
+      <div className="col-12 mb-3 d-flex align-items-center justify-content-md-end justify-content-center pe-md-5 pe-0 ps-0" data-aos="fade-up" data-aos-duration="1000">
         <img src={Donlogo} className="add_img_logo_size" alt="Don Logo" />
       </div>
       
@@ -233,25 +233,36 @@ const HomePage = ({ setOpenModal, openModal }) => {
       </div>
 
       <div className="col-12 text-md-end text-center mt-3 pe-md-5" data-aos="fade-up" data-aos-duration="1000">
-        <p className="text-md-end text-center add_font_para_second">
+        <p className="text-md-end text-justify add_font_para_second">
           Every drop of Doncruz Platinum tells a story—one of tradition, precision,
           and passion. From the expert jima of the agave to the meticulous art of
           distillation, this is more than just a spirit—it’s an experience.
         </p>
       </div>
 
-      <div className="col-12 mt-md-5 mt-0 d-flex align-items-center justify-content-md-end justify-content-center pe-md-5 pe-0">
-        <AnimateOnScroll animationType="fade-right" delay={0.2}>
+      {/* <div className="col-12 mt-md-5 mt-0 d-flex align-items-center justify-content-md-end justify-content-center pe-md-5 pe-0">
+        <div data-aos="fade-up" data-aos-delay="200">
           <span className="add_color_font d-flex align-items-end justify-content-md-end justify-content-center">
             <hr className="me-3 add_line_width" /> Plata
           </span>
-        </AnimateOnScroll>
+        </div>
+      </div> */}
+      <div className="col-12 mt-md-5 mt-0 d-flex align-items-center justify-content-md-end justify-content-center ps-md-5 pe-0">
+        <div className="add_color_font d-flex align-items-center justify-content-end">
+          <AnimateOnScroll animationType="fade-up" delay={0.1}>
+            <span className="add_color_font">Plata</span>
+          </AnimateOnScroll>
+          <AnimateOnScroll animationType="fade-up" delay={0.2}>
+            <hr className="ms-3 add_line_width" />
+          </AnimateOnScroll>
+        </div>
       </div>
     </div>
   </div>
-</div> */}
+</div>
 
-        <div className="row">
+
+        {/* <div className="row">
           <div className="col-md-7 col-12 pe-0 order-1 order-md-2">
             <img src={Anejob} className="w-100 h-100" alt="" />
           </div>
@@ -285,15 +296,15 @@ const HomePage = ({ setOpenModal, openModal }) => {
               </div>
             </div>
           </div>
-        </div>
-        {/* <div className="row">
-  <div className="col-md-7 col-12 pe-0 order-1 order-md-2" data-aos="fade-left" data-aos-duration="1000">
+        </div> */}
+  <div className="row">
+  <div className="col-md-7 col-12 pe-0 order-1 order-md-2" data-aos="fade-up" data-aos-duration="1000">
     <img src={Anejob} className="w-100 h-100" alt="Añejo Bottle" />
   </div>
 
   <div className="col-md-5 col-12 ps-md-5 ps-0 d-flex align-items-end justify-content-end mb-md-5 mb-0 pt-4 pt-md-0 pb-5 order-2 order-md-1">
     <div className="row ps-md-5 ps-0">
-      <div className="col-12 mb-3 d-flex align-items-center justify-content-md-start justify-content-center ps-md-5 ps-5">
+      <div className="col-12 mb-3 d-flex align-items-center justify-content-md-start justify-content-center ps-md-5 ps-5" data-aos="fade-up" data-aos-duration="1000">
         <img src={Donlogo} className="add_img_logo_size" alt="Don Logo" />
       </div>
 
@@ -303,7 +314,7 @@ const HomePage = ({ setOpenModal, openModal }) => {
         </h3>
       </div>
 
-      <div className="col-12 text-md-start text-center mt-3 ps-md-5 ps-4" data-aos="fade-up" data-aos-duration="1000">
+      <div className="col-12 text-md-start text-justify mt-3 ps-md-5 ps-4" data-aos="fade-up" data-aos-duration="1000">
         <p className="add_font_para_second">
           At Tequila don cruz Platinum, every bottle is the perfect fusion of time-
           honored tradition and cutting-edge innovation. While modern techniques
@@ -314,17 +325,18 @@ const HomePage = ({ setOpenModal, openModal }) => {
 
       <div className="col-12 mt-md-5 mt-0 d-flex align-items-center justify-content-md-start justify-content-center ps-md-5 ps-4">
         <div className="add_color_font d-flex align-items-center justify-content-start">
-          <AnimateOnScroll animationType="fade-left" delay={0.1}>
+          <AnimateOnScroll animationType="fade-up" delay={0.1}>
             <span className="add_color_font">Añejo</span>
           </AnimateOnScroll>
-          <AnimateOnScroll animationType="fade-right" delay={0.2}>
+          <AnimateOnScroll animationType="fade-up" delay={0.2}>
             <hr className="ms-3 add_line_width" />
           </AnimateOnScroll>
         </div>
       </div>
     </div>
   </div>
-</div> */}
+</div>
+
 
 
 
@@ -405,7 +417,7 @@ const HomePage = ({ setOpenModal, openModal }) => {
     data-aos-duration="1000" // Duration (in milliseconds)
     data-aos-once="false" // Allow animation to trigger on scroll multiple times
   >
-    <p className="add_font_para_second text-center pe-0 mb-0">
+    <p className="add_font_para_second text-md-center text-justify pe-0 mb-0">
       From the careful jima to the meticulous distillation, every step in the
       creation of tequila is infused with passion and dedication. This is why
       we believe tequila should be revered as a high-end spirit.
@@ -418,7 +430,7 @@ const HomePage = ({ setOpenModal, openModal }) => {
     data-aos-duration="1000" // Duration
     data-aos-once="false" // Allow animation to trigger on scroll multiple times
   >
-    <p className="add_font_para_second text-center ps-0 mb-0">
+    <p className="add_font_para_second text-md-center text-justify ps-0 mb-0">
       To create a truly exceptional tequila, it takes time, love, commitment, and an exquisite
       recipe. And when this is achieved, only a bottle of equal elegance will suffice — something
       that exudes strength, importance, and is worthy of the precious liquid it holds.
@@ -440,7 +452,7 @@ const HomePage = ({ setOpenModal, openModal }) => {
               <img src={Bootglass} className="img-fluid add_height_all rounded" alt="Image 4" />
             </div>
           </div> */}
-            <div className="row g-3">
+            <div className="row g-3 ">
               <div className="col-12 col-md-3 d-flex align-items-center justify-content-center">
                 <AnimateOnScroll delay={0}>
                   <img src={Lightbott} className="img-fluid add_height_all rounded" alt="Image 1" />
@@ -462,9 +474,11 @@ const HomePage = ({ setOpenModal, openModal }) => {
                 </AnimateOnScroll>
               </div>
             </div>
+            
+            
           </div>
         </div>
-        <div className="row mx-auto mx-md-0 mt-md-5 pt-md-5 pt-0 mt-0">
+        {/* <div className="row mx-auto mx-md-0 mt-md-5 pt-md-5 pt-0 mt-0">
           <div className="col-md-5 col-12 order-1 ps-0 order-md-2 pe-md-5 pe-0 d-flex align-items-center justify-content-center mb-md-5 mb-0 pb-md-5 pb-0">
             <div className="row px-md-5 px-0 mt-md-0 mt-5 mx-auto">
               <div className="col-12 text-md-start text-center">
@@ -492,7 +506,36 @@ const HomePage = ({ setOpenModal, openModal }) => {
           <div className="col-md-7 col-12 order-2 order-md-1 ps-0 mb-md-5 mb-0">
             <img src={Twoperson} className="w-100 h-100" alt="" />
           </div>
-        </div>
+        </div> */}
+<div className="row mx-auto mx-md-0 mt-md-5 pt-md-5 pt-0 mt-0">
+  <div className="col-md-5 col-12 order-1 ps-0 order-md-2 pe-md-5 pe-0 d-flex align-items-center justify-content-center mb-md-5 mb-0 pb-md-5 pb-0">
+    <div className="row px-md-5 px-0 mt-md-0 mt-5 mx-auto">
+      <div className="col-12 text-md-start text-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+        <h3 className="add_second_heading">
+          From Farm to Bottle – Crafting <br /> Perfection from the Finest Agave
+        </h3>
+      </div>
+      <div className="col-12 text-md-start text-center mt-md-3 mt-1" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+        <p className="add_font_para_second">
+          Hand-selected from the heart of the fields, only the best
+          Blue Weber Agave makes its way into Tequiladoncruz Platinum. Every plant is carefully nurtured, harvested at
+          peak maturity, and expertly trimmed to extract the richest flavors.
+        </p>
+      </div>
+      <div className="col-12 text-md-start text-center mt-md-3 mt-1" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+        <p className="add_font_para_second">
+          With generations of expertise, our jimadores ensure that
+          only the purest, most flavorful piñas begin the journey to
+          becoming an exceptional tequila.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div className="col-md-7 col-12 order-2 order-md-1 ps-0 mb-md-5 mb-0" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+    <img src={Twoperson} className="w-100 h-100" alt="" />
+  </div>
+</div>
 
       </div>
       <Modal

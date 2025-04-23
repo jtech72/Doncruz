@@ -47,13 +47,13 @@ const Footer = () => {
 
   {/* {/ Center Logo /} */}
   <div className="col-4 col-md-2 text-center my-3 my-md-0">
-    <AnimateOnScroll animationType="zoom" delay={0.3}>
+    {/* <AnimateOnScroll animationType="zoom" delay={0.3}> */}
       <img
         src={Logo}
         alt="Logo"
         className="img-fluid add_size_bottom_logo"
       />
-    </AnimateOnScroll>
+    {/* </AnimateOnScroll> */}
   </div>
 
   {/* {/ Right Line /} */}

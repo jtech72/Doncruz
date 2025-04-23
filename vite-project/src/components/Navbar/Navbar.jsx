@@ -110,7 +110,7 @@ const Navbar = () => {
             >
               <img src={logo} alt="Logo" className="add_logo_size" />
             </a>
-            <button
+            {/* <button
               className="navbar-toggler border-0 shadow-none ms-auto"
               type="button"
               onClick={toggleNavbar}
@@ -118,7 +118,7 @@ const Navbar = () => {
               aria-label="Toggle navigation"
             >
               <span className="navbar-toggler-icon"></span>
-            </button>
+            </button> */}
           </div>
 
 
