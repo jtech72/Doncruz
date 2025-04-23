@@ -142,6 +142,7 @@ span.add_color_font{
     /* z-index: -111; */
     height: 9rem;
   }
+  
   .fade.custom-modal.modal.show {
     z-index: 999999;
 }
