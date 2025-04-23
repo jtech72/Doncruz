@@ -9,13 +9,14 @@ import Phone from '../../../src/assets/Phone.png'
 import Mail from '../../../src/assets/Mail.png'
 import './Footer.css'
 import { Link } from 'react-router-dom'
+import AnimateOnScroll from '../HomePage/AnimateOnScroll'
 
 const Footer = () => {
   return (
     <footer className="bg-black text-white py-md-5 pb-md-3 pt-3 pb-3 overflow-x-hidden mt-5">
       <div className="container-fluid px-3 px-md-0">
         {/* Divider and Logo Section */}
-        <div className="row  mx-auto mx-md-0 align-items-center text-center text-md-start">
+        {/* <div className="row  mx-auto mx-md-0 align-items-center text-center text-md-start">
           <div className="col-4 col-md-5 px-0 pe-md-5">
             <hr
               className="d-block d-md-block"
@@ -31,7 +32,41 @@ const Footer = () => {
               style={{ height: '1px', borderColor: '#EBB713', opacity: '1' }}
             />
           </div>
-        </div>
+        </div> */}
+        <div className="row mx-auto mx-md-0 align-items-center text-center text-md-start">
+  
+  {/* {/ Left Line /} */}
+  <div className="col-4 col-md-5 px-0 pe-md-5">
+    <AnimateOnScroll animationType="fade-left" delay={0.1}>
+      <hr
+        className="d-block d-md-block"
+        style={{ height: '1px', borderColor: '#EBB713', opacity: '1' }}
+      />
+    </AnimateOnScroll>
+  </div>
+
+  {/* {/ Center Logo /} */}
+  <div className="col-4 col-md-2 text-center my-3 my-md-0">
+    <AnimateOnScroll animationType="zoom" delay={0.3}>
+      <img
+        src={Logo}
+        alt="Logo"
+        className="img-fluid add_size_bottom_logo"
+      />
+    </AnimateOnScroll>
+  </div>
+
+  {/* {/ Right Line /} */}
+  <div className="col-4 col-md-5 px-0 ps-md-5">
+    <AnimateOnScroll animationType="fade-right" delay={0.2}>
+      <hr
+        className="d-block d-md-block"
+        style={{ height: '1px', borderColor: '#EBB713', opacity: '1' }}
+      />
+    </AnimateOnScroll>
+  </div>
+
+</div>
 
         {/* Footer Main Content */}
         <div className="row py-md-5 pb-0 pt-3 px-md-5 px-0">

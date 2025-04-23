@@ -6,6 +6,7 @@ import vector3 from '../../assets/Vector3.png'
 import vector4 from '../../assets/Vector4.png'
 import { motion } from "framer-motion";
 import { gsap } from 'gsap';
+import tequila from '../../assets/tequila.png'
 
 
 import { Link } from 'react-router-dom';
@@ -30,16 +31,16 @@ const Navbar = () => {
   useEffect(() => {
     const runAnimation = () => {
       if (!introLogoRef.current || !navbarLogoRef.current || !overlayRef.current) return;
-  
+
       const targetRect = navbarLogoRef.current.getBoundingClientRect();
-  
+
       const tl = gsap.timeline({
         onComplete: () => {
           setShowOverlay(false);
           document.body.classList.add('intro-done');
         },
       });
-  
+
       tl.fromTo(
         introLogoRef.current,
         {
@@ -76,12 +77,12 @@ const Navbar = () => {
           '-=0.4'
         );
     };
-  
+
     const timeout = setTimeout(runAnimation, 100);
-  
+
     return () => clearTimeout(timeout);
   }, []);
-  
+
 
   const toggleNavbar = () => {
     setIsOpen(!isOpen);
@@ -138,74 +139,18 @@ const Navbar = () => {
 
               {/* Center logo (hidden in mobile and shown above) */}
               <div className="col-md-4 text-center ps-md-0 ps-0 d-none d-md-block">
-                <Link className="nav-link text-dark active" to="/">
-                  {/* <div className="navbar-brand mx-auto">
-                    <img src={logo} alt="Logo" className="add_logo_size " />
-                  </div> */}
-                  {showOverlay && (
-        <div
-          ref={overlayRef}
-          className="position-fixed top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center bg-white"
-          style={{ zIndex: 9999 }}
-        >
-          <img
-            ref={introLogoRef}
-            src={logo}
-            alt="Intro Logo"
-            className="position-absolute"
-            style={{
-              width: 120,
-              height: 120,
-              zIndex: 10000,
-            }}
-          />
-        </div>
-      )}
+                <Link className="nav-link text-dark active" to="/">{/* <div className="navbar-brand mx-auto">                    <img src={logo} alt="Logo" className="add_logo_size " />                  </div> */}                  {/* <section class="cubecontainer" >                      <div id="cube">                      <figure class="front"></figure>                      <figure class="back"></figure>                      <figure class="right"></figure>                      <figure class="left"></figure>                      <div class="acvtive"></div>                       </div>                  </section>  */}                  {/* <div class="animated-image">                  <img src={vector1} alt="Logo" className="add_logo_size" />                  <img src={vector2} alt="Logo" className="add_logo_size" />                  <img src={vector3} alt="Logo" className="add_logo_size" />                  <img src={vector4} alt="Logo" className="add_logo_size" />                   </div> */}                  {/* <div className="relative w-[160px] h-[160px] mx-auto mt-20">                    <motion.img src={vector1} alt="Top Left"                    {...commonProps} initial={{ x: -100, y: -100, opacity: 0 }}/>                    <motion.img src={vector2} alt="Top Right"                    {...commonProps} initial={{ x: 100, y: -100, opacity: 0 }}/>                   <motion.img src={vector3} alt="Bottom Left"                    {...commonProps} initial={{ x: -100, y: 100, opacity: 0 }}/>                   <motion.img src={vector4} alt="Bottom Right"                    {...commonProps} initial={{ x: 100, y: 100, opacity: 0 }}/>  </div> */}  
+                <div className='position-relative d-flex justify-content-center'>
+                   <div className='position-relative'><div className="animate__animated animate__fadeInDown rotate-360">
+                    <img src={vector1} alt="" /> </div><div className="animate__animated animate__fadeInDown animate__delay-1s rotate-360">
+                       <img src={vector2} alt="" /></div></div> <div className='d-flex justify-content-center position-absolute mt-2'>
+                        <div className="animate__animated animate__fadeInUp animate__delay-2s rotate-360"><img src={vector3} alt="" /></div>
+                        <div className="animate__animated animate__fadeInUp animate__delay-3s rotate-360"><img src={vector4} alt="" /></div></div></div>
 
-      {/* {/ Navbar with logo /} */}
-      <nav className="navbar d-flex align-items-center justify-content-center px-4 py-2">
-        <div className="navbar-brand" ref={navbarLogoRef}>
-          <img src={logo} alt="Navbar Logo" style={{ width: 100 }} />
-        </div>
-      </nav>
-
-      {/* {/ Page Content /} */}
-      {/* <div className="container mt-5">
-        <h1>Welcome to My Website</h1>
-        <p>This is your content.</p>
-      </div> */}
-    {/* </> */}
-                  {/* <section class="cubecontainer" >
-
-
-                    <div id="cube">
-                      <figure class="front"></figure>
-                      <figure class="back"></figure>
-                      <figure class="right"></figure>
-                      <figure class="left"></figure>
-                      <div class="acvtive"></div>
-
-
-
-                    </div>
-                  </section> */}
-                  {/* <div class="animated-image">
-                  <img src={vector1} alt="Logo" className="add_logo_size" />
-                  <img src={vector2} alt="Logo" className="add_logo_size" />
-                  <img src={vector3} alt="Logo" className="add_logo_size" />
-                  <img src={vector4} alt="Logo" className="add_logo_size" />
-
-                  </div> */}
-                  {/* <div className="relative w-[160px] h-[160px] mx-auto mt-20">
-                    <motion.img src={vector1} alt="Top Left" 
-                    {...commonProps} initial={{ x: -100, y: -100, opacity: 0 }}/>
-                    <motion.img src={vector2} alt="Top Right"
-                    {...commonProps} initial={{ x: 100, y: -100, opacity: 0 }}/>
-                   <motion.img src={vector3} alt="Bottom Left"
-                    {...commonProps} initial={{ x: -100, y: 100, opacity: 0 }}/>
-                   <motion.img src={vector4} alt="Bottom Right"
-                    {...commonProps} initial={{ x: 100, y: 100, opacity: 0 }}/>  </div> */}
-                </Link>
+                        <div className='mt-2'>
+                          <img src={tequila } alt="" />
+                        </div>
+                      </Link>
               </div>
 
               {/* Right links */}

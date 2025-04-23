@@ -247,6 +247,14 @@ span.add_color_font{
     left: 0;
     right: 0;
   }
+
+
+
+@keyframes rotate360 {
+  from {transform: rotate(0deg); }
+to {transform: rotate(360deg);}}
+.rotate-360 {animation: rotate360 2s linear !important; }
+
   @media screen and (min-width: 360px) and (max-width: 768px) {
     .add_right_margin {
         margin-right: 0rem;
@@ -391,4 +399,17 @@ body {
 
 body.intro-done {
   overflow: auto;
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #e91e63, 0 0 20px #e91e63, 0 0 25px #e91e63;
+  }
+  100% {
+    text-shadow: 0 0 10px #fff, 0 0 20px #e91e63, 0 0 30px #e91e63, 0 0 40px #e91e63, 0 0 50px #e91e63;
+  }
+}
+
+.glow-animate {
+  animation: glow 2.5s ease-in-out forwards;
 }
