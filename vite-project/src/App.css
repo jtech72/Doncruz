@@ -25,6 +25,10 @@ body::-webkit-scrollbar {
     font-size: 20px;
     line-height: 32px;
 }
+.add_para_font_era{
+  font-size: 20px;
+  line-height: 32px;
+}
 hr.add_color_line{
     /* / border: 1px solid #EBB713; / */
     opacity: 1;
@@ -51,8 +55,8 @@ span.add_color_font{
     color: #EBB713;
 }
 .add_img_logo_size{
-    width: 285px;
-    height: 59px;
+    width: 270px;
+    height: 50px;
 }
 .tequila_font_size {
     font-size: 80px;
@@ -142,7 +146,7 @@ span.add_color_font{
     /* z-index: -111; */
     height: 9rem;
   }
-  
+
   .fade.custom-modal.modal.show {
     z-index: 999999;
 }
@@ -154,6 +158,10 @@ span.add_color_font{
   .add_logo_size_icon{
     /* width: 1rem; */
     height: 1.5rem;
+  }
+  .add_logo_size_icon_twitter{
+    height: 2rem;
+
   }
 
   /* contact us form css */
@@ -263,11 +271,11 @@ to {transform: rotate(360deg);}}
         margin-right: 0rem;
     }
     .add_top_banner_img {
-        background: url('./assets/bgmobilebanner.png') no-repeat center center;
+        background: url('./assets/bgmobilebanner.svg') no-repeat center center;
         /* background-size: cover; */
         text-align: center;
         /* position: relative; */
-        height: 56vh;
+        height: 44vh;
       }
     .top_img_dan {
         width: 18rem;
@@ -291,6 +299,10 @@ to {transform: rotate(360deg);}}
         font-size: 11px;
         line-height: 16px;
     }
+    .add_para_font_era{
+      font-size: 14px;
+      line-height: 18px;
+    }
     .add_second_heading {
         font-size: 20px;
         line-height: 28px;
@@ -312,7 +324,7 @@ to {transform: rotate(360deg);}}
         height: 2.5rem;
     }
     .add_line_width {
-        width: 8rem;
+        width: 6.5rem;
       
     }
     span.add_color_font {
@@ -436,3 +448,4 @@ body.intro-done {
   font-weight: normal;
   font-style: normal;
 }
+

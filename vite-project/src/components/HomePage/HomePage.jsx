@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 
 import Cenetrlogo from '../../assets/centerlogo.svg'
 import Menbottle from '../../assets/menbottleimg.svg'
@@ -11,7 +11,7 @@ import Yellowbottle from '../../assets/yellobott.svg'
 import Lightbott from '../../assets/lightbott.svg'
 import youtube from '../../assets/toutube.png'
 import instagram from '../../assets/insta.png'
-import facebook from '../../assets/facebook.png'
+import facebook from '../../assets/facebook.svg'
 import { Modal } from 'react-bootstrap'
 import { gsap } from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
@@ -21,10 +21,40 @@ import "aos/dist/aos.css"; // Import the AOS styles
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Slider from 'react-slick'
-
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 // Register the ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
+const text = "From Agave to Excellence – Perfection in every pour.";
 
+const containerVariants = {
+  visible: {
+    transition: {
+      staggerChildren: 0.02,
+      delayChildren: 0.1,
+    },
+  },
+};
+
+const letterVariants = {
+  hidden: {
+    opacity: 0,
+    y: 40,
+    rotateX: 90,
+    scale: 0.8,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    rotateX: 0,
+    scale: 1,
+    transition: {
+      type: "spring",
+      stiffness: 300,
+      damping: 12,
+    },
+  },
+};
 const HomePage = ({ setOpenModal, openModal }) => {
 
   useEffect(() => {
@@ -109,6 +139,21 @@ const HomePage = ({ setOpenModal, openModal }) => {
       }
     ]
   };
+
+  const { ref, inView } = useInView({
+    triggerOnce: false,
+    threshold: 0.3,
+  });
+
+  const [shouldAnimate, setShouldAnimate] = useState(false);
+
+  useEffect(() => {
+    if (inView) {
+      setShouldAnimate(true);
+    } else {
+      setShouldAnimate(false); // 👈 Reset when out of view
+    }
+  }, [inView]);
   return (
     <section>
       <div className="container-fluid">
@@ -119,13 +164,13 @@ const HomePage = ({ setOpenModal, openModal }) => {
                 <div className="row mx-auto d-md-flex d-none">
                   <div className="col-md-4 col-12 pt-5 pt-md-0 d-flex align-items-center flex-column justify-content-between">
                     <p className="description pb-md-5 pb-4 pt-md-0 pt-4 mb-0 text-md-start text-center">
-                      From the careful jima to the meticulous distillation, every step in the creation of tequila is infused with passion and dedication.
+                      From the careful jima to the meticulous distillation, every step <br/>in the creation of tequila is infused with passion and dedication.
                     </p>
                   </div>
                   <div className="col-md-4 col-12"></div>
                   <div className="col-md-4 col-12 d-flex align-items-center flex-column justify-content-between ps-md-5 ps-0">
                     <div className="social-icons pb-5">
-                      <img src={facebook} className="add_logo_size_icon me-3" alt="facebook" />
+                      <img src={facebook} className="add_logo_size_icon_twitter me-2" alt="facebook" />
                       <img src={instagram} className="add_logo_size_icon me-3" alt="instagram" />
                       <img src={youtube} className="add_logo_size_icon" alt="youtube" />
                     </div>
@@ -139,7 +184,7 @@ const HomePage = ({ setOpenModal, openModal }) => {
 
         <div className="row add_bg_img">
 
-          <div className="col-12 px-3 px-md-0 pt-5 pb-4">
+          <div className="col-12 px-3 px-md-0 pt-md-5 pt-4 pb-4">
             <div className="row mx-auto mx-md-0">
 
               {/* {/ Left Line /} */}
@@ -171,17 +216,53 @@ const HomePage = ({ setOpenModal, openModal }) => {
           </div>
 
 
-          <AnimateOnScroll animationType="fade-up" className="glow-animate">
-            <div className="col-12 text-center">
+          {/* <AnimateOnScroll animationType="fade-up" className="glow-animate">
+            <div className="col-12 text-center mb-2">
               <h1 className="text-white add_Font_heading">
                 From Agave to Excellence - Perfection<br /> in every pour.
               </h1>
             </div>
-          </AnimateOnScroll>
+          </AnimateOnScroll> */}
+          {/* <AnimateOnScroll animationType="zoom-out" className="glow-animate">
+  <div className="col-12 text-center mb-2">
+    <h1 className="text-white add_Font_heading">
+      From Agave to Excellence - Perfection<br /> in every pour.
+    </h1>
+  </div>
+</AnimateOnScroll> */}
+ <div className="col-12 text-center mb-2" ref={ref}>
+      <motion.h1
+        className="text-white add_Font_heading flex flex-wrap justify-center"
+        variants={containerVariants}
+        initial="hidden"
+        animate={shouldAnimate ? "visible" : "hidden"}
+      >
+        {text.split("").map((char, index) => (
+          <motion.span
+            key={index}
+            variants={letterVariants}
+            className="inline-block"
+            style={{
+              display: char === " " ? "inline-block" : "inline-block",
+              marginRight: char === " " ? "0.25em" : "0",
+            }}
+          >
+            {char}
+          </motion.span>
+        ))}
+      </motion.h1>
+    </div>
+{/* <AnimateOnScroll animationType="zoom-out" className="glow-animate">
+  <div className="col-12 text-center mb-2">
+    <h1 className="text-white add_Font_heading">
+      From Agave to Excellence - Perfection<br /> in every pour.
+    </h1>
+  </div>
+</AnimateOnScroll> */}
 
-          <div className="col-12 text-center pb-md-4 pb-0 mb-4 mt-4">
+          <div className="col-12 text-center pb-md-4 pb-0 mb-md-4 mb-2 mt-md-4 mt-3">
             <p className="text-white add_para_font">
-              Don Cruz Platinium — The Legacy of Enric Ramon in Every Sip
+              Don Cruz Platinium — The Legacy of Enric Ramon in Every Sip.
             </p>
           </div>
         </div>
@@ -209,13 +290,14 @@ const HomePage = ({ setOpenModal, openModal }) => {
                   distillation, this is more than just a spirit—it’s an experience.
                 </p>
               </div>
-              <div className="col-12 mt-md-5 mt-0 d-md-flex d-none align-items-center justify-content-md-end justify-content-center ps-md-5 pe-0">
+              <div className="col-12 mt-md-5 mt-0 d-md-flex d-none align-items-center justify-content-md-end justify-content-center pe-md-5 pe-0">
                 <div className="add_color_font d-flex align-items-center justify-content-end">
+                 
+                  <AnimateOnScroll animationType="fade-up" delay={0.2}>
+                    <hr className="me-3 add_line_width" />
+                  </AnimateOnScroll>
                   <AnimateOnScroll animationType="fade-up" delay={0.1}>
                     <span className="add_color_font">Plata</span>
-                  </AnimateOnScroll>
-                  <AnimateOnScroll animationType="fade-up" delay={0.2}>
-                    <hr className="ms-3 add_line_width" />
                   </AnimateOnScroll>
                 </div>
               </div>
@@ -294,40 +376,44 @@ const HomePage = ({ setOpenModal, openModal }) => {
 
         <div className="row py-md-5 pt-5 pb-0 add_bg_img_design">
           <div className="col-12 d-flex align-items-center justify-content-center">
-            <p className="mb-0 pb-0 add_para_font pe-4">The new era of</p>
+            <p className="mb-0 pb-0 add_para_font_era pe-4">The new era of</p>
           </div>
           <div className="col-12 d-flex align-items-center justify-content-center">
             <h5 className="tequila_font_size mb-0">Tequila</h5>
           </div>
           <div className="col-md-10 col-12 mx-auto pb-5">
        
-            <div className="row d-md-flex d-none align-items-center justify-content-center mt-4 mb-5">
-              <div
-                className="col-md-6 col-12 border-md-end py-1 border border-dark border-top-0 border-start-0 border-bottom-0"
-                data-aos="fade-right"
-                data-aos-duration="1000"
-                data-aos-once="false"
-              >
-                <p className="add_font_para_second text-end pe-3 mb-0">
-                  From the careful jima to the meticulous distillation, every step in the<br />
-                  creation of tequila is infused with passion and dedication. This is why<br />
-                  we believe tequila should be revered as a high-end spirit.
-                </p>
-              </div>
+          <div className="row d-md-flex d-none align-items-center justify-content-center mt-4 mb-5">
+  {/* Left column with static border */}
+  <div className="col-md-6 col-12 border-md-end border border-dark border-top-0 border-start-0 border-bottom-0 py-1">
+    <div
+      data-aos="fade-right"
+      data-aos-duration="1000"
+      data-aos-once="false"
+    >
+      <p className="add_font_para_second text-end pe-3 mb-0">
+        From the careful jima to the meticulous distillation, every step in the<br />
+        creation of tequila is infused with passion and dedication. This is why<br />
+        we believe tequila should be revered as a high-end spirit.
+      </p>
+    </div>
+  </div>
 
-              <div
-                className="col-md-6 col-12 py-1 pe-0"
-                data-aos="fade-left"
-                data-aos-duration="1000"
-                data-aos-once="false"
-              >
-                <p className="add_font_para_second text-start ps-3 mb-0">
-                  To create a truly exceptional tequila, it takes time, love, commitment, and an exquisite<br />
-                  recipe. And when this is achieved, only a bottle of equal elegance will suffice — something <br />
-                  that exudes strength, importance, and is worthy of the precious liquid it holds.
-                </p>
-              </div>
-            </div>
+  {/* Right column with animation as usual */}
+  <div
+    className="col-md-6 col-12 py-1 pe-0"
+    data-aos="fade-left"
+    data-aos-duration="1000"
+    data-aos-once="false"
+  >
+    <p className="add_font_para_second text-start ps-3 mb-0">
+      To create a truly exceptional tequila, it takes time, love, commitment, and an exquisite<br />
+      recipe. And when this is achieved, only a bottle of equal elegance will suffice — something <br />
+      that exudes strength, importance, and is worthy of the precious liquid it holds.
+    </p>
+  </div>
+</div>
+
 
             <div className="row mx-auto d-block d-md-none align-items-center justify-content-center mt-4 mb-5">
               <div
