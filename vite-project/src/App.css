@@ -13,8 +13,8 @@ body::-webkit-scrollbar {
     background-size: cover;
 }
 .add_logo_size{
-    width: 6rem;
-    height: 6rem;
+    width: 5rem;
+    height: 5rem;
 }
 .add_Font_heading {
     font-size: 48px;
@@ -144,7 +144,7 @@ span.add_color_font{
     background-color: transparent;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
     /* z-index: -111; */
-    height: 9rem;
+    height: 6.2rem;
   }
 
   .fade.custom-modal.modal.show {
@@ -295,7 +295,7 @@ span.add_color_font{
   }
   100% {
     height: 100%;
-    margin-top: 29px;
+    margin-top: 10px;
     background-color: transparent;
     display: block; /* Optional: only keep if layout needs to change */
   }
@@ -352,11 +352,11 @@ to {transform: rotate(360deg);}}
         margin-right: 0rem;
     }
     .add_top_banner_img {
-        background: url('./assets/bgmobilebanner.svg') no-repeat;
+        background: url('./assets/bgmobilebanner.svg') no-repeat center center;
         /* background-size: cover; */
         text-align: center;
         /* position: relative; */
-        height: 44vh;
+        height: 46vh;
       }
     .top_img_dan {
         width: 18rem;
@@ -528,5 +528,120 @@ body.intro-done {
        url('../public/fonts/Quirkily-Regular.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
+}
+
+/* Tequila text reveal */
+.sub_tequila {
+  opacity: 0;
+  visibility: hidden;
+  animation: showTequila 1s 3s forwards;
+}
+
+@keyframes showTequila {
+  from {
+    opacity: 0;
+    visibility: hidden;
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+/* Logo background animation */
+.logo_back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: logoExpand 5s forwards, whiteBG 5s forwards;
+}
+
+@keyframes logoExpand {
+  0% {
+    transform: translateY(90%);
+  }
+  100% {
+    transform: translateY(0%);
+    margin-top: 10px;
+  }
+}
+
+/* Background transition */
+.main_bg {
+  animation: whiteBackground 7s forwards;
+}
+
+@keyframes whiteBackground {
+  0% {
+    background-color: white;
+    height: 100%;
+  }
+  100% {
+    background-color: transparent;
+    height: auto;
+  }
+}
+
+/* Logo image animations */
+.img_logo {
+  width: 180px;
+  animation: expandLogo1 4.3s ease forwards;
+  animation-delay: 0.6s;
+  z-index: 9999 !important;
+}
+
+@keyframes expandLogo1 {
+  to {
+    width: 40px;
+    z-index: 9999;
+  }
+}
+
+.img_logo2 {
+  width: 180px;
+  animation: expandLogo2 4.3s ease forwards;
+  animation-delay: 0.6s;
+  z-index: 9999 !important;
+}
+
+@keyframes expandLogo2 {
+  to {
+    width: 35px;
+    z-index: 9999;
+  }
+}
+
+/* Full rotation animation */
+.rotate-360 {
+  animation: rotate360 4s linear !important;
+}
+
+@keyframes rotate360 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+
+
+@media (max-width: 768px) {
+  .img_logo {
+    width: 100px;
+  }
+
+  .img_logo2 {
+    width: 90px;
+  }
+
+  .logo_back {
+    flex-direction: column;
+    margin-top: 20px;
+  }
+  
 }
 
