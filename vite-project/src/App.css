@@ -82,7 +82,7 @@ span.add_color_font{
     height: 46rem;
 }
 .add_top_banner_img {
-    background: url('./assets/bgbanner.svg') no-repeat center center;
+    background: url('./assets/bgbanner.svg') no-repeat;
     background-size: cover;
     text-align: center;
     position: relative;
@@ -155,6 +155,7 @@ span.add_color_font{
     background-color: white !important;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
+  
   .add_logo_size_icon{
     /* width: 1rem; */
     height: 1.5rem;
@@ -351,7 +352,7 @@ to {transform: rotate(360deg);}}
         margin-right: 0rem;
     }
     .add_top_banner_img {
-        background: url('./assets/bgmobilebanner.svg') no-repeat center center;
+        background: url('./assets/bgmobilebanner.svg') no-repeat;
         /* background-size: cover; */
         text-align: center;
         /* position: relative; */
