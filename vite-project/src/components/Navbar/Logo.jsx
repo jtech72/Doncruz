@@ -17,7 +17,7 @@ const Logo = () => {
   return (
     <>
       <Link
-        className={`nav-link text-dark active main_bg position-fixed w-100 ${scrolled ? 'scrolled' : ''}`}
+        className={`nav-link text-dark active main_bg position-fixed mb-2 mb-md-0 w-100 ${scrolled ? 'scrolled' : ''}`}
         style={{ zIndex: '9999' }}
         to="/"
       >
