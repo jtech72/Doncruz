@@ -258,13 +258,93 @@ span.add_color_font{
     left: 0;
     right: 0;
   }
+  
+  /* Hide initially and reveal with a fade-in after 3 seconds */
+.sub_tequila {
+  opacity: 0;
+  visibility: hidden;
+  animation: showTequila 1s 3s forwards;
+}
 
+/* Keyframes for fading in */
+@keyframes showTequila {
+  from {
+    opacity: 0;
+    visibility: hidden;
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+/* Animate logo background and position over time */
+.logo_back {
+  animation: logoExpand 7.3s forwards;
+}
+
+/* Keyframes for expanding and changing background */
+@keyframes logoExpand {
+  0% {
+    height: 100%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  100% {
+    height: 100%;
+    margin-top: 29px;
+    background-color: transparent;
+    display: block; /* Optional: only keep if layout needs to change */
+  }
+}
+
+  
+  
+  .img_logo {
+    width: 200px;
+    animation: expandLogo1 2s ease forwards;
+    animation-delay: 0.6s;
+  }
+  
+  @keyframes expandLogo1 {
+    from {
+      width: 400px;
+      background-color: white !important;
+    }
+    to {
+      width: 40px;
+      height: 100%;
+    }
+  }
+  
+  .img_logo2 {
+    width: 200px;
+    animation: expandLogo2 2s ease forwards;
+    animation-delay: 0.6s;
+  }
+  
+  @keyframes expandLogo2 {
+    from {
+      width: 400px;
+      background-color: white !important;
+    }
+    to {
+      width: 35px;
+      height: 100%;
+    }
+  }
+  
+ 
+
+  
 
 
 @keyframes rotate360 {
   from {transform: rotate(0deg); }
 to {transform: rotate(360deg);}}
-.rotate-360 {animation: rotate360 2s linear !important; }
+.rotate-360 {animation: rotate360 4s linear !important; }
 
   @media screen and (min-width: 360px) and (max-width: 768px) {
     .add_right_margin {
