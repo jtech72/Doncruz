@@ -56,7 +56,6 @@ const letterVariants = {
   },
 };
 const HomePage = ({ setOpenModal, openModal }) => {
-
   useEffect(() => {
     // Animation for the logo
     gsap.to('.add_logo_size', {
@@ -70,7 +69,6 @@ const HomePage = ({ setOpenModal, openModal }) => {
       duration: 1,
       ease: 'power1.out',
     });
-
     // Animation for the color lines
     gsap.to('.add_color_line', {
       scrollTrigger: {
@@ -89,8 +87,8 @@ const HomePage = ({ setOpenModal, openModal }) => {
     // Initialize AOS
     AOS.init({
       duration: 1000, // Animation duration (in milliseconds)
-      once: false,    // Allow animations to trigger on scroll multiple times
-      offset: 100,    // Distance from the viewport when the animation starts
+      once: false, // Allow animations to trigger on scroll multiple times
+      offset: 100, // Distance from the viewport when the animation starts
     });
 
     // Refresh AOS on every scroll to ensure it triggers again
@@ -180,7 +178,6 @@ const HomePage = ({ setOpenModal, openModal }) => {
             </div>
           </div>
         </section>
-
 
         <div className="row add_bg_img">
 
@@ -542,9 +539,7 @@ const HomePage = ({ setOpenModal, openModal }) => {
           </div>
         </div>
       </Modal>
-
     </section>
   )
 }
-
 export default HomePage

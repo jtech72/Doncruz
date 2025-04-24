@@ -8,6 +8,7 @@ import PrivacyPolicy from './components/PrivacyPolicy/PrivacyPolicy'
 import TermsofUse from './components/TermsofUse/TermsofUse'
 import CookiesPolicy from './components/CookiesPolicy/CookiesPolicy'
 import TermsandConditions from './components/TermsandConditions/TermsandConditions'
+import Logo from './components/Navbar/Logo'
 
 function App() {
   const [openModal, setOpenModal] = useState(false)
@@ -20,7 +21,9 @@ function App() {
   }, []);
   return (
     <>
+  
       <Navbar />
+      <Logo />
      <Routes>
 
       <Route path='/' element={<HomePage setOpenModal={setOpenModal} openModal={openModal}/>}/>
@@ -28,6 +31,7 @@ function App() {
       <Route path='/termsOfUse' element={<TermsofUse />}/>
       <Route path='/cookies' element={<CookiesPolicy />}/>
       <Route path='/termsAndConditions' element={<TermsandConditions />}/>
+      <Route path='/logo' element={<Logo />}/>
 
      </Routes>
       <Footer />
