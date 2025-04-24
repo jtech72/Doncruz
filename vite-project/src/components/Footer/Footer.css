@@ -48,3 +48,31 @@ li{
 .copy_link{
   font-size: 12px;
 }
+.add_heading_font_footer{
+  font-size: 24px;
+  line-height: 30px;
+  font-family: 'Quikly-Rar', sans-serif !important;
+
+}
+.add_text_font_footer {
+  font-size: 16px;
+  line-height: 20px;
+  font-family: 'Quikly-Rar', sans-serif !important;
+
+}
+@media screen and (min-width: 360px) and (max-width: 768px) {
+  .add_heading_font_footer{
+    font-size: 18px;
+    line-height: 24px;
+    font-family: 'Quikly-Rar', sans-serif !important;
+  
+  }
+  .add_text_font_footer {
+    font-size: 12px;
+    line-height: 16px;
+    font-family: 'Quikly-Rar', sans-serif !important;
+  }
+  .add_size_social_icon {
+    width: 1rem;
+}
+}

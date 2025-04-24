@@ -23,7 +23,7 @@ function App() {
     <>
   
       <Navbar />
-      
+      <Logo />
      <Routes>
 
       <Route path='/' element={<HomePage setOpenModal={setOpenModal} openModal={openModal}/>}/>
