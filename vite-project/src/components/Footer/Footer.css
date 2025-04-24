@@ -45,6 +45,9 @@ li{
   /* width: 1.9rem; */
   height: 1.4rem;
 }
+.fav_icon_twitter {
+  height: 1.8rem;
+}
 .copy_link{
   font-size: 12px;
 }
@@ -62,8 +65,8 @@ li{
 }
 @media screen and (min-width: 360px) and (max-width: 768px) {
   .add_heading_font_footer{
-    font-size: 18px;
-    line-height: 24px;
+    font-size: 15px;
+    line-height: 19px;
     font-family: 'Quikly-Rar', sans-serif !important;
   
   }
