@@ -18,7 +18,7 @@ const Logo = () => {
 
     return (
         <>
-            <Link className={`nav-link text-dark active logo_back position-fixed w-100  ${scrolled ? 'scrolled' : ''}`}
+            <Link className={`nav-link text-dark active logo_back position-fixed w-100 d-none d-md-block  ${scrolled ? 'scrolled' : ''}`}
                 style={{ background: "transparent ", zIndex: "9999 " }} to="/">
                 <div className='position-relative d-flex justify-content-center'>
                     <div className='position-relative'><div className="animate__animated animate__fadeInDown rotate-360">
