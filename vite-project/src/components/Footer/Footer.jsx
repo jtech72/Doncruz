@@ -3,15 +3,15 @@ import { Link } from 'react-router-dom';
 import { FaChevronDown } from 'react-icons/fa';
 import Line from '../../../src/assets/Line.png';
 import Logo from '../../../src/assets/Logo.svg';
-import Inst from '../../../src/assets/inst.png';
-import FB from '../../assets/fb.png';
-import IG from '../../assets/you.png';
+import Inst from '../../../src/assets/inst.svg';
+import FB from '../../assets/fb.svg';
+import IG from '../../assets/you.svg';
 import Map from '../../../src/assets/Map.png';
 import Phone from '../../../src/assets/Phone.png';
 import Mail from '../../../src/assets/Mail.png';
 import './Footer.css';
 import AnimateOnScroll from '../HomePage/AnimateOnScroll';
-
+import { motion } from 'framer-motion'
 const Footer = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
   const [openSections, setOpenSections] = useState({
@@ -45,11 +45,19 @@ const Footer = () => {
       }));
     }
   };
+  const lineVariants = {
+    hidden: { opacity: 0, x: '-100%' },
+    visible: { opacity: 1, x: 0, transition: { type: 'spring', stiffness: 300, damping: 25 } },
+  };
 
+  const zoomVariants = {
+    hidden: { opacity: 0, scale: 0.5 },
+    visible: { opacity: 1, scale: 1, transition: { type: 'spring', stiffness: 300, damping: 25 } },
+  };
   return (
     <footer className="bg-black text-white py-md-5 pb-md-3 pt-3 pb-3 overflow-x-hidden mt-5">
       <div className="container-fluid px-3 px-md-0">
-        <div className="row mx-auto mx-md-0 align-items-center text-center text-md-start">
+        {/* <div className="row mx-auto mx-md-0 align-items-center text-center text-md-start">
           <div className="col-4 col-md-5 px-0 pe-md-5">
             <AnimateOnScroll animationType="fade-left" delay={0.1}>
               <hr className="d-block d-md-block" style={{ height: '1px', borderColor: '#EBB713', opacity: '1' }} />
@@ -63,17 +71,54 @@ const Footer = () => {
               <hr className="d-block d-md-block" style={{ height: '1px', borderColor: '#EBB713', opacity: '1' }} />
             </AnimateOnScroll>
           </div>
-        </div>
+        </div> */}
+  <div className="row mx-auto mx-md-0 align-items-center text-center text-md-start">
+      {/* {/ Left Line Animation /} */}
+      <div className="col-4 col-md-5 px-0 pe-md-5">
+        <motion.hr
+          variants={lineVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false }}
+          style={{ height: '1px', borderColor: '#EBB713', opacity: '1' }}
+        />
+      </div>
+
+      {/* {/ Logo Animation /} */}
+      <div className="col-4 col-md-2 text-center my-3 my-md-0">
+        <motion.img
+          src={Logo}
+          alt="Logo"
+          className="img-fluid add_size_bottom_logo"
+          variants={zoomVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false }}
+        />
+      </div>
+
+      {/* {/ Right Line Animation /} */}
+      <div className="col-4 col-md-5 px-0 ps-md-5">
+        <motion.hr
+          variants={lineVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false }}
+          style={{ height: '1px', borderColor: '#EBB713', opacity: '1' }}
+        />
+      </div>
+    </div>
+
 
         <div className="row py-md-5 pb-0 pt-3 px-md-5 px-0">
           {/* About Us */}
-          <div className="col-12 col-md-4  mb-2 mb-md-0 ps-md-5">
+          <div className="col-12 col-md-4  mb-0 mb-md-0 ps-md-5">
             <h4
               className="text-warning d-flex align-items-center justify-content-between ps-md-5 ps-0 pb-2 add_heading_font_footer"
               onClick={() => toggleSection("about")}
               style={{ cursor: isMobile ? "pointer" : "default" }}
             >
-              <span>About us</span>
+              <span>About Us</span>
               {isMobile && (
                 <FaChevronDown className={`dropdown-icon ${openSections.about ? 'rotate' : ''}`} style={{ color: "#EBB713" }} />
               )}
@@ -92,16 +137,16 @@ const Footer = () => {
                 </ul>
                 <h4 className="text-warning mb-3 ps-md-5 ps-0 add_heading_font_footer d-md-flex d-none">Follow us on</h4>
                 <div className="d-md-flex d-none ps-md-5 ps-0">
-                  <img src={FB} className="pe-3 fav_icon" alt="Facebook" />
-                  <img src={Inst} className="pe-3 fav_icon" alt="Instagram" />
-                  <img src={IG} className="fav_icon" alt="IG" />
+                  <img src={FB} className="pe-2 fav_icon_twitter" alt="Facebook" />
+                  <img src={Inst} className="pe-3 mt-1 fav_icon" alt="Instagram" />
+                  <img src={IG} className="fav_icon mt-1" alt="IG" />
                 </div>
               </>
             )}
           </div>
 
           {/* Quick Links */}
-          <div className="col-12 col-md-2 mb-2 mb-md-0 ps-md-5">
+          <div className="col-12 col-md-2 mb-0 mb-md-0 ps-md-5">
             <h4
               className="text-warning d-flex align-items-center justify-content-between pb-2 add_heading_font_footer"
               onClick={() => toggleSection("quickLinks")}
@@ -123,7 +168,7 @@ const Footer = () => {
           </div>
 
           {/* Our Collections */}
-          <div className="col-12 col-md-2 mb-2 mb-md-0 ps-md-5">
+          <div className="col-12 col-md-2 mb-0 mb-md-0 ps-md-5">
             <h4
               className="text-warning d-flex align-items-center justify-content-between pb-2 add_heading_font_footer"
               onClick={() => toggleSection("collections")}
@@ -137,7 +182,7 @@ const Footer = () => {
             {openSections.collections && (
               <ul className="list-unstyled">
                 <li className="pb-2 add_text_font_footer">Plata</li>
-                <li className="add_text_font_footer">Anejo</li>
+                <li className="add_text_font_footer">Añejo</li>
               </ul>
             )}
           </div>
@@ -145,7 +190,7 @@ const Footer = () => {
           {/* Contact Us */}
           <div className="col-12 col-md-4 ps-md-5">
             <h4
-              className="text-warning d-flex align-items-center justify-content-between pb-2 add_heading_font_footer"
+              className="text-warning d-flex align-items-center justify-content-between pb-md-2 pb-0 add_heading_font_footer"
               onClick={() => toggleSection("contact")}
               style={{ cursor: isMobile ? "pointer" : "default" }}
             >
@@ -156,16 +201,28 @@ const Footer = () => {
             </h4>
             {openSections.contact && (
               <ul className="list-unstyled">
-                <li className="pb-3 d-flex align-items-start">
+                {/* <li className="pb-3 d-flex align-items-start">
                   <img src={Map} className="me-2 add_size_social_icon" alt="Map" />
                   <div className='add_text_font_footer'>2972 Westheimer Rd. Santa Ana, <br /><span>Illinois 85486</span></div>
-                </li>
-                <li className="pb-3 d-flex align-items-center add_text_font_footer">
+                </li> */}
+                {/* <li className="pb-3 d-flex align-items-center add_text_font_footer">
                   <img src={Phone} className="me-2 add_size_social_icon" alt="Phone" />1800-267-4444
-                </li>
-                <li className="d-flex align-items-center add_text_font_footer">
-                  <img src={Mail} className="me-2 add_size_social_icon" alt="Email" />alma.lawson@example.com
-                </li>
+                </li> */}
+               <li className="d-flex align-items-center add_text_font_footer">
+  {/* <img src={Mail} className="me-2 add_size_social_icon" alt="Email" /> */}
+  <form className="d-flex flex-grow-1" onSubmit={(e) => e.preventDefault()}>
+    <input
+      type="email"
+      className="form-control me-2 w-50"
+      placeholder="Enter your email"
+      required
+    />
+    <button type="submit" className="btn btn-warning">
+      Submit
+    </button>
+  </form>
+</li>
+
               </ul>
             )}
           </div>
@@ -175,8 +232,8 @@ const Footer = () => {
             <h4 className="text-warning me-3 mb-0 add_heading_font_footer">Follow us on</h4>
 
           </div>
-          <div className='col-6'>
-            <img src={FB} className="pe-3 fav_icon" alt="Facebook" />
+          <div className='col-6 d-flex align-items-center justify-content-end'>
+            <img src={FB} className="pe-2  fav_icon_twitter" alt="Facebook" />
             <img src={Inst} className="pe-3 fav_icon" alt="Instagram" />
             <img src={IG} className="fav_icon" alt="IG" />
           </div>
@@ -211,8 +268,11 @@ const Footer = () => {
 
         <hr style={{ height: '1px', borderColor: '#EBB713', opacity: '1' }} />
         <div className="text-center pt-0">
-          <p className="mb-0 add_text_font_footer">Powered By RowthTech © 2025 Don Cruz Platinium | All Rights Reserved.</p>
-        </div>
+  <p className="mb-0 copy_link">
+    Powered By <a href="https://rowthtech.com" className="text-warning">RowthTech</a> © 2025 Don Cruz Platinium | All Rights Reserved.
+  </p>
+</div>
+
       </div>
     </footer>
   );
