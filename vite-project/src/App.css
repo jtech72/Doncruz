@@ -247,13 +247,33 @@ span.add_color_font{
     left: 0;
     right: 0;
   }
+  .img_logo {
+    width: 600px;
+    animation: expandLogo 1s ease forwards;
+    animation-delay: 3s;
+    
+  }
+  
+  @keyframes expandLogo {
+    from {
+      width: 400px;
 
+      background-color: white !important;
+      
+    }
+    to {
+      width: 100%;
+    }
+  }
+ 
+
+  
 
 
 @keyframes rotate360 {
   from {transform: rotate(0deg); }
 to {transform: rotate(360deg);}}
-.rotate-360 {animation: rotate360 2s linear !important; }
+.rotate-360 {animation: rotate360 5s linear !important; }
 
   @media screen and (min-width: 360px) and (max-width: 768px) {
     .add_right_margin {
