@@ -251,46 +251,47 @@ span.add_color_font{
     right: 0;
   }
   
-  .sub_tequila {
+  /* Hide initially and reveal with a fade-in after 3 seconds */
+.sub_tequila {
+  opacity: 0;
+  visibility: hidden;
+  animation: showTequila 1s 3s forwards;
+}
+
+/* Keyframes for fading in */
+@keyframes showTequila {
+  from {
     opacity: 0;
     visibility: hidden;
-    animation: showTequila 0s 3s forwards;
   }
-  
-  /* Keyframe to show after 5s */
-  @keyframes showTequila {
-    to {
-      opacity: 1;
-      visibility: visible;
-    }
+  to {
+    opacity: 1;
+    visibility: visible;
   }
-  
-  .logo_back {
-    animation: logoExpand 5.3s forwards;
-  }
-  
-  /* Keyframe animation */
-  @keyframes logoExpand {
-    0% {
-      height: 100%;
-      background-color: white ;
-   
-      display: flex;
-      align-items: center;
-      justify-content: center;
+}
 
-    }
-    100% {
-      /* padding-top: 0rem; */
-      display: block;
-      align-items: center;
-      justify-content: center;
-      margin-top: 29px;
+/* Animate logo background and position over time */
+.logo_back {
+  animation: logoExpand 7.3s forwards;
+}
 
-      height: 100%;
-      background-color: transparent;
-    }
+/* Keyframes for expanding and changing background */
+@keyframes logoExpand {
+  0% {
+    height: 100%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
+  100% {
+    height: 100%;
+    margin-top: 29px;
+    background-color: transparent;
+    display: block; /* Optional: only keep if layout needs to change */
+  }
+}
+
   
   
   .img_logo {
