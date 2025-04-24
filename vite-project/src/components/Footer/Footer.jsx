@@ -11,7 +11,7 @@ import Phone from '../../../src/assets/Phone.png';
 import Mail from '../../../src/assets/Mail.png';
 import './Footer.css';
 import AnimateOnScroll from '../HomePage/AnimateOnScroll';
-import { motion } from 'framer-motion';
+import { motion } from 'framer-motion'
 const Footer = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
   const [openSections, setOpenSections] = useState({
