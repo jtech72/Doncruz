@@ -11,7 +11,7 @@ import Phone from '../../../src/assets/Phone.png';
 import Mail from '../../../src/assets/Mail.png';
 import './Footer.css';
 import AnimateOnScroll from '../HomePage/AnimateOnScroll';
-
+import { motion } from 'framer-motion';
 const Footer = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
   const [openSections, setOpenSections] = useState({
@@ -45,11 +45,19 @@ const Footer = () => {
       }));
     }
   };
+  const lineVariants = {
+    hidden: { opacity: 0, x: '-100%' },
+    visible: { opacity: 1, x: 0, transition: { type: 'spring', stiffness: 300, damping: 25 } },
+  };
 
+  const zoomVariants = {
+    hidden: { opacity: 0, scale: 0.5 },
+    visible: { opacity: 1, scale: 1, transition: { type: 'spring', stiffness: 300, damping: 25 } },
+  };
   return (
     <footer className="bg-black text-white py-md-5 pb-md-3 pt-3 pb-3 overflow-x-hidden mt-5">
       <div className="container-fluid px-3 px-md-0">
-        <div className="row mx-auto mx-md-0 align-items-center text-center text-md-start">
+        {/* <div className="row mx-auto mx-md-0 align-items-center text-center text-md-start">
           <div className="col-4 col-md-5 px-0 pe-md-5">
             <AnimateOnScroll animationType="fade-left" delay={0.1}>
               <hr className="d-block d-md-block" style={{ height: '1px', borderColor: '#EBB713', opacity: '1' }} />
@@ -63,7 +71,44 @@ const Footer = () => {
               <hr className="d-block d-md-block" style={{ height: '1px', borderColor: '#EBB713', opacity: '1' }} />
             </AnimateOnScroll>
           </div>
-        </div>
+        </div> */}
+  <div className="row mx-auto mx-md-0 align-items-center text-center text-md-start">
+      {/* {/ Left Line Animation /} */}
+      <div className="col-4 col-md-5 px-0 pe-md-5">
+        <motion.hr
+          variants={lineVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false }}
+          style={{ height: '1px', borderColor: '#EBB713', opacity: '1' }}
+        />
+      </div>
+
+      {/* {/ Logo Animation /} */}
+      <div className="col-4 col-md-2 text-center my-3 my-md-0">
+        <motion.img
+          src={Logo}
+          alt="Logo"
+          className="img-fluid add_size_bottom_logo"
+          variants={zoomVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false }}
+        />
+      </div>
+
+      {/* {/ Right Line Animation /} */}
+      <div className="col-4 col-md-5 px-0 ps-md-5">
+        <motion.hr
+          variants={lineVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false }}
+          style={{ height: '1px', borderColor: '#EBB713', opacity: '1' }}
+        />
+      </div>
+    </div>
+
 
         <div className="row py-md-5 pb-0 pt-3 px-md-5 px-0">
           {/* About Us */}
