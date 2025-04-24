@@ -105,12 +105,12 @@ const Navbar = () => {
         <div className="container">
           {/* Navbar brand and toggler for mobile */}
           <div className="d-flex w-100 justify-content-between align-items-center d-md-none position-relative">
-            <a
+            {/* <a
               className="navbar-brand pt-0 position-absolute start-50 translate-middle-x"
               href="#"
             >
               <img src={logo} alt="Logo" className="add_logo_size" />
-            </a>
+            </a> */}
             {/* <button
               className="navbar-toggler border-0 shadow-none ms-auto"
               type="button"
