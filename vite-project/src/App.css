@@ -568,7 +568,7 @@ body.intro-done {
 
 /* Background transition */
 .main_bg {
-  animation: whiteBackground 7s forwards;
+  animation: whiteBackground 3.1s forwards;
 }
 
 @keyframes whiteBackground {
@@ -576,7 +576,7 @@ body.intro-done {
     background-color: white;
     height: 100%;
   }
-  100% {
+  90% {
     background-color: transparent;
     height: auto;
   }
