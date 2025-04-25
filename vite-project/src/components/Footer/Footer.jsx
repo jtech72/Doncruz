@@ -78,7 +78,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-black text-white py-md-5 pb-md-3 pt-3 pb-3 overflow-x-hidden mt-5">
+    <footer className="bg-black text-white py-md-5 pb-md-3 pt-0 pb-3 overflow-x-hidden mt-5">
       <div className="container-fluid px-3 px-md-0">
 
         <div className="row mx-auto mx-md-0 align-items-center text-center text-md-start">
@@ -141,7 +141,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="row py-md-5 pb-0 pt-3 px-md-5 px-0">
+        <div className="row py-md-5 pb-0 pt-0 px-md-5 px-0">
 
           {/* About Us */}
           <div className="col-12 col-md-4 ps-md-5">
