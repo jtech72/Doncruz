@@ -26,7 +26,6 @@ import { useInView } from "react-intersection-observer";
 // Register the ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
 const text = "From Agave to Excellence – Perfection in every pour.";
-
 const containerVariants = {
   visible: {
     transition: {
@@ -35,7 +34,6 @@ const containerVariants = {
     },
   },
 };
-
 const letterVariants = {
   hidden: {
     opacity: 0,
@@ -137,7 +135,6 @@ const HomePage = ({ setOpenModal, openModal }) => {
       }
     ]
   };
-
   const { ref, inView } = useInView({
     triggerOnce: false,
     threshold: 0.3,
@@ -159,7 +156,6 @@ const HomePage = ({ setOpenModal, openModal }) => {
       transition: { duration: 1, ease: "easeInOut" },
     },
   };
-
   const typingVariants = {
     hidden: { opacity: 0 },
     visible: (custom) => ({
@@ -170,7 +166,6 @@ const HomePage = ({ setOpenModal, openModal }) => {
       },
     }),
   };
-
   return (
     <section>
       <div className="container-fluid">
@@ -197,77 +192,58 @@ const HomePage = ({ setOpenModal, openModal }) => {
             </div>
           </div>
         </section>
-
         <div className="row add_bg_img">
-
           <div className="col-12 px-3 px-md-0 pt-md-5 pt-4 pb-4">
             <div className="row mx-auto mx-md-0">
-
-              {/* {/ Left Line /} */}
               <div className="col my-auto ps-0">
-                {/* <AnimateOnScroll animationType="fade-left" delay={0.1}> */}
                 <hr className="add_color_line" />
-                {/* </AnimateOnScroll> */}
               </div>
-
-              {/* {/ Center Logo /} */}
               <div className="col-1 d-flex align-items-center justify-content-center">
-                {/* <AnimateOnScroll animationType="zoom" delay={0.3}> */}
                 <img
                   className="add_logo_size"
                   alt="center logo"
                   src={Cenetrlogo}
                 />
-                {/* </AnimateOnScroll> */}
               </div>
-
-              {/* {/ Right Line /} */}
               <div className="col my-auto pe-0">
-                {/* <AnimateOnScroll animationType="fade-right" delay={0.2}> */}
                 <hr className="add_color_line" />
-                {/* </AnimateOnScroll> */}
               </div>
-
             </div>
           </div>
-
           <div
-  className="col-12 text-center mb-2 d-flex justify-content-center align-items-center"
-  ref={ref}
->
-  <motion.h1
-    className="text-white add_Font_heading"
-    variants={containerVariants}
-    initial="hidden"
-    animate={shouldAnimate ? "visible" : "hidden"}
-    style={{ overflow: "hidden" }} // Ensures smooth transition without overflowing
-  >
-    {text.split("").map((char, index) => (
-      <motion.span
-        key={index}
-        className="inline-block"
-        variants={typingVariants}
-        custom={index} // Pass the index for delay calculation
-        style={{
-          display: char === " " ? "inline-block" : "inline-block",
-          marginRight: char === " " ? "0.25em" : "0",
-          opacity: shouldAnimate ? 1 : 0, // Optional: Control opacity if needed
-        }}
-        initial={{ y: 50, opacity: 0 }} // Start from below and invisible
-        animate={{ y: 0, opacity: 1 }} // Slide up to the normal position and fade in
-        transition={{
-          y: { type: "spring", stiffness: 200, damping: 25, delay: index * 0.05 }, // Add a delay for each character
-          opacity: { duration: 0.3 },
-        }}
-      >
-        {char}
-      </motion.span>
-    ))}
-  </motion.h1>
-</div>
-
-
-
+            className="col-12 text-center mb-2 d-flex justify-content-center align-items-center"
+            ref={ref}
+          >
+            <motion.h1
+              className="text-white add_Font_heading"
+              variants={containerVariants}
+              initial="hidden"
+              animate={shouldAnimate ? "visible" : "hidden"}
+              style={{ overflow: "hidden" }} // Ensures smooth transition without overflowing
+            >
+              {text.split("").map((char, index) => (
+                <motion.span
+                  key={index}
+                  className="inline-block"
+                  variants={typingVariants}
+                  custom={index} // Pass the index for delay calculation
+                  style={{
+                    display: char === " " ? "inline-block" : "inline-block",
+                    marginRight: char === " " ? "0.25em" : "0",
+                    opacity: shouldAnimate ? 1 : 0, // Optional: Control opacity if needed
+                  }}
+                  initial={{ y: 50, opacity: 0 }} // Start from below and invisible
+                  animate={{ y: 0, opacity: 1 }} // Slide up to the normal position and fade in
+                  transition={{
+                    y: { type: "spring", stiffness: 200, damping: 25, delay: index * 0.05 }, // Add a delay for each character
+                    opacity: { duration: 0.3 },
+                  }}
+                >
+                  {char}
+                </motion.span>
+              ))}
+            </motion.h1>
+          </div>
           <div className="col-12 text-center pb-md-4 pb-0 mb-md-4 mb-2 mt-md-4 mt-3">
             <p className="text-white add_para_font">
               Don Cruz Platinium — The Legacy of Enric Ramon in Every Sip.
@@ -278,7 +254,6 @@ const HomePage = ({ setOpenModal, openModal }) => {
           <div className="col-md-7 col-12 ps-0" data-aos="fade-up" data-aos-duration="1000">
             <img src={Menbottle} className="w-100 h-100" alt="Men Bottle" />
           </div>
-
           <div className="col-md-5 mt-4 mt-md-0 col-12 pe-md-5 pe-0 d-flex align-items-end justify-content-end mb-md-5 mb-0 pb-5">
             <div className="row pe-md-5 pe-2 mx-auto">
               <div className="col-12 mb-3 d-flex align-items-center justify-content-md-end justify-content-center pe-md-5 pe-0 ps-0" data-aos="fade-up" data-aos-duration="1000">
@@ -300,7 +275,6 @@ const HomePage = ({ setOpenModal, openModal }) => {
               </div>
               <div className="col-12 mt-md-5 mt-0 d-md-flex d-none align-items-center justify-content-md-end justify-content-center pe-md-5 pe-0">
                 <div className="add_color_font d-flex align-items-center justify-content-end">
-
                   <AnimateOnScroll animationType="fade-up" delay={0.2}>
                     <hr className="me-3 add_line_width" />
                   </AnimateOnScroll>
@@ -325,24 +299,20 @@ const HomePage = ({ setOpenModal, openModal }) => {
             </div>
           </div>
         </div>
-
         <div className="row">
           <div className="col-md-7 col-12 pe-0 order-1 order-md-2" data-aos="fade-up" data-aos-duration="1000">
             <img src={Anejob} className="w-100 h-100" alt="Añejo Bottle" />
           </div>
-
           <div className="col-md-5 col-12 ps-md-5 ps-0 d-flex align-items-end justify-content-end mb-md-5 mb-0 pt-4 pt-md-0 pb-5 order-2 order-md-1">
             <div className="row ps-md-5 ps-0 mx-auto">
               <div className="col-12 mb-3 d-flex align-items-center justify-content-md-start justify-content-center ps-md-5 ps-5" data-aos="fade-up" data-aos-duration="1000">
                 <img src={Donlogo} className="add_img_logo_size" alt="Don Logo" />
               </div>
-
               <div className="col-12 text-md-start text-center ps-md-5 ps-4" data-aos="fade-up" data-aos-duration="1000">
                 <h3 className="add_second_heading">
                   This is Don Cruz Platinum Añejo –<br /> The Pinnacle of Purity.
                 </h3>
               </div>
-
               <div className="col-12 text-md-start text-justify mt-3 ps-md-5 ps-4" data-aos="fade-up" data-aos-duration="1000">
                 <p className="add_font_para_second">
                   At Tequila don cruz Platinum, every bottle is the perfect fusion of time-
@@ -351,7 +321,6 @@ const HomePage = ({ setOpenModal, openModal }) => {
                   a testament to an exceptional recipe passed down with dedication.
                 </p>
               </div>
-
               <div className="col-12 mt-md-5 mt-0 d-md-flex d-none align-items-center justify-content-md-start justify-content-center ps-md-5 ps-4">
                 <div className="add_color_font d-flex align-items-center justify-content-start">
                   <AnimateOnScroll animationType="fade-up" delay={0.1}>
@@ -378,10 +347,6 @@ const HomePage = ({ setOpenModal, openModal }) => {
             </div>
           </div>
         </div>
-
-
-
-
         <div className="row py-md-5 pt-5 pb-0 add_bg_img_design">
           <div className="col-12 d-flex align-items-center justify-content-center">
             <p className="mb-0 pb-0 add_para_font_era pe-4">The new era of</p>
@@ -390,9 +355,7 @@ const HomePage = ({ setOpenModal, openModal }) => {
             <h5 className="tequila_font_size mb-0">Tequila</h5>
           </div>
           <div className="col-md-10 col-12 mx-auto pb-5">
-
             <div className="row d-md-flex d-none align-items-center justify-content-center mt-4 mb-5">
-              {/* Left column with static border */}
               <div className="col-md-6 col-12 border-md-end border border-dark border-top-0 border-start-0 border-bottom-0 py-1">
                 <div
                   data-aos="fade-right"
@@ -406,8 +369,6 @@ const HomePage = ({ setOpenModal, openModal }) => {
                   </p>
                 </div>
               </div>
-
-              {/* Right column with animation as usual */}
               <div
                 className="col-md-6 col-12 py-1 pe-0"
                 data-aos="fade-left"
@@ -421,8 +382,6 @@ const HomePage = ({ setOpenModal, openModal }) => {
                 </p>
               </div>
             </div>
-
-
             <div className="row mx-auto d-block d-md-none align-items-center justify-content-center mt-4 mb-5">
               <div
                 className="col-md-6 col-12 py-1"
@@ -436,7 +395,6 @@ const HomePage = ({ setOpenModal, openModal }) => {
                   we believe tequila should be revered as a high-end spirit.
                 </p>
               </div>
-
               <div
                 className="col-md-6 col-12 py-1"
                 data-aos="fade-up"  // Animation type
@@ -450,78 +408,32 @@ const HomePage = ({ setOpenModal, openModal }) => {
                 </p>
               </div>
             </div>
-
-            {/* <div className="row g-3 d-md-flex d-none ">
-              <div className="col-12 col-md-3 d-flex align-items-center justify-content-center">
-                <AnimateOnScroll delay={0}>
-                  <img src={Lightbott} className="img-fluid add_height_all rounded" alt="Image 1" />
-                </AnimateOnScroll>
-              </div>
-              <div className="col-12 col-md-3 d-flex align-items-center justify-content-center">
-                <AnimateOnScroll delay={0.1}>
-                  <img src={Yellowbottle} className="img-fluid add_height_all rounded" alt="Image 2" />
-                </AnimateOnScroll>
-              </div>
-              <div className="col-12 col-md-3 d-flex align-items-center justify-content-center">
-                <AnimateOnScroll delay={0.2}>
-                  <img src={Bluebootle} className="img-fluid add_height_all rounded" alt="Image 3" />
-                </AnimateOnScroll>
-              </div>
-              <div className="col-12 col-md-3 d-flex align-items-center justify-content-center">
-                <AnimateOnScroll delay={0.3}>
-                  <img src={Bootglass} className="img-fluid add_height_all rounded" alt="Image 4" />
-                </AnimateOnScroll>
-              </div>
-            </div> */}
-
-
-
             <div className="row g-3 d-md-flex d-none">
-              <div className="col-12 col-md-3 d-flex align-items-center justify-content-center">
-                <motion.div
-                  initial={{ scale: 0, opacity: 0, x: -300 }}  // Starting off-screen from the left
-                  whileInView={{ scale: 1, opacity: 1, x: 0 }}  // Final position (zoom in and center)
-                  transition={{ type: 'spring', stiffness: 50, delay: 0, duration: 1.5 }}
-                >
-                  <img src={Lightbott} className="img-fluid add_height_all rounded" alt="Image 1" />
-                </motion.div>
-              </div>
-
-              <div className="col-12 col-md-3 d-flex align-items-center justify-content-center">
-                <motion.div
-                  initial={{ scale: 0, opacity: 0, x: -300 }}  // Starting off-screen from the left
-                  whileInView={{ scale: 1, opacity: 1, x: 0 }}  // Final position (zoom in and center)
-                  transition={{ type: 'spring', stiffness: 50, delay: 0.1, duration: 1.5 }}
-                >
-                  <img src={Yellowbottle} className="img-fluid add_height_all rounded" alt="Image 2" />
-                </motion.div>
-              </div>
-
-              <div className="col-12 col-md-3 d-flex align-items-center justify-content-center">
-                <motion.div
-                  initial={{ scale: 0, opacity: 0, x: 300 }}  // Starting off-screen from the right
-                  whileInView={{ scale: 1, opacity: 1, x: 0 }}  // Final position (zoom in and center)
-                  transition={{ type: 'spring', stiffness: 50, delay: 0.2, duration: 1.5 }}
-                >
-                  <img src={Bluebootle} className="img-fluid add_height_all rounded" alt="Image 3" />
-                </motion.div>
-              </div>
-
-              <div className="col-12 col-md-3 d-flex align-items-center justify-content-center">
-                <motion.div
-                  initial={{ scale: 0, opacity: 0, x: 300 }}  // Starting off-screen from the right
-                  whileInView={{ scale: 1, opacity: 1, x: 0 }}  // Final position (zoom in and center)
-                  transition={{ type: 'spring', stiffness: 50, delay: 0.3, duration: 1.5 }}
-                >
-                  <img src={Bootglass} className="img-fluid add_height_all rounded" alt="Image 4" />
-                </motion.div>
-              </div>
+              {[
+                { src: Lightbott, alt: "Image 1", delay: 0, x: 0 },
+                { src: Yellowbottle, alt: "Image 2", delay: 0.1, x: 0 },
+                { src: Bluebootle, alt: "Image 3", delay: 0.2, x: 0 },
+                { src: Bootglass, alt: "Image 4", delay: 0.3, x: 0 },
+              ].map((item, index) => (
+                <div key={index} className="col-12 col-md-3 d-flex align-items-center justify-content-center">
+                  <motion.div
+                    initial={{ scale: 0.9, opacity: 0, x: 0 }}
+                    whileInView={{ scale: 1, opacity: 1, x: item.x }}
+                    viewport={{ amount: 0.5 }}
+                    transition={{
+                      type: "spring",
+                      stiffness: 40,
+                      damping: 10,
+                      delay: item.delay,
+                      duration: 1.2,
+                      ease: "easeOut"
+                    }}
+                  >
+                    <img src={item.src} className="img-fluid add_height_all rounded" alt={item.alt} />
+                  </motion.div>
+                </div>
+              ))}
             </div>
-
-
-
-
-
             <div className="container d-block d-md-none">
               <Slider {...settings}>
                 <div className="d-flex justify-content-center">
@@ -538,11 +450,8 @@ const HomePage = ({ setOpenModal, openModal }) => {
                 </div>
               </Slider>
             </div>
-
-
           </div>
         </div>
-
         <div className="row mx-auto mx-md-0 mt-md-5 pt-md-5 pt-0 mt-0">
           <div className="col-md-5 col-12 order-1 ps-0 order-md-2 pe-md-5 pe-0 d-flex align-items-center justify-content-center mb-md-5 mb-0 pb-md-5 pb-0">
             <div className="row px-md-5 px-0 mt-md-0 mt-5 mx-auto">
@@ -567,12 +476,10 @@ const HomePage = ({ setOpenModal, openModal }) => {
               </div>
             </div>
           </div>
-
           <div className="col-md-7 col-12 order-2 order-md-1 ps-0 mb-md-5 mb-0" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
             <img src={Twoperson} className="w-100 h-100" alt="" />
           </div>
         </div>
-
       </div>
       <Modal
         show={openModal}

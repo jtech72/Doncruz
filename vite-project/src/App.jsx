@@ -9,6 +9,7 @@ import TermsofUse from './components/TermsofUse/TermsofUse'
 import CookiesPolicy from './components/CookiesPolicy/CookiesPolicy'
 import TermsandConditions from './components/TermsandConditions/TermsandConditions'
 import Logo from './components/Navbar/Logo'
+import AgeVerificationModal from "./components/AgeVerificationModal/AgeVerificationModal";
 
 function App() {
   const [openModal, setOpenModal] = useState(false)
@@ -21,7 +22,8 @@ function App() {
   }, []);
   return (
     <>
-  
+        {/* <AgeVerificationModal /> */}
+
       <Navbar />
       <Logo />
      <Routes>
