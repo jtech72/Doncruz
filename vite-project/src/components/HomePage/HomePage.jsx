@@ -221,35 +221,52 @@ const HomePage = ({ setOpenModal, openModal }) => {
               animate={shouldAnimate ? "visible" : "hidden"}
               style={{ overflow: "hidden" }} // Ensures smooth transition without overflowing
             >
-              {text.split("").map((char, index) => (
-                <motion.span
-                  key={index}
-                  className="inline-block"
-                  variants={typingVariants}
-                  custom={index} // Pass the index for delay calculation
-                  style={{
-                    display: char === " " ? "inline-block" : "inline-block",
-                    marginRight: char === " " ? "0.25em" : "0",
-                    opacity: shouldAnimate ? 1 : 0, // Optional: Control opacity if needed
-                  }}
-                  initial={{ y: 50, opacity: 0 }} // Start from below and invisible
-                  animate={{ y: 0, opacity: 1 }} // Slide up to the normal position and fade in
-                  transition={{
-                    y: { type: "spring", stiffness: 200, damping: 25, delay: index * 0.05 }, // Add a delay for each character
-                    opacity: { duration: 0.3 },
-                  }}
-                >
-                  {char}
-                </motion.span>
-              ))}
+              <motion.div
+                className="inline-block"
+                variants={typingVariants}
+                custom={0} // Adjust index for delay calculation
+                style={{
+                  display: "block", // Make the element block-level to break into a new line
+                  marginRight: "0.25em",
+                  opacity: shouldAnimate ? 1 : 0,
+                }}
+                initial={{ y: 50, opacity: 0 }} // Start from below and invisible
+                animate={{ y: 0, opacity: 1 }} // Slide up to the normal position and fade in
+                transition={{
+                  y: { type: "spring", stiffness: 200, damping: 25, delay: 0 * 0.05 },
+                  opacity: { duration: 0.3 },
+                }}
+              >
+                From Agave to Excellence - Perfection
+              </motion.div>
+              <motion.div
+                className="inline-block"
+                variants={typingVariants}
+                custom={1} // Adjust index for delay calculation
+                style={{
+                  display: "block", // Make the element block-level to break into a new line
+                  marginRight: "0.25em",
+                  opacity: shouldAnimate ? 1 : 0,
+                }}
+                initial={{ y: 50, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{
+                  y: { type: "spring", stiffness: 200, damping: 25, delay: 1 * 0.05 },
+                  opacity: { duration: 0.3 },
+                }}
+              >
+                in every pour.
+              </motion.div>
             </motion.h1>
           </div>
+
           <div className="col-12 text-center pb-md-4 pb-0 mb-md-4 mb-2 mt-md-4 mt-3">
             <p className="text-white add_para_font">
               Don Cruz Platinium — The Legacy of Enric Ramon in Every Sip.
             </p>
           </div>
         </div>
+        <section id='colletions'>
         <div className="row">
           <div className="col-md-7 col-12 ps-0" data-aos="fade-up" data-aos-duration="1000">
             <img src={Menbottle} className="w-100 h-100" alt="Men Bottle" />
@@ -347,7 +364,9 @@ const HomePage = ({ setOpenModal, openModal }) => {
             </div>
           </div>
         </div>
-        <div className="row py-md-5 pt-5 pb-0 add_bg_img_design">
+        </section>
+       <section id='Experience'>
+       <div className="row py-md-5 pt-5 pb-0 add_bg_img_design">
           <div className="col-12 d-flex align-items-center justify-content-center">
             <p className="mb-0 pb-0 add_para_font_era pe-4">The new era of</p>
           </div>
@@ -452,7 +471,9 @@ const HomePage = ({ setOpenModal, openModal }) => {
             </div>
           </div>
         </div>
-        <div className="row mx-auto mx-md-0 mt-md-5 pt-md-5 pt-0 mt-0">
+       </section>
+       <section id='aboutus'>
+       <div className="row mx-auto mx-md-0 mt-md-5 pt-md-5 pt-0 mt-0">
           <div className="col-md-5 col-12 order-1 ps-0 order-md-2 pe-md-5 pe-0 d-flex align-items-center justify-content-center mb-md-5 mb-0 pb-md-5 pb-0">
             <div className="row px-md-5 px-0 mt-md-0 mt-5 mx-auto">
               <div className="col-12  text-justify" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
@@ -480,6 +501,8 @@ const HomePage = ({ setOpenModal, openModal }) => {
             <img src={Twoperson} className="w-100 h-100" alt="" />
           </div>
         </div>
+       </section>
+      
       </div>
       <Modal
         show={openModal}
