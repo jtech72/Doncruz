@@ -15,14 +15,7 @@ import Logo from './Logo';
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
-  const sectionOneRef = useRef(null);
-  const sectionTwoRef = useRef(null);
-  const sectionThreeRef = useRef(null);
 
-    // Function to scroll to specific section
-    const scrollToSection = (sectionRef) => {
-      sectionRef.current?.scrollIntoView({ behavior: 'smooth' });
-    };
 
   const overlayRef = useRef(null);
   const introLogoRef = useRef(null);
@@ -145,9 +138,20 @@ const Navbar = () => {
                 </ul>
               </div>
 
-
+         
               <div className="col-md-4 text-center ps-md-0 ps-0 d-none d-md-block ">
-             
+                {/* <Link className="nav-link text-dark active" to="/">
+                  <div className='position-relative d-flex justify-content-center'>
+                    <div className='position-relative'><div className="animate__animated animate__fadeInDown rotate-360">
+                      <img src={vector1} className='img_logo' alt="" /> </div><div className="animate__animated animate__fadeInDown animate__delay-1s rotate-360">
+                        <img src={vector2} className='img_logo' alt="" /></div></div> <div className='d-flex justify-content-center position-absolute mt-2'>
+                      <div className="animate__animated animate__fadeInUp animate__delay-2s rotate-360"><img src={vector3} className='img_logo' alt="" /></div>
+                      <div className="animate__animated animate__fadeInUp animate__delay-3s rotate-360"><img src={vector4} className='img_logo' alt="" /></div></div></div>
+
+                  <div className='mt-2'>
+                    <img src={tequila} className='' alt="" />
+                  </div>
+                </Link> */}
                 
               </div>
 

@@ -27,7 +27,7 @@ const Logo = () => {
             <div className="animate__animated animate__fadeInDown rotate-360">
               <img src={vector1} className="img_logo mt-2" alt="Vector 1" />
             </div>
-            <div className="animate__animated animate__fadeInDown animate__delay-1s rotate-360">
+            <div className="animate__animated animate__fadeInDown animate__delay-1s rotate-360 d-flex align-items-start">
               <img src={vector2} className="img_logo" alt="Vector 2" />
             </div>
           </div>
