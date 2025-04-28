@@ -266,12 +266,13 @@ const HomePage = ({ setOpenModal, openModal }) => {
             </p>
           </div>
         </div>
-        <section id='colletions'>
+        <section id='colletions'  >
         <div className="row">
+          <section id='plata' className='px-0 d-md-flex d-block'>
           <div className="col-md-7 col-12 ps-0" data-aos="fade-up" data-aos-duration="1000">
             <img src={Menbottle} className="w-100 h-100" alt="Men Bottle" />
           </div>
-          <div className="col-md-5 mt-4 mt-md-0 col-12 pe-md-5 pe-0 d-flex align-items-end justify-content-end mb-md-5 mb-0 pb-5">
+          <div className="col-md-5 mt-4 mt-md-0 col-12 pe-md-5 pe-0 d-flex align-items-end justify-content-end mb-md-5 mb-0 pb-md-5 pb-4">
             <div className="row pe-md-5 pe-2 mx-auto">
               <div className="col-12 mb-3 d-flex align-items-center justify-content-md-end justify-content-center pe-md-5 pe-0 ps-0" data-aos="fade-up" data-aos-duration="1000">
                 <img src={Donlogo} className="add_img_logo_size" alt="Don Logo" />
@@ -315,8 +316,12 @@ const HomePage = ({ setOpenModal, openModal }) => {
               </div>
             </div>
           </div>
+          </section>
+        
         </div>
         <div className="row">
+        <section id='anjoi' className='px-0 d-md-flex d-block'>
+
           <div className="col-md-7 col-12 pe-0 order-1 order-md-2" data-aos="fade-up" data-aos-duration="1000">
             <img src={Anejob} className="w-100 h-100" alt="Añejo Bottle" />
           </div>
@@ -363,6 +368,7 @@ const HomePage = ({ setOpenModal, openModal }) => {
               </div>
             </div>
           </div>
+          </section>
         </div>
         </section>
        <section id='Experience'>
@@ -502,7 +508,6 @@ const HomePage = ({ setOpenModal, openModal }) => {
           </div>
         </div>
        </section>
-      
       </div>
       <Modal
         show={openModal}

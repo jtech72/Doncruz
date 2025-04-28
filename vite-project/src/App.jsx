@@ -27,7 +27,6 @@ function App() {
       <Navbar />
       <Logo />
      <Routes>
-
       <Route path='/' element={<HomePage setOpenModal={setOpenModal} openModal={openModal}/>}/>
       <Route path='/privacy' element={<PrivacyPolicy />}/>
       <Route path='/termsOfUse' element={<TermsofUse />}/>

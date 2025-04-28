@@ -93,8 +93,8 @@ const Footer = () => {
                 backgroundColor: "#EBB713",
                 border: "none",
                 transformOrigin: "left",
-                color:"yellow",
-                opacity:"1"
+                color: "yellow",
+                opacity: "1"
               }}
             />
           </div>
@@ -134,8 +134,8 @@ const Footer = () => {
                 backgroundColor: "#EBB713",
                 border: "none",
                 transformOrigin: "right",
-                color:"yellow",
-                opacity:"1"
+                color: "yellow",
+                opacity: "1"
               }}
             />
           </div>
@@ -189,12 +189,24 @@ const Footer = () => {
               )}
             </h4>
             {openSections.quickLinks && (
-              <ul className="list-unstyled">
-                <li className="pb-2 add_text_font_footer">Home</li>
-                <li className="pb-2 add_text_font_footer">About Us</li>
-                <li className="pb-2 add_text_font_footer">Collections</li>
-                <li className="add_text_font_footer">Experience</li>
-              </ul>
+             <ul className="list-unstyled">
+             <li className="pb-2 add_text_font_footer">
+               <a className="text-white text-decoration-none" href="#">Home</a>
+             </li>
+             <li className="pb-2 add_text_font_footer">
+               <a className="text-white text-decoration-none" href="#colletions">Collections</a>
+             </li>
+           
+             <li className="add_text_font_footer pb-2">
+               <a className="text-white text-decoration-none" href="#Experience">Experience</a>
+             </li>
+             <li className=" add_text_font_footer">
+               <a className="text-white text-decoration-none" href="#aboutus">About us</a>
+             </li>
+           
+           
+           </ul>
+           
             )}
           </div>
 
@@ -212,8 +224,15 @@ const Footer = () => {
             </h4>
             {openSections.collections && (
               <ul className="list-unstyled">
-                <li className="pb-2 add_text_font_footer">Plata</li>
-                <li className="add_text_font_footer">Añejo</li>
+                
+             <li className="add_text_font_footer pb-2">
+               <a className="text-white text-decoration-none" href="#plata">Plata</a>
+             </li>
+                {/* <li className="pb-2 add_text_font_footer">Plata</li> */}
+                <li className="add_text_font_footer pb-2">
+               <a className="text-white text-decoration-none" href="#anjoi">Añejo</a>
+             </li>
+                {/* <li className="add_text_font_footer">Añejo</li> */}
               </ul>
             )}
           </div>
