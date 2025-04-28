@@ -93,8 +93,8 @@ const Footer = () => {
                 backgroundColor: "#EBB713",
                 border: "none",
                 transformOrigin: "left",
-                color:"yellow",
-                opacity:"1"
+                color: "yellow",
+                opacity: "1"
               }}
             />
           </div>
@@ -134,8 +134,8 @@ const Footer = () => {
                 backgroundColor: "#EBB713",
                 border: "none",
                 transformOrigin: "right",
-                color:"yellow",
-                opacity:"1"
+                color: "yellow",
+                opacity: "1"
               }}
             />
           </div>
@@ -190,10 +190,15 @@ const Footer = () => {
             </h4>
             {openSections.quickLinks && (
               <ul className="list-unstyled">
-                <li className="pb-2 add_text_font_footer">Home</li>
-                <li className="pb-2 add_text_font_footer">About Us</li>
-                <li className="pb-2 add_text_font_footer">Collections</li>
-                <li className="add_text_font_footer">Experience</li>
+                {/* <li className="pb-2 add_text_font_footer">Home</li> */}
+                <li><a href="#">Home</a></li>
+
+                {/* <li className="pb-2 add_text_font_footer">About Us</li> */}
+                <li><a href="#aboutus">About us</a></li>
+                <li><a href="#colletions">Collections</a></li>
+                {/* <li className="pb-2 add_text_font_footer">Collections</li> */}
+                {/* <li className="add_text_font_footer">Experience</li> */}
+                <li><a href="#Experience">Experience</a></li>
               </ul>
             )}
           </div>
