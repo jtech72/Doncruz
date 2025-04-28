@@ -90,10 +90,10 @@ const Footer = () => {
               viewport={{ once: false }}
               style={{
                 height: "1px",
-                backgroundColor: "#EBB713",
+                backgroundColor: "silver",
                 border: "none",
                 transformOrigin: "left",
-                color: "yellow",
+                color: "silver",
                 opacity: "1"
               }}
             />
@@ -131,10 +131,10 @@ const Footer = () => {
               viewport={{ once: false }}
               style={{
                 height: "1px",
-                backgroundColor: "#EBB713",
+                backgroundColor: "silver",
                 border: "none",
                 transformOrigin: "right",
-                color: "yellow",
+                color: "silver",
                 opacity: "1"
               }}
             />
@@ -303,7 +303,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <hr style={{ height: '1px', borderColor: '#EBB713', opacity: '1' }} />
+        <hr style={{ height: '1px', borderColor: 'silver  ', opacity: '1' }} />
         <div className="text-center pt-0">
           <p className="mb-0 copy_link">
             Powered By <a href="https://rowthtech.com" className="text-warning">RowthTech</a> © 2025 Don Cruz Platinium | All Rights Reserved.
