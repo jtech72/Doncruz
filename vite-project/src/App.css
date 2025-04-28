@@ -405,11 +405,12 @@ button:hover {
 
   .add_top_banner_img {
     background: url('./assets/bgmobilebanner.svg') no-repeat center center;
-    /* background-size: cover; */
+    background-size: cover;
     text-align: center;
     /* position: relative; */
-    height: 45vh;
+    height: 47vh;
   }
+  
 
   .top_img_dan {
     width: 18rem;
@@ -779,7 +780,7 @@ body.intro-done {
   }
 
   .img_logo {
-    width: 100px;
+    width: 150px;
     animation: shrinkLogoMobile 5s ease forwards; 
   }
 
