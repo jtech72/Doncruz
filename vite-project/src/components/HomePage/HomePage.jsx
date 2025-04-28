@@ -502,7 +502,6 @@ const HomePage = ({ setOpenModal, openModal }) => {
           </div>
         </div>
        </section>
-      
       </div>
       <Modal
         show={openModal}

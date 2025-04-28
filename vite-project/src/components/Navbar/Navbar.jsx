@@ -133,7 +133,7 @@ const Navbar = () => {
                     <Link className="nav-link add_font_size_nav text-dark active " to="/">Home</Link>
                   </li>
                   <li className="nav-item ps-md-4 ps-0">
-                    <a className="nav-link add_font_size_nav text-dark active" href="#">Collections </a>
+                    <a className="nav-link add_font_size_nav text-dark active" href="#collections">Collections </a>
                   </li>
                 </ul>
               </div>
@@ -159,7 +159,7 @@ const Navbar = () => {
               <div className="col-md-4">
                 <ul className="navbar-nav d-flex flex-md-row flex-column justify-content-end pe-md-5 pe-0">
                   <li className="nav-item ps-md-3 pe-md-5 pe-0">
-                    <a className="nav-link add_font_size_nav text-dark active" href="#">Experience</a>
+                    <a className="nav-link add_font_size_nav text-dark active" href="#Experience">Experience</a>
                   </li>
                   <li className="nav-item ps-md-4 ps-0">
                     <a className="nav-link add_font_size_nav text-dark active pe-md-5 pe-0" href="#"> About Us</a>
