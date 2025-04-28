@@ -189,24 +189,24 @@ const Footer = () => {
               )}
             </h4>
             {openSections.quickLinks && (
-             <ul className="list-unstyled">
-             <li className="pb-2 add_text_font_footer">
-               <a className="text-white text-decoration-none" href="#">Home</a>
-             </li>
-             <li className="pb-2 add_text_font_footer">
-               <a className="text-white text-decoration-none" href="#colletions">Collections</a>
-             </li>
-           
-             <li className="add_text_font_footer pb-2">
-               <a className="text-white text-decoration-none" href="#Experience">Experience</a>
-             </li>
-             <li className=" add_text_font_footer">
-               <a className="text-white text-decoration-none" href="#aboutus">About us</a>
-             </li>
-           
-           
-           </ul>
-           
+              <ul className="list-unstyled">
+                <li className="pb-2 add_text_font_footer">
+                  <a className="text-white text-decoration-none" href="#">Home</a>
+                </li>
+                <li className="pb-2 add_text_font_footer">
+                  <a className="text-white text-decoration-none" href="#colletions">Collections</a>
+                </li>
+
+                <li className="add_text_font_footer pb-2">
+                  <a className="text-white text-decoration-none" href="#Experience">Experience</a>
+                </li>
+                <li className=" add_text_font_footer">
+                  <a className="text-white text-decoration-none" href="#aboutus">About us</a>
+                </li>
+
+
+              </ul>
+
             )}
           </div>
 
@@ -224,14 +224,14 @@ const Footer = () => {
             </h4>
             {openSections.collections && (
               <ul className="list-unstyled">
-                
-             <li className="add_text_font_footer pb-2">
-               <a className="text-white text-decoration-none" href="#plata">Plata</a>
-             </li>
+
+                <li className="add_text_font_footer pb-2">
+                  <a className="text-white text-decoration-none" href="#plata">Plata</a>
+                </li>
                 {/* <li className="pb-2 add_text_font_footer">Plata</li> */}
                 <li className="add_text_font_footer pb-2">
-               <a className="text-white text-decoration-none" href="#anjoi">Añejo</a>
-             </li>
+                  <a className="text-white text-decoration-none" href="#anjoi">Añejo</a>
+                </li>
                 {/* <li className="add_text_font_footer">Añejo</li> */}
               </ul>
             )}
@@ -306,9 +306,10 @@ const Footer = () => {
         <hr style={{ height: '1px', borderColor: 'silver  ', opacity: '1' }} />
         <div className="text-center pt-0">
           <p className="mb-0 copy_link">
-            Powered By <a href="https://rowthtech.com" className="text-warning">RowthTech</a> © 2025 Don Cruz Platinium | All Rights Reserved.
+            Powered By <a href="https://rowthtech.com" className="text-warning" target="_blank" rel="noopener noreferrer">RowthTech</a> © 2025 Don Cruz Platinium | All Rights Reserved.
           </p>
         </div>
+
       </div>
     </footer>
   );
