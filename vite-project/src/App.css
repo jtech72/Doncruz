@@ -42,7 +42,7 @@ body::-webkit-scrollbar {
 hr.add_color_line {
   /* / border: 1px solid #EBB713; / */
   opacity: 1;
-  color: #EBB713;
+  color: silver;
 }
 
 .add_second_heading {
