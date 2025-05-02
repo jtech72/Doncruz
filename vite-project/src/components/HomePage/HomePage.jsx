@@ -176,7 +176,9 @@ const HomePage = ({ setOpenModal, openModal }) => {
                 <div className="row mx-auto d-md-flex d-none">
                   <div className="col-md-4 ps-0 col-12 pt-5 pt-md-0 d-flex align-items-center flex-column justify-content-between">
                     <p className="description pb-md-5 pb-4 pt-md-0 pt-4 mb-0 text-md-start text-center">
-                      From the careful jima to the meticulous distillation, every step <br />in the creation of tequila is infused with passion and dedication.
+                      {/* From the careful jima to the meticulous distillation, every step <br />in the creation of tequila is infused with passion and dedication. */}
+                      From the heart of Mexico’s agave fields, Don Cruz Platinum isn’t just tequila, it’s a legacy you can taste.
+
                     </p>
                   </div>
                   <div className="col-md-4 col-12"></div>
@@ -267,247 +269,277 @@ const HomePage = ({ setOpenModal, openModal }) => {
           </div>
         </div>
         <section id='colletions'  >
-        <div className="row">
-          <section id='plata' className='px-0 d-md-flex d-block'>
-          <div className="col-md-7 col-12 ps-0" data-aos="fade-up" data-aos-duration="1000">
-            <img src={Menbottle} className="w-100 h-100" alt="Men Bottle" />
-          </div>
-          <div className="col-md-5 mt-4 mt-md-0 col-12 pe-md-5 pe-0 d-flex align-items-end justify-content-end mb-md-5 mb-0 pb-md-5 pb-4">
-            <div className="row pe-md-5 pe-2 mx-auto">
-              <div className="col-12 mb-3 d-flex align-items-center justify-content-md-end justify-content-center pe-md-5 pe-0 ps-0" data-aos="fade-up" data-aos-duration="1000">
-                <img src={Donlogo} className="add_img_logo_size" alt="Don Logo" />
+          <div className="row">
+            <section id='plata' className='px-0 d-md-flex d-block'>
+              <div className="col-md-7 col-12 ps-0" data-aos="fade-up" data-aos-duration="1000">
+                <img src={Menbottle} className="w-100 h-100" alt="Men Bottle" />
               </div>
+              <div className="col-md-5 mt-4 mt-md-0 col-12 pe-md-5 pe-0 d-flex align-items-end justify-content-end mb-md-5 mb-0 pb-md-5 pb-4">
+                <div className="row pe-md-5 pe-2 mx-auto">
+                  <div className="col-12 mb-3 d-flex align-items-center justify-content-md-end justify-content-center pe-md-5 pe-0 ps-0" data-aos="fade-up" data-aos-duration="1000">
+                    <img src={Donlogo} className="add_img_logo_size" alt="Don Logo" />
+                  </div>
 
-              <div className="col-12 text-md-end text-center pe-md-5 pe-0 ps-0" data-aos="fade-up" data-aos-duration="1000">
-                <h3 className="add_second_heading">
-                  This is Don Cruz Platinium Plata-<br /> This is tequila, redefined.
-                </h3>
-              </div>
+                  <div className="col-12 text-md-end text-center pe-md-5 pe-0 ps-0" data-aos="fade-up" data-aos-duration="1000">
+                    <h3 className="add_second_heading">
+                      {/* This is Don Cruz Platinium Plata-<br /> This is tequila, redefined. */}
+                      Don Cruz Platinum Plata <br/>Crisp. Vibrant. Pure.
 
-              <div className="col-12 text-md-end text-center mt-3 pe-md-5" data-aos="fade-up" data-aos-duration="1000">
-                <p className="text-md-end text-justify add_font_para_second">
-                  Every drop of Doncruz Platinum tells a story—one of tradition, precision,
+
+                    </h3>
+                  </div>
+
+                  <div className="col-12 text-md-end text-center mt-3 pe-md-5" data-aos="fade-up" data-aos-duration="1000">
+                    <p className="text-md-end text-justify add_font_para_second">
+                      {/* Every drop of Doncruz Platinum tells a story—one of tradition, precision,
                   and passion. From the expert jima of the agave to the meticulous art of
-                  distillation, this is more than just a spirit—it’s an experience.
-                </p>
-              </div>
-              <div className="col-12 mt-md-5 mt-0 d-md-flex d-none align-items-center justify-content-md-end justify-content-center pe-md-5 pe-0">
-                <div className="add_color_font d-flex align-items-center justify-content-end">
-                  <AnimateOnScroll animationType="fade-up" delay={0.2}>
-                    <hr className="me-3 add_line_width" />
-                  </AnimateOnScroll>
-                  <AnimateOnScroll animationType="fade-up" delay={0.1}>
-                    <span className="add_color_font">Plata</span>
-                  </AnimateOnScroll>
+                  distillation, this is more than just a spirit—it’s an experience. */}
+                      Our Plata honors the true essence of agave — clean, lively, and full of natural energy.
+                      With every sip, you taste the freshness of the fields and the craftsmanship that shaped it.
+                    </p>
+                    <p className=''>For those who want tequila in its purest, boldest form.
+                    </p>
+                  </div>
+                  <div className="col-12 mt-md-5 mt-0 d-md-flex d-none align-items-center justify-content-md-end justify-content-center pe-md-5 pe-0">
+                    <div className="add_color_font d-flex align-items-center justify-content-end">
+                      <AnimateOnScroll animationType="fade-up" delay={0.2}>
+                        <hr className="me-3 add_line_width" />
+                      </AnimateOnScroll>
+                      <AnimateOnScroll animationType="fade-up" delay={0.1}>
+                        <span className="add_color_font">Plata</span>
+                      </AnimateOnScroll>
+                    </div>
+                  </div>
+                  <div className="col-12 mt-md-5 mt-0 d-flex ps-0 d-md-none align-items-center justify-content-md-end justify-content-center ps-md-5 pe-0">
+                    <div className="add_color_font d-flex align-items-center justify-content-end">
+                      <AnimateOnScroll animationType="fade-up" delay={0.2}>
+                        <hr className="me-2 add_line_width" />
+                      </AnimateOnScroll>
+                      <AnimateOnScroll animationType="fade-up" delay={0.1}>
+                        <span className="add_color_font">Plata</span>
+                      </AnimateOnScroll>
+                      <AnimateOnScroll animationType="fade-up" delay={0.2}>
+                        <hr className="ms-2 add_line_width" />
+                      </AnimateOnScroll>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div className="col-12 mt-md-5 mt-0 d-flex ps-0 d-md-none align-items-center justify-content-md-end justify-content-center ps-md-5 pe-0">
-                <div className="add_color_font d-flex align-items-center justify-content-end">
-                  <AnimateOnScroll animationType="fade-up" delay={0.2}>
-                    <hr className="me-2 add_line_width" />
-                  </AnimateOnScroll>
-                  <AnimateOnScroll animationType="fade-up" delay={0.1}>
-                    <span className="add_color_font">Plata</span>
-                  </AnimateOnScroll>
-                  <AnimateOnScroll animationType="fade-up" delay={0.2}>
-                    <hr className="ms-2 add_line_width" />
-                  </AnimateOnScroll>
-                </div>
-              </div>
-            </div>
-          </div>
-          </section>
-        
-        </div>
-        <div className="row">
-        <section id='anjoi' className='px-0 d-md-flex d-block'>
+            </section>
 
-          <div className="col-md-7 col-12 pe-0 order-1 order-md-2" data-aos="fade-up" data-aos-duration="1000">
-            <img src={Anejob} className="w-100 h-100" alt="Añejo Bottle" />
           </div>
-          <div className="col-md-5 col-12 ps-md-5 ps-0 d-flex align-items-end justify-content-end mb-md-5 mb-0 pt-4 pt-md-0 pb-5 order-2 order-md-1">
-            <div className="row ps-md-5 ps-0 mx-auto">
-              <div className="col-12 mb-3 d-flex align-items-center justify-content-md-start justify-content-center ps-md-5 ps-5" data-aos="fade-up" data-aos-duration="1000">
-                <img src={Donlogo} className="add_img_logo_size" alt="Don Logo" />
+          <div className="row">
+            <section id='anjoi' className='px-0 d-md-flex d-block'>
+
+              <div className="col-md-7 col-12 pe-0 order-1 order-md-2" data-aos="fade-up" data-aos-duration="1000">
+                <img src={Anejob} className="w-100 h-100" alt="Añejo Bottle" />
               </div>
-              <div className="col-12 text-md-start text-center ps-md-5 ps-4" data-aos="fade-up" data-aos-duration="1000">
-                <h3 className="add_second_heading">
-                  This is Don Cruz Platinum Añejo –<br /> The Pinnacle of Purity.
-                </h3>
-              </div>
-              <div className="col-12 text-md-start text-justify mt-3 ps-md-5 ps-4" data-aos="fade-up" data-aos-duration="1000">
-                <p className="add_font_para_second">
-                  At Tequila don cruz Platinum, every bottle is the perfect fusion of time-
+              <div className="col-md-5 col-12 ps-md-5 ps-0 d-flex align-items-end justify-content-end mb-md-5 mb-0 pt-4 pt-md-0 pb-5 order-2 order-md-1">
+                <div className="row ps-md-5 ps-0 mx-auto">
+                  <div className="col-12 mb-3 d-flex align-items-center justify-content-md-start justify-content-center ps-md-5 ps-5" data-aos="fade-up" data-aos-duration="1000">
+                    <img src={Donlogo} className="add_img_logo_size" alt="Don Logo" />
+                  </div>
+                  <div className="col-12 text-md-start text-center ps-md-5 ps-4" data-aos="fade-up" data-aos-duration="1000">
+                    <h3 className="add_second_heading">
+                      Don Cruz Platinum Añejo
+                      –<br /> The Pinnacle of Purity
+
+                    </h3>
+                  </div>
+                  <div className="col-12 text-md-start text-justify mt-3 ps-md-5 ps-4" data-aos="fade-up" data-aos-duration="1000">
+                    <p className="add_font_para_second">
+                      {/* At Tequila don cruz Platinum, every bottle is the perfect fusion of time-
                   honored tradition and cutting-edge innovation. While modern techniques
                   elevate the craft, the soul of this tequila lies in its unrivaled smoothness—
-                  a testament to an exceptional recipe passed down with dedication.
-                </p>
-              </div>
-              <div className="col-12 mt-md-5 mt-0 d-md-flex d-none align-items-center justify-content-md-start justify-content-center ps-md-5 ps-4">
-                <div className="add_color_font d-flex align-items-center justify-content-start">
-                  <AnimateOnScroll animationType="fade-up" delay={0.1}>
-                    <span className="add_color_font">Añejo</span>
-                  </AnimateOnScroll>
-                  <AnimateOnScroll animationType="fade-up" delay={0.2}>
-                    <hr className="ms-3 add_line_width" />
-                  </AnimateOnScroll>
+                  a testament to an exceptional recipe passed down with dedication. */}
+                      Aged to deep perfection, our Añejo brings rich notes of the ingredients after being aged for years, yet layered with complexity, every glass is a tribute to patience — and crowned with real gold flakes, it's a reminder that true craftsmanship deserves to shine.
+                    </p>
+                    <p className=''>For those who know greatness isn’t rushed. It’s crafted.</p>
+                  </div>
+                  <div className="col-12 mt-md-5 mt-0 d-md-flex d-none align-items-center justify-content-md-start justify-content-center ps-md-5 ps-4">
+                    <div className="add_color_font d-flex align-items-center justify-content-start">
+                      <AnimateOnScroll animationType="fade-up" delay={0.1}>
+                        <span className="add_color_font">Añejo</span>
+                      </AnimateOnScroll>
+                      <AnimateOnScroll animationType="fade-up" delay={0.2}>
+                        <hr className="ms-3 add_line_width" />
+                      </AnimateOnScroll>
+                    </div>
+                  </div>
+                  <div className="col-12 mt-md-5 mt-0 d-flex ps-0 d-md-none align-items-center justify-content-md-end justify-content-center ps-md-5 pe-0">
+                    <div className="add_color_font d-flex align-items-center justify-content-end">
+                      <AnimateOnScroll animationType="fade-up" delay={0.2}>
+                        <hr className="me-2 add_line_width" />
+                      </AnimateOnScroll>
+                      <AnimateOnScroll animationType="fade-up" delay={0.1}>
+                        <span className="add_color_font">Añejo</span>
+                      </AnimateOnScroll>
+                      <AnimateOnScroll animationType="fade-up" delay={0.2}>
+                        <hr className="ms-2 add_line_width" />
+                      </AnimateOnScroll>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div className="col-12 mt-md-5 mt-0 d-flex ps-0 d-md-none align-items-center justify-content-md-end justify-content-center ps-md-5 pe-0">
-                <div className="add_color_font d-flex align-items-center justify-content-end">
-                  <AnimateOnScroll animationType="fade-up" delay={0.2}>
-                    <hr className="me-2 add_line_width" />
-                  </AnimateOnScroll>
-                  <AnimateOnScroll animationType="fade-up" delay={0.1}>
-                    <span className="add_color_font">Añejo</span>
-                  </AnimateOnScroll>
-                  <AnimateOnScroll animationType="fade-up" delay={0.2}>
-                    <hr className="ms-2 add_line_width" />
-                  </AnimateOnScroll>
-                </div>
-              </div>
-            </div>
+            </section>
           </div>
-          </section>
-        </div>
         </section>
-       <section id='Experience'>
-       <div className="row py-md-5 pt-5 pb-0 add_bg_img_design">
-          <div className="col-12 d-flex align-items-center justify-content-center">
-            <p className="mb-0 pb-0 add_para_font_era pe-4">The new era of</p>
-          </div>
-          <div className="col-12 d-flex align-items-center justify-content-center">
-            <h5 className="tequila_font_size mb-0">Tequila</h5>
-          </div>
-          <div className="col-md-10 col-12 mx-auto pb-5">
-            <div className="row d-md-flex d-none align-items-center justify-content-center mt-4 mb-5">
-              <div className="col-md-6 col-12 border-md-end border border-dark border-top-0 border-start-0 border-bottom-0 py-1">
+        <section id='Experience'>
+          <div className="row py-md-5 pt-5 pb-0 add_bg_img_design">
+            <div className="col-12 d-flex align-items-center justify-content-center">
+              <p className="mb-0 pb-0 add_para_font_era pe-4">The new era of</p>
+            </div>
+            <div className="col-12 d-flex align-items-center justify-content-center">
+              <h5 className="tequila_font_size mb-0">Tequila</h5>
+            </div>
+            <div className="col-md-10 col-12 mx-auto pb-5">
+              <div className="row d-md-flex d-none align-items-center justify-content-center mt-4 mb-5">
+                <div className="col-md-6 col-12 border-md-end border border-dark border-top-0 border-start-0 border-bottom-0 py-1">
+                  <div
+                    data-aos="fade-right"
+                    data-aos-duration="1000"
+                    data-aos-once="false"
+                  >
+                    <p className="add_font_para_second text-end pe-3 mb-0">
+                      {/* From the careful jima to the meticulous distillation, every step in the<br />
+                      creation of tequila is infused with passion and dedication. This is why<br />
+                      we believe tequila should be revered as a high-end spirit. */}
+                      From the careful jima to the meticulous distillation, every step in the creation of <br/>
+                      Don Cruz tequila is infused with passion, heritage, and unwavering dedication. <br/>
+                      This is why we believe tequila deserves to be revered -
+                       not just as <br/> a drink, but as a high-end spirit worthy of celebration.
+                    </p>
+                  </div>
+                </div>
                 <div
-                  data-aos="fade-right"
+                  className="col-md-6 col-12 py-1 pe-0"
+                  data-aos="fade-left"
                   data-aos-duration="1000"
                   data-aos-once="false"
                 >
-                  <p className="add_font_para_second text-end pe-3 mb-0">
-                    From the careful jima to the meticulous distillation, every step in the<br />
-                    creation of tequila is infused with passion and dedication. This is why<br />
-                    we believe tequila should be revered as a high-end spirit.
+                  <p className="add_font_para_second text-start ps-3 mb-0">
+                    {/* To create a truly exceptional tequila, it takes time, love, commitment, and an exquisite<br />
+                    recipe. And when this is achieved, only a bottle of equal elegance will suffice — something <br />
+                    that exudes strength, importance, and is worthy of the precious liquid it holds. */}
+                    Crafting a truly exceptional tequila takes more than just time. It demands love,<br/>
+                     patience, precision, and an uncompromising commitment to quality. When <br/>
+                     this level of excellence is achieved, it deserves more than just<br/>
+                      any bottle - it calls for a vessel that mirrors its elegance. 
+
                   </p>
                 </div>
               </div>
-              <div
-                className="col-md-6 col-12 py-1 pe-0"
-                data-aos="fade-left"
-                data-aos-duration="1000"
-                data-aos-once="false"
-              >
-                <p className="add_font_para_second text-start ps-3 mb-0">
-                  To create a truly exceptional tequila, it takes time, love, commitment, and an exquisite<br />
-                  recipe. And when this is achieved, only a bottle of equal elegance will suffice — something <br />
-                  that exudes strength, importance, and is worthy of the precious liquid it holds.
-                </p>
-              </div>
-            </div>
-            <div className="row mx-auto d-block d-md-none align-items-center justify-content-center mt-4 mb-5">
-              <div
-                className="col-md-6 col-12 py-1"
-                data-aos="fade-up"  // Animation type
-                data-aos-duration="1000" // Duration (in milliseconds)
-                data-aos-once="false" // Allow animation to trigger on scroll multiple times
-              >
-                <p className="add_font_para_second text-md-center text-justify pe-0 mb-0">
-                  From the careful jima to the meticulous distillation, every step in the
-                  creation of tequila is infused with passion and dedication. This is why
-                  we believe tequila should be revered as a high-end spirit.
-                </p>
-              </div>
-              <div
-                className="col-md-6 col-12 py-1"
-                data-aos="fade-up"  // Animation type
-                data-aos-duration="1000" // Duration
-                data-aos-once="false" // Allow animation to trigger on scroll multiple times
-              >
-                <p className="add_font_para_second text-md-center text-justify ps-0 mb-0">
-                  To create a truly exceptional tequila, it takes time, love, commitment, and an exquisite
-                  recipe. And when this is achieved, only a bottle of equal elegance will suffice — something
-                  that exudes strength, importance, and is worthy of the precious liquid it holds.
-                </p>
-              </div>
-            </div>
-            <div className="row g-3 d-md-flex d-none">
-              {[
-                { src: Lightbott, alt: "Image 1", delay: 0, x: 0 },
-                { src: Yellowbottle, alt: "Image 2", delay: 0.1, x: 0 },
-                { src: Bluebootle, alt: "Image 3", delay: 0.2, x: 0 },
-                { src: Bootglass, alt: "Image 4", delay: 0.3, x: 0 },
-              ].map((item, index) => (
-                <div key={index} className="col-12 col-md-3 d-flex align-items-center justify-content-center">
-                  <motion.div
-                    initial={{ scale: 0.9, opacity: 0, x: 0 }}
-                    whileInView={{ scale: 1, opacity: 1, x: item.x }}
-                    viewport={{ amount: 0.5 }}
-                    transition={{
-                      type: "spring",
-                      stiffness: 40,
-                      damping: 10,
-                      delay: item.delay,
-                      duration: 1.2,
-                      ease: "easeOut"
-                    }}
-                  >
-                    <img src={item.src} className="img-fluid add_height_all rounded" alt={item.alt} />
-                  </motion.div>
+              <div className="row mx-auto d-block d-md-none align-items-center justify-content-center mt-4 mb-5">
+                <div
+                  className="col-md-6 col-12 py-1"
+                  data-aos="fade-up"  // Animation type
+                  data-aos-duration="1000" // Duration (in milliseconds)
+                  data-aos-once="false" // Allow animation to trigger on scroll multiple times
+                >
+                  <p className="add_font_para_second text-md-center text-justify pe-0 mb-0">
+                  From the careful jima to the meticulous distillation, every step in the creation of Don 
+                  Cruz tequila is infused with passion, heritage, and unwavering dedication.
+                   This is why we believe tequila deserves to be revered - not just as a drink,
+                    but as a high-end spirit worthy of celebration.
+                  </p>
                 </div>
-              ))}
-            </div>
-            <div className="container d-block d-md-none">
-              <Slider {...settings}>
-                <div className="d-flex justify-content-center">
-                  <img src={Lightbott} className="img-fluid add_height_all rounded" alt="Image 1" />
+                <div
+                  className="col-md-6 col-12 py-1"
+                  data-aos="fade-up"  // Animation type
+                  data-aos-duration="1000" // Duration
+                  data-aos-once="false" // Allow animation to trigger on scroll multiple times
+                >
+                  <p className="add_font_para_second text-md-center text-justify ps-0 mb-0">
+                  Crafting a truly exceptional tequila takes more than just time. It demands love, 
+                  patience, precision, and an uncompromising commitment to quality.
+                   When this level of excellence is achieved, it deserves more than just any bottle - 
+                   it calls for a vessel that mirrors its elegance.
+                  </p>
                 </div>
-                <div className="d-flex justify-content-center">
-                  <img src={Yellowbottle} className="img-fluid add_height_all rounded" alt="Image 2" />
-                </div>
-                <div className="d-flex justify-content-center">
-                  <img src={Bluebootle} className="img-fluid add_height_all rounded" alt="Image 3" />
-                </div>
-                <div className="d-flex justify-content-center">
-                  <img src={Bootglass} className="img-fluid add_height_all rounded" alt="Image 4" />
-                </div>
-              </Slider>
-            </div>
-          </div>
-        </div>
-       </section>
-       <section id='aboutus'>
-       <div className="row mx-auto mx-md-0 mt-md-5 pt-md-5 pt-0 mt-0">
-          <div className="col-md-5 col-12 order-1 ps-0 order-md-2 pe-md-5 pe-0 d-flex align-items-center justify-content-center mb-md-5 mb-0 pb-md-5 pb-0">
-            <div className="row px-md-5 px-0 mt-md-0 mt-5 mx-auto">
-              <div className="col-12  text-justify" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
-                <h3 className="add_second_heading">
-                  From Farm to Bottle – Crafting <br /> Perfection from the Finest Agave
-                </h3>
               </div>
-              <div className="col-12  text-justify mt-md-3 mt-1" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-                <p className="add_font_para_second  text-justify">
-                  Hand-selected from the heart of the fields, only the best
-                  Blue Weber Agave makes its way into Tequiladoncruz Platinum. Every plant is carefully nurtured, harvested at
-                  peak maturity, and expertly trimmed to extract the richest flavors.
-                </p>
+              <div className="row g-3 d-md-flex d-none">
+                {[
+                  { src: Lightbott, alt: "Image 1", delay: 0, x: 0 },
+                  { src: Yellowbottle, alt: "Image 2", delay: 0.1, x: 0 },
+                  { src: Bluebootle, alt: "Image 3", delay: 0.2, x: 0 },
+                  { src: Bootglass, alt: "Image 4", delay: 0.3, x: 0 },
+                ].map((item, index) => (
+                  <div key={index} className="col-12 col-md-3 d-flex align-items-center justify-content-center">
+                    <motion.div
+                      initial={{ scale: 0.9, opacity: 0, x: 0 }}
+                      whileInView={{ scale: 1, opacity: 1, x: item.x }}
+                      viewport={{ amount: 0.5 }}
+                      transition={{
+                        type: "spring",
+                        stiffness: 40,
+                        damping: 10,
+                        delay: item.delay,
+                        duration: 1.2,
+                        ease: "easeOut"
+                      }}
+                    >
+                      <img src={item.src} className="img-fluid add_height_all rounded" alt={item.alt} />
+                    </motion.div>
+                  </div>
+                ))}
               </div>
-              <div className="col-12  text-justify mt-md-3 mt-1" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-                <p className="add_font_para_second  text-justify">
-                  With generations of expertise, our jimadores ensure that
-                  only the purest, most flavorful piñas begin the journey to
-                  becoming an exceptional tequila.
-                </p>
+              <div className="container d-block d-md-none">
+                <Slider {...settings}>
+                  <div className="d-flex justify-content-center">
+                    <img src={Lightbott} className="img-fluid add_height_all rounded" alt="Image 1" />
+                  </div>
+                  <div className="d-flex justify-content-center">
+                    <img src={Yellowbottle} className="img-fluid add_height_all rounded" alt="Image 2" />
+                  </div>
+                  <div className="d-flex justify-content-center">
+                    <img src={Bluebootle} className="img-fluid add_height_all rounded" alt="Image 3" />
+                  </div>
+                  <div className="d-flex justify-content-center">
+                    <img src={Bootglass} className="img-fluid add_height_all rounded" alt="Image 4" />
+                  </div>
+                </Slider>
               </div>
             </div>
           </div>
-          <div className="col-md-7 col-12 order-2 order-md-1 ps-0 mb-md-5 mb-0" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
-            <img src={Twoperson} className="w-100 h-100" alt="" />
+        </section>
+        <section id='aboutus'>
+          <div className="row mx-auto mx-md-0 mt-md-5 pt-md-5 pt-0 mt-0">
+            <div className="col-md-5 col-12 order-1 ps-0 order-md-2 pe-md-5 pe-0 d-flex align-items-center justify-content-center mb-md-5 mb-0 pb-md-5 pb-0">
+              <div className="row px-md-5 px-0 mt-md-0 mt-5 mx-auto">
+                <div className="col-12  text-justify" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                  <h3 className="add_second_heading">
+                    {/* From Farm to Bottle – Crafting <br /> Perfection from the Finest Agave */}
+                    Rooted in Mexico. 
+
+                  </h3>
+                </div>
+                <div className="col-12  text-justify mt-md-3 mt-1" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                  <p className="add_font_para_second  text-justify">
+                    {/* Hand-selected from the heart of the fields, only the best
+                    Blue Weber Agave makes its way into Tequiladoncruz Platinum. Every plant is carefully nurtured, harvested at
+                    peak maturity, and expertly trimmed to extract the richest flavors. */}
+                    Don Cruz Platinium is more than a name — it’s a tribute. A tribute to 
+                    the jimadores who cut each agave by hand. A tribute to the distillers who learned 
+                    from their fathers and grandfathers. A tribute to the land itself — sunburnt, rich,
+                     and alive with spirit. We don't cut corners.
+                     We don't follow trends. We honor the old ways, blending them 
+                     with just enough modern mastery to make something timeless—something extraordinary.
+                  </p>
+                </div>
+                {/* <div className="col-12  text-justify mt-md-3 mt-1" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                  <p className="add_font_para_second  text-justify">
+                    With generations of expertise, our jimadores ensure that
+                    only the purest, most flavorful piñas begin the journey to
+                    becoming an exceptional tequila.
+                  </p>
+                </div> */}
+              </div>
+            </div>
+            <div className="col-md-7 col-12 order-2 order-md-1 ps-0 mb-md-5 mb-0" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+              <img src={Twoperson} className="w-100 h-100" alt="" />
+            </div>
           </div>
-        </div>
-       </section>
+        </section>
       </div>
       <Modal
         show={openModal}

@@ -100,7 +100,7 @@ const Navbar = () => {
                 <ul className="navbar-nav d-flex flex-md-row flex-column justify-content-start ps-md-5 ps-0">
                   <li className="nav-item ps-md-5 pe-0 ps-md-4 ps-0 pe-md-5 pe-0">
                    
-                      <a href="#" className="nav-link add_font_size_nav text-dark active">Home</a>
+                      <a href="/" className="nav-link add_font_size_nav text-dark active">Home</a>
 
                   </li>
                 

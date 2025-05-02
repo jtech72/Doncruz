@@ -158,8 +158,8 @@ const Footer = () => {
             {openSections.about && (
               <>
                 <p className="ps-md-5 add_text_font_footer d-md-block d-none">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore...
-                </p>
+                At Don Cruz, we craft tequila with purpose, passion, and precision - honoring generations of tradition with every bottle.
+                 From hand-harvested agave to our signature slow distillation, we believe tequila should be savored, celebrated, and remembered.                 </p>
                 <ul className="list-unstyled ps-md-5 d-block d-md-none">
                   <li><Link to="/privacy" className="text-white text-decoration-none add_text_font_footer">Privacy Policy</Link></li>
                   <li><Link to="/termsOfUse" className="text-white text-decoration-none add_text_font_footer">Terms of Use</Link></li>
