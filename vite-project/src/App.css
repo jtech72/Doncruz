@@ -836,3 +836,6 @@ html {
 #plata  {
   scroll-margin-top: 90px; /* default for desktop */
 }
+.add_font_bold{
+  font-weight: 700;
+}
