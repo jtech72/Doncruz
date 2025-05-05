@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 
 import Cenetrlogo from '../../assets/centerlogo.svg'
-import Menbottle from '../../assets/menbottleimg.svg'
+import Menbottle from '../../assets/menbottleimg.png'
 import Donlogo from '../../assets/donlogo.svg'
 import Anejob from '../../assets/anejobottle.svg'
 import Twoperson from '../../assets/twoperson.png'
@@ -283,7 +283,7 @@ const HomePage = ({ setOpenModal, openModal }) => {
                   <div className="col-12 text-md-end text-center pe-md-5 pe-0 ps-0" data-aos="fade-up" data-aos-duration="1000">
                     <h3 className="add_second_heading">
                       {/* This is Don Cruz Platinium Plata-<br /> This is tequila, redefined. */}
-                      Don Cruz Platinum Plata <br/>Crisp. Vibrant. Pure.
+                      Crisp. Vibrant. Pure.
 
 
                     </h3>
@@ -297,8 +297,10 @@ const HomePage = ({ setOpenModal, openModal }) => {
                       Our Plata honors the true essence of agave — clean, lively, and full of natural energy.
                       With every sip, you taste the freshness of the fields and the craftsmanship that shaped it.
                     </p>
-                    <p className=''>For those who want tequila in its purest, boldest form.
-                    </p>
+                    <h6 className='add_font_bold'>
+  For those who want tequila in its purest, boldest form.
+</h6>
+
                   </div>
                   <div className="col-12 mt-md-5 mt-0 d-md-flex d-none align-items-center justify-content-md-end justify-content-center pe-md-5 pe-0">
                     <div className="add_color_font d-flex align-items-center justify-content-end">
@@ -341,8 +343,7 @@ const HomePage = ({ setOpenModal, openModal }) => {
                   </div>
                   <div className="col-12 text-md-start text-center ps-md-5 ps-4" data-aos="fade-up" data-aos-duration="1000">
                     <h3 className="add_second_heading">
-                      Don Cruz Platinum Añejo
-                      –<br /> The Pinnacle of Purity
+                       The Pinnacle of Purity.
 
                     </h3>
                   </div>
@@ -354,7 +355,9 @@ const HomePage = ({ setOpenModal, openModal }) => {
                   a testament to an exceptional recipe passed down with dedication. */}
                       Aged to deep perfection, our Añejo brings rich notes of the ingredients after being aged for years, yet layered with complexity, every glass is a tribute to patience — and crowned with real gold flakes, it's a reminder that true craftsmanship deserves to shine.
                     </p>
-                    <p className=''>For those who know greatness isn’t rushed. It’s crafted.</p>
+                    {/* <p className='add_font_bold'>For those who know greatness isn’t rushed. It’s crafted.</p> */}
+                    <h6 className='add_font_bold'>
+                    For those who know greatness isn’t rushed. It’s crafted.</h6>
                   </div>
                   <div className="col-12 mt-md-5 mt-0 d-md-flex d-none align-items-center justify-content-md-start justify-content-center ps-md-5 ps-4">
                     <div className="add_color_font d-flex align-items-center justify-content-start">
@@ -514,7 +517,7 @@ const HomePage = ({ setOpenModal, openModal }) => {
                   </h3>
                 </div>
                 <div className="col-12  text-justify mt-md-3 mt-1" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-                  <p className="add_font_para_second  text-justify">
+                  <p className="add_font_para_second  text-justify" style={{textAlign:"justify"}}>
                     {/* Hand-selected from the heart of the fields, only the best
                     Blue Weber Agave makes its way into Tequiladoncruz Platinum. Every plant is carefully nurtured, harvested at
                     peak maturity, and expertly trimmed to extract the richest flavors. */}
