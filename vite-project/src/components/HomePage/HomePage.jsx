@@ -177,7 +177,7 @@ const HomePage = ({ setOpenModal, openModal }) => {
                   <div className="col-md-4 ps-0 col-12 pt-5 pt-md-0 d-flex align-items-center flex-column justify-content-between">
                     <p className="description pb-md-5 pb-4 pt-md-0 pt-4 mb-0 text-md-start text-center">
                       {/* From the careful jima to the meticulous distillation, every step <br />in the creation of tequila is infused with passion and dedication. */}
-                      From the heart of Mexico’s agave fields, Don Cruz Platinum isn’t just tequila, it’s a legacy you can taste.
+                      From the heart of Mexico’s agave fields, Don Cruz Platinium isn’t just tequila, it’s a legacy you can taste.
 
                     </p>
                   </div>
