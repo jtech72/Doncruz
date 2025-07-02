@@ -171,7 +171,17 @@ span.add_color_font {
   font-family: 'Quikly-Rar', sans-serif !important;
 
 }
+header {
+  padding-top: env(safe-area-inset-top);
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+}
 
+.navbar {
+  padding-top: env(safe-area-inset-top);
+}
+
+ 
 .navbar-custom {
   background-color: transparent;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
